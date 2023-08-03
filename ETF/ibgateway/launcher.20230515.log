@@ -1,0 +1,554 @@
+2023-05-15 16:35:50.709 [CO] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2023-05-15 16:35:50.718 [CO] INFO  [JTS-Main] - installer version: 4.6.8, installer type: standalone, install dir: 'F:\IBKR\ibgateway\', Jts dir: 'F:\IBKR\ibgateway', VM options file: 'F:\IBKR\ibgateway\ibgateway.vmoptions'
+2023-05-15 16:35:50.732 [CO] INFO  [JTS-Main] - Verifying environment [entryPoint=IBGATEWAY_STANDALONE]...
+2023-05-15 16:35:50.753 [CO] INFO  [JTS-Main] - Install4jAutoUpdateService initialized [props=LauncherProperties[updateDownloadUrl=null,skipUpdateCheck=false,nightlyEnabled=true,channelNameArg=null,channelName=stable,channelChanged=false,jtsConfigDir=F:\IBKR\ibgateway,apiPort=null,sessionId=null,installDir=F:\IBKR\ibgateway\,exeName=null]].
+2023-05-15 16:35:50.759 [CO] INFO  [JTS-Main] - PROXY Installed custom selector
+2023-05-15 16:35:50.766 [CO] INFO  [JTS-Main] - useSsl=true,FIX endPoint=ndc1.ibllc.com:4001
+2023-05-15 16:35:50.830 [CO] INFO  [JTS-Main] - Setting custom timezone: Europe/Moscow
+2023-05-15 16:35:50.835 [CO] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2023-05-15 16:35:50.838 [CO] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2023-05-15 16:35:50.839 [CO] INFO  [JTS-Main] - Region: America
+2023-05-15 16:35:50.841 [CO] INFO  [JTS-Main] - Starting to download 'https://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'https://download2.interactivebrokers.com/java/classes/locales.jar'
+2023-05-15 16:35:52.375 [CO] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=F:\IBKR\ibgateway\jars\locales.jar  sourceMod=2019-11-07 18:30:14  destMod=2019-11-07 18:30:14  sourceSize=114646  destSize=114646  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2023-05-15 16:35:52.375 [CO] INFO  [JTS-Main] - LOCALE: F:\IBKR\ibgateway\jars\locales.jar already up-to-date
+2023-05-15 16:35:52.379 [CO] INFO  [JTS-Main] - DocumentBuilderFactory=jar:file:/C:/Users/Anton/AppData/Local/Programs/Common/i4j_jres/Oda-jK0QgTEmVssfllLP/1.8.0_202_64/lib/rt.jar!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderFactoryImpl.class
+2023-05-15 16:35:52.403 [CO] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2023-05-15 16:35:52.411 [CO] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2023-05-15 16:35:52.415 [CO] INFO  [JTS-Main] - Locale from ini: ru
+2023-05-15 16:35:52.416 [CO] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@624ea235 with file:/F:/IBKR/ibgateway/jars/locales.jar, parent: sun.misc.Launcher$AppClassLoader@c387f44
+2023-05-15 16:35:52.416 [CO] INFO  [JTS-Main] - Locale=ru_RU  country=Russia  variant=
+2023-05-15 16:35:52.418 [CO] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2023-05-15 16:35:52.420 [CO] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru]
+2023-05-15 16:35:52.423 [CO] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru_RU]
+2023-05-15 16:35:52.424 [CO] INFO  [JTS-Main] - LOCALE:  type: launcher intended: ru_RU actual: ru size: 490
+2023-05-15 16:35:52.424 [CO] INFO  [JTS-Main] - settings dir: 'F:\IBKR\ibgateway'
+2023-05-15 16:35:52.587 [CO] INFO  [JTS-Main] - LauncherFontUpdater: simulatehighdefscreen=false
+2023-05-15 16:35:52.587 [CO] INFO  [JTS-Main] - LauncherFontUpdater: Screen dimensions=1600x900
+2023-05-15 16:35:52.587 [CO] INFO  [JTS-Main] - LauncherFontUpdater: highres=false
+2023-05-15 16:35:52.587 [CO] INFO  [JTS-Main] - LauncherFontUpdater: FontSize=16
+2023-05-15 16:35:52.587 [CO] INFO  [JTS-Main] - initPreUI() - entry
+2023-05-15 16:35:52.598 [CO] INFO  [JTS-Main] - Build 10.19.1k, Jan 23, 2023 5:13:03 PM
+2023-05-15 16:35:52.626 [CO] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2023-05-15 16:35:52.630 [CO] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2023-05-15 16:35:52.964 [CO] INFO  [JTS-Main] - Current LAF: TWS LAF
+2023-05-15 16:35:52.965 [CO] INFO  [JTS-Main] - initPreUI() - exit
+2023-05-15 16:35:52.971 [CO] INFO  [JTS-MiscUlrsRequester-5] - Connecting cdc1.ibllc.com:4000 timeout=10000...
+2023-05-15 16:35:53.359 [CO] INFO  [JTS-MiscUlrsRequester-5] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.168.0.102:51550
+2023-05-15 16:35:53.361 [CO] INFO  [JTS-MiscUlrsRequester-5] - Resolving mac address
+2023-05-15 16:35:53.524 [CO] INFO  [JTS-MiscUlrsRequester-5] - MACNetworkInfo created <6edcb1b5|B4:B0:24:7E:68:3E|192.168.0.102>
+2023-05-15 16:35:53.526 [CO] INFO  [JTS-MISC URLsListenerS1-6] - Starting listener thread [sessionID=1]...
+2023-05-15 16:35:53.542 [CO] INFO  [JTS-MiscUlrsRequester-5] - Sending MiscUrls request
+2023-05-15 16:35:53.542 [CO] INFO  [JTS-AuthDispatcherS1-7] - Starting dispatcher thread [sessionID=1]...
+2023-05-15 16:35:53.546 [CO] INFO  [JTS-MiscUlrsRequester-5] - LOGIN_TIME_MONITOR	 false 16:35:53:546 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2023-05-15 16:35:53.547 [CO] INFO  [JTS-MISC URLsListenerS1-6] - Initial listener buffer size is 65536.
+2023-05-15 16:35:53.547 [CO] INFO  [JTS-AuthResponseMonitor-8] - Starting auth response monitor thread
+2023-05-15 16:35:53.547 [CO] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread [sessionID=1] is ready to process messages.
+2023-05-15 16:35:53.708 [CO] INFO  [JTS-AuthDispatcherS1-7] - Received NS_MISC_URLS
+2023-05-15 16:35:53.709 [CO] INFO  [JTS-AuthDispatcherS1-7] - IBMiscUrl.miscUrlMessage()[sslRequired=true]
+2023-05-15 16:35:53.709 [CO] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: scope is blank - setting userScope to EXTERNAL
+2023-05-15 16:35:53.710 [CO] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: setting userScope to EXTERNAL
+2023-05-15 16:35:53.714 [CO] INFO  [JTS-AuthDispatcherS1-7] - Disconnecting cdc1.ibllc.com:4000 [disconnectDetails=DisconnectDetails[sessionID=1,endPoint=cdc1.ibllc.com:4000,reason=DISCONNECT_BY_DESIGN,cause=null,systemMessage=null,keepSocketOpen=false]]...
+2023-05-15 16:35:53.714 [CO] INFO  [JTS-AuthDispatcherS1-7] - Socket closed.
+2023-05-15 16:35:53.714 [CO] INFO  [JTS-AuthDispatcherS1-7] - Interrupting dispatcher [sessionID=1]...
+2023-05-15 16:35:53.714 [CO] INFO  [JTS-AuthDispatcherS1-7] - Interrupting listener [sessionID=1,disconnectSocket=true]...
+2023-05-15 16:35:53.714 [CO] INFO  [JTS-MISC URLsListenerS1-6] - Socket or stream for connection cdc1.ibllc.com:4000 was closed by another thread.
+2023-05-15 16:35:53.715 [CO] INFO  [JTS-AuthDispatcherS1-7] - Dispatcher thread terminating [sessionID=1,interrupted=true]...
+2023-05-15 16:35:53.715 [CO] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread terminating [sessionID=1] [seen=1168,totalShifted=1168,moreAvailable=0]
+2023-05-15 16:35:53.715 [CO] INFO  [JTS-AuthResponseMonitor-8] - Terminating auth response monitor thread
+2023-05-15 16:35:53.797 [CO] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow
+2023-05-15 16:35:53.799 [CO] INFO  [AWT-EventQueue-0] - Starting GstatMessageMgr...
+2023-05-15 16:35:53.803 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - Started on 20230515-13:35:53
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow name:Moscow Standard Time dst:0
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - java version = 1.8.0_202
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - os = Windows 10
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - os version = 10.0
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - os architecture = 64
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2023-05-15 16:35:53.839 [CO] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2023-05-15 16:35:53.840 [CO] INFO  [AWT-EventQueue-0] - username = 'Anton'
+2023-05-15 16:35:54.198 [CO] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 2 (Mon), YYYYMMofToday: 202305, YYYYMMDDofToday: 20230515, m_todayDate: 20230515, dueToChangeInTimezone: false
+2023-05-15 16:35:55.757 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=716,453KB HeapUsage: Max=786,432KB used=68,440KB committed=262,144KB NonHeapUsage: Max=0KB used=61,087KB committed=62,720KB
+2023-05-15 16:35:55.931 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:35:56.410 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:35:56.759 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=2.48% avg=2.48% 30 min avg=2.48% 10 min avg=2.48% 5 min avg=2.48% 1 min avg=2.48%
+GC:called=3 times CPU used=0.03%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=26 curr daemon=20
+2023-05-15 16:38:55.935 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:38:57.020 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:38:57.027 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:38:57.027 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:40:55.809 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=673,100KB HeapUsage: Max=786,432KB used=111,283KB committed=262,144KB NonHeapUsage: Max=0KB used=67,878KB committed=69,632KB
+2023-05-15 16:40:56.809 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.11% 30 min avg=0.11% 10 min avg=0.11% 5 min avg=0.07% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 16:41:57.021 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:41:58.037 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:41:58.045 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:41:58.045 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:44:58.039 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:44:58.821 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:44:58.829 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:44:58.830 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:45:55.919 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=644,502KB HeapUsage: Max=786,432KB used=139,955KB committed=262,144KB NonHeapUsage: Max=0KB used=68,000KB committed=69,888KB
+2023-05-15 16:45:56.919 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.06% 30 min avg=0.06% 10 min avg=0.04% 5 min avg=0.02% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 16:47:58.822 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:48:00.441 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:48:00.448 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:48:00.448 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:50:55.974 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=615,830KB HeapUsage: Max=786,432KB used=168,627KB committed=262,144KB NonHeapUsage: Max=0KB used=67,944KB committed=70,144KB
+2023-05-15 16:50:56.974 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.04% 30 min avg=0.04% 10 min avg=0.01% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 16:51:00.442 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:51:01.596 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:51:01.614 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:51:01.614 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:54:01.598 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:54:02.435 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:54:02.452 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:54:02.452 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 16:55:56.027 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=736,873KB HeapUsage: Max=786,432KB used=48,771KB committed=262,144KB NonHeapUsage: Max=0KB used=68,250KB committed=70,144KB
+2023-05-15 16:55:57.028 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.03% 30 min avg=0.03% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=4 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 16:57:02.436 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 16:57:03.500 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 16:57:03.507 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 16:57:03.507 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:00:03.501 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:00:04.260 [CO] ERROR [JTS-GstatMessageMgr-11] - Error sending request: api.ibkr.com
+2023-05-15 17:00:04.270 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:00:04.270 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:00:56.082 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=711,036KB HeapUsage: Max=786,432KB used=74,371KB committed=262,144KB NonHeapUsage: Max=0KB used=68,361KB committed=70,144KB
+2023-05-15 17:00:57.082 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.03% 30 min avg=0.03% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=4 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:03:04.261 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:03:06.422 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:03:06.431 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:03:06.431 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:05:56.137 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=682,874KB HeapUsage: Max=786,432KB used=103,043KB committed=262,144KB NonHeapUsage: Max=0KB used=68,396KB committed=70,144KB
+2023-05-15 17:05:57.138 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.02% 30 min avg=0.02% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=4 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:06:06.422 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:06:07.217 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:06:07.230 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:06:07.230 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:09:07.218 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:09:08.293 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:09:08.301 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:09:08.301 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:10:56.191 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=651,130KB HeapUsage: Max=786,432KB used=134,787KB committed=262,144KB NonHeapUsage: Max=0KB used=68,381KB committed=70,208KB
+2023-05-15 17:10:57.191 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.02% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=4 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:12:08.295 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:12:10.175 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:12:10.189 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:12:10.189 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:15:10.178 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:15:12.055 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:15:12.061 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:15:12.061 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:15:56.243 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=616,828KB HeapUsage: Max=786,432KB used=168,579KB committed=262,144KB NonHeapUsage: Max=0KB used=68,494KB committed=70,272KB
+2023-05-15 17:15:57.243 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.02% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.01%
+GC:called=4 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:18:12.056 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:18:13.031 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:18:13.043 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:18:13.043 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:20:56.295 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=739,624KB HeapUsage: Max=786,432KB used=45,783KB committed=262,144KB NonHeapUsage: Max=0KB used=68,529KB committed=70,272KB
+2023-05-15 17:20:57.296 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.02% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=5 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:21:13.031 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:21:14.030 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:21:14.045 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:21:14.045 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:24:14.032 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:24:14.816 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:24:14.829 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:24:14.829 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:25:56.322 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=712,256KB HeapUsage: Max=786,432KB used=73,431KB committed=262,144KB NonHeapUsage: Max=0KB used=68,620KB committed=70,336KB
+2023-05-15 17:25:57.322 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=5 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:27:14.818 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:27:15.662 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:27:15.677 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:27:15.677 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:30:15.663 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:30:16.702 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:30:16.717 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:30:16.717 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:30:56.334 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=682,790KB HeapUsage: Max=786,432KB used=103,127KB committed=262,144KB NonHeapUsage: Max=0KB used=68,669KB committed=70,400KB
+2023-05-15 17:30:57.334 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.01%
+GC:called=5 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:33:16.704 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:33:18.748 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:33:18.765 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:33:18.765 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:35:56.386 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=652,070KB HeapUsage: Max=786,432KB used=133,847KB committed=262,144KB NonHeapUsage: Max=0KB used=68,699KB committed=70,400KB
+2023-05-15 17:35:57.387 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=5 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:36:18.750 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:36:20.370 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:36:20.381 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:36:20.382 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:39:20.371 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:39:21.253 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:39:21.261 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:39:21.262 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:40:56.440 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=617,024KB HeapUsage: Max=786,432KB used=168,663KB committed=262,144KB NonHeapUsage: Max=0KB used=68,838KB committed=70,528KB
+2023-05-15 17:40:57.441 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=5 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:42:21.255 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:42:22.033 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:42:22.049 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:42:22.049 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:45:22.034 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:45:23.051 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:45:23.058 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:45:23.058 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:45:56.494 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=737,064KB HeapUsage: Max=786,432KB used=48,343KB committed=262,144KB NonHeapUsage: Max=0KB used=68,919KB committed=70,592KB
+2023-05-15 17:45:57.495 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.01% 1 min avg=0.01%
+GC:called=6 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:48:23.053 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:48:24.004 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:48:24.013 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:48:24.013 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:50:56.549 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=711,775KB HeapUsage: Max=786,432KB used=73,943KB committed=262,144KB NonHeapUsage: Max=0KB used=68,931KB committed=70,592KB
+2023-05-15 17:50:57.549 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=6 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:51:24.005 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:51:25.880 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:51:25.887 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:51:25.887 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:54:25.880 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:54:26.684 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:54:26.701 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:54:26.701 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 17:55:56.602 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=681,254KB HeapUsage: Max=786,432KB used=104,663KB committed=262,144KB NonHeapUsage: Max=0KB used=68,989KB committed=70,656KB
+2023-05-15 17:55:57.616 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=6 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 17:57:26.684 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 17:57:27.726 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 17:57:27.742 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 17:57:27.742 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 18:00:27.726 [CO] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-15 18:00:30.854 [CO] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 18:00:30.862 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 18:00:30.862 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 18:00:56.656 [CO] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=649,000KB HeapUsage: Max=786,432KB used=136,407KB committed=262,144KB NonHeapUsage: Max=0KB used=69,094KB committed=70,976KB
+2023-05-15 18:00:57.657 [CO] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.01% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=6 times CPU used=0.00%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=18
+2023-05-15 18:02:48.832 [CO] INFO  [AWT-EventQueue-0] - Stopping GstatMessageMgr...
+2023-05-15 18:02:48.835 [CO] INFO  [AWT-EventQueue-0] - Setting dir is F:\IBKR\ibgateway\
+2023-05-15 18:02:48.835 [CO] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2023-05-15 18:02:48.837 [CO] INFO  [AWT-EventQueue-0] - BaseIniFile.saveGatewayFixEndPoint() [host=ndc1.ibllc.com,port=4001]...
+2023-05-15 18:02:48.838 [CO] INFO  [AWT-EventQueue-0] - SPLASH Creating screen with 5 steps
+2023-05-15 18:02:48.902 [CO] INFO  [AWT-EventQueue-0] - SplashScreen: using ads manager
+2023-05-15 18:02:48.905 [CO] INFO  [AWT-EventQueue-0] - AdImageContainer: start build ads UI
+2023-05-15 18:02:48.917 [CO] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-15 18:02:48.923 [CO] INFO  [AWT-EventQueue-0] - AdManager: sending request with header X-USERNAME
+2023-05-15 18:02:49.801 [CO] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request is ok
+2023-05-15 18:02:49.808 [CO] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw"}
+2023-05-15 18:02:49.844 [CO] INFO  [AWT-EventQueue-0] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw
+
+2023-05-15 18:02:50.462 [CO] INFO  [AWT-EventQueue-0] - initAutoEncryptionMenu(): autoEncryption set to true
+2023-05-15 18:02:50.481 [CO] INFO  [AWT-EventQueue-0] - Contacting cdc1.ibllc.com:4001 as user NOT PRINTED
+2023-05-15 18:02:50.514 [CO] INFO  [AWT-EventQueue-0] - UserCredentials.sessionId() [this=1143901948,old=null,new=6462499a.01fa].
+2023-05-15 18:02:50.514 [CO] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2023-05-15 18:02:50.514 [CO] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:18:02:50:514
+2023-05-15 18:02:50.514 [CO] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2023-05-15 18:02:50.517 [CO] INFO  [JTS-Login-14] - Starting launcher login thread
+2023-05-15 18:02:50.518 [CO] INFO  [JTS-Login-14] - LauncherLoginThread.runLoginWithUI()[hotBackupStrategy=ON,loginAttempt=1,socketDelay=20000].
+2023-05-15 18:02:50.518 [CO] INFO  [JTS-Login-14] - SPLASH Соединение с сервером
+2023-05-15 18:02:50.522 [CO] INFO  [JTS-Login-14] - ### startLogin startTime=1684162970514
+2023-05-15 18:02:50.522 [CO] INFO  [JTS-Login-14] - ### loginAttempt loginAttempt=1
+2023-05-15 18:02:50.523 [CO] INFO  [JTS-Login-14] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000...
+2023-05-15 18:02:50.523 [CO] INFO  [JTS-Login-14] - ### onSocketOpenStart socketOpenStart=1684162970523; endPoint=cdc1.ibllc.com; port=4001
+2023-05-15 18:02:50.534 [CO] INFO  [JTS-Order-Audit-16] - Starting async queue thread
+2023-05-15 18:02:50.535 [CO] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2023-05-15 18:02:50.616 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdImageContainer: ad image is shown
+2023-05-15 18:02:50.616 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN request https://api.ibkr.com/tws.proxy/info/show/dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTY5MDEw
+2023-05-15 18:02:50.850 [CO] ERROR [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN service 411
+2023-05-15 18:02:50.850 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: request image to put in cache
+2023-05-15 18:02:50.851 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-15 18:02:50.851 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: sending request with header X-USERNAME
+2023-05-15 18:02:51.693 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request is ok
+2023-05-15 18:02:51.694 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy"}
+2023-05-15 18:02:51.695 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjg0MTYyOTcwOTAy
+
+2023-05-15 18:02:51.695 [CO] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: try to save image  inF:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk\\149-1-1200x1000-ru.jpeg
+2023-05-15 18:02:51.725 [CO] INFO  [JTS-Login-14] - ### onSocketOpenEnd socketOpenEnd=1684162971725
+2023-05-15 18:02:51.725 [CO] INFO  [JTS-Login-14] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.168.0.102:62224
+2023-05-15 18:02:51.726 [CO] INFO  [JTS-Login-14] - JTSAuthConnection.onConnected(): lastKnownCipherStatus=INSECURE
+2023-05-15 18:02:51.726 [CO] INFO  [JTS-Login-14] - Changing state for connection from PRELOGON to PRELOGON in B 1322500515: SessionSocket:2
+2023-05-15 18:02:51.726 [CO] INFO  [JTS-Login-14] - Authenticating
+2023-05-15 18:02:51.727 [CO] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-15 18:02:51.727 [CO] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: timeout=20000
+2023-05-15 18:02:51.727 [CO] INFO  [JTS-CCPListenerS2-17] - Starting listener thread [sessionID=2]...
+2023-05-15 18:02:51.728 [CO] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: activate
+2023-05-15 18:02:51.729 [CO] INFO  [JTS-Login-14] - SPLASH -0001 step 1 AuthDispatcher.connect
+2023-05-15 18:02:51.728 [CO] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Starting auth timeout monitor thread for CCP
+2023-05-15 18:02:51.729 [CO] INFO  [JTS-Login-14] - Sending connect request
+2023-05-15 18:02:51.730 [CO] INFO  [JTS-AuthDispatcherS2-18] - Starting dispatcher thread [sessionID=2]...
+2023-05-15 18:02:51.731 [CO] INFO  [JTS-Login-14] - AuthDispatcher.initNSMsgVersionLimits: minVersion=38, maxVersion=47
+2023-05-15 18:02:51.731 [CO] INFO  [JTS-Login-14] - AuthDispatcher.NSConnectRequest: userSessionID=6462499a.01fa, beeDemoType=NULL
+2023-05-15 18:02:51.731 [CO] INFO  [JTS-Login-14] - ### onNsMsg loginMessageReq=1684162971731; brandNewUser=false
+2023-05-15 18:02:51.732 [CO] INFO  [JTS-Login-14] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2023-05-15 18:02:51.732 [CO] INFO  [JTS-Login-14] - NSConnectRequest: sending CLIENT_USE_SSL=0x80000
+2023-05-15 18:02:52.220 [CO] INFO  [JTS-Login-14] - SPLASH Аутентификация
+2023-05-15 18:02:52.220 [CO] INFO  [JTS-CCPListenerS2-17] - Initial listener buffer size is 65536.
+2023-05-15 18:02:52.220 [CO] INFO  [JTS-CCPListenerS2-17] - Listener thread [sessionID=2] is ready to process messages.
+2023-05-15 18:02:52.222 [CO] INFO  [JTS-Login-14] - Terminating launcher login thread
+2023-05-15 18:02:52.381 [CO] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0653 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:02:52.382 [CO] INFO  [JTS-AuthDispatcherS2-18] - set nsMsgVersion: context=AuthStart; version=47
+2023-05-15 18:02:52.383 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received NS_AUTH_START: 1
+2023-05-15 18:02:52.385 [CO] INFO  [JTS-AuthDispatcherS2-18] - pwd time to expiry ms: 2418213429000 days: 27989
+2023-05-15 18:02:52.385 [CO] INFO  [JTS-AuthDispatcherS2-18] - Long pwd allowed: true
+2023-05-15 18:02:52.385 [CO] INFO  [JTS-AuthDispatcherS2-18] -  NS_AUTH_START version=47 pwd=1 soft=0 token(s)=[token=4, tokenSubtype=2[Одноразовый код доступа]] initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=1640183492
+2023-05-15 18:02:52.387 [CO] INFO  [JTS-AuthDispatcherS2-18] - ### onStartAuthentication
+2023-05-15 18:02:52.387 [CO] INFO  [JTS-AuthDispatcherS2-18] - Starting password Authentication
+2023-05-15 18:02:52.387 [CO] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthQuery
+2023-05-15 18:02:52.387 [CO] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-15 18:02:52.388 [CO] INFO  [JTS-AuthDispatcherS2-18] - UserCredentials.setFrom() [this=1143901948,other=1143901948,old=6462499a.01fa,new=6462499a.01fa].
+2023-05-15 18:02:52.547 [CO] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-15 18:02:52.547 [CO] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:02:52.548 [CO] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:02:52.548 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_PARAMS
+2023-05-15 18:02:52.548 [CO] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthParams
+2023-05-15 18:02:52.548 [CO] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-15 18:02:52.707 [CO] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0326 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:02:52.707 [CO] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-15 18:02:52.708 [CO] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:02:52.708 [CO] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:02:52.708 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received SERVER_PARAMS
+2023-05-15 18:02:52.710 [CO] INFO  [JTS-AuthDispatcherS2-18] - Session Token received in AuthenticationMessageXYZ=2ae12XXXXX.., messageId=SERVER_KEY (4)
+2023-05-15 18:02:52.711 [CO] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-15 18:02:52.869 [CO] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-15 18:02:52.870 [CO] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_RESULT
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthServerProof
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - Passed pwd authentication.
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - ### onStartTokenAuth
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - Requesting Sms
+2023-05-15 18:02:52.870 [CO] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 774
+2023-05-15 18:02:53.029 [CO] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0322 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:02:53.029 [CO] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-15 18:02:53.030 [CO] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:02:53.030 [CO] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-15 18:02:53.030 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received Result_Sms
+2023-05-15 18:02:53.030 [CO] INFO  [JTS-AuthDispatcherS2-18] - AuthTimeoutMonitor-CCP: pause
+2023-05-15 18:02:53.074 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:02:53.075 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:02:53.078 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:02:53.078 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:03:13.030 [CO] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 20001 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:03:13.030 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received NS_TEST_REQUEST
+2023-05-15 18:03:13.031 [CO] INFO  [JTS-AuthDispatcherS2-18] - Sent NS_HEART_BEAT:#%#%0000MISC47;531;20230515-15:03:12;
+2023-05-15 18:03:17.397 [CO] INFO  [AWT-EventQueue-0] - Security code: ***
+2023-05-15 18:03:17.398 [CO] INFO  [AWT-EventQueue-0] - AuthTimeoutMonitor-CCP: resume, idleTime=24368
+2023-05-15 18:03:17.398 [CO] INFO  [AWT-EventQueue-0] - sendXYZMessage: 774
+2023-05-15 18:03:17.398 [CO] INFO  [AWT-EventQueue-0] - SPLASH 4368 step 3 AuthDispatcher.send
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-15 18:03:17.559 [CO] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - Received Result
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - Failed token authentication.
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=1640183492 new=null old=null ctciOld=null
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-CCPListenerS2-17] - Socket for connection cdc1.ibllc.com:4001 (SSL) was closed by peer.
+2023-05-15 18:03:17.559 [CO] INFO  [JTS-AuthDispatcherS2-18] - ccp session token non-CTCI is set as Empty 
+2023-05-15 18:03:17.560 [CO] INFO  [JTS-CCPListenerS2-17] - Listener thread terminating [sessionID=2] [seen=828,totalShifted=780,moreAvailable=0]
+2023-05-15 18:03:17.561 [CO] INFO  [JTS-AuthDispatcherS2-18] - Starting GstatMessageMgr...
+2023-05-15 18:03:17.563 [CO] INFO  [JTS-GstatMessageMgr-26] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","peer":"cdc1.ibllc.com","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru","user":"***","ut":"paper"}']...
+2023-05-15 18:03:17.564 [CO] INFO  [JTS-AuthDispatcherS2-18] - Не удалось подключиться к серверу: incorrect security code
+2023-05-15 18:03:17.564 [CO] INFO  [JTS-AuthDispatcherS2-18] - called cleanupMktSrvr
+2023-05-15 18:03:17.564 [CO] INFO  [JTS-AuthDispatcherS2-18] - Disconnecting cdc1.ibllc.com:4001 (SSL) [disconnectDetails=DisconnectDetails[sessionID=2,endPoint=cdc1.ibllc.com:4001 (SSL),reason=DISCONNECT_ON_EXIT_SESSION,cause=null,systemMessage=null,keepSocketOpen=false]]...
+2023-05-15 18:03:17.564 [CO] INFO  [JTS-AuthDispatcherS2-18] - Socket closed.
+2023-05-15 18:03:17.564 [CO] INFO  [JTS-AuthDispatcherS2-18] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-15 18:03:17.565 [CO] INFO  [JTS-AuthDispatcherS2-18] - Interrupting dispatcher [sessionID=2]...
+2023-05-15 18:03:17.565 [CO] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Terminating auth timeout monitor thread for CCP
+2023-05-15 18:03:17.565 [CO] INFO  [JTS-AuthDispatcherS2-18] - Interrupting listener [sessionID=2,disconnectSocket=true]...
+2023-05-15 18:03:17.565 [CO] INFO  [JTS-AuthDispatcherS2-18] - CONN CALC: Last connection attempt time is cleared!
+2023-05-15 18:03:17.566 [CO] INFO  [JTS-DisconnectedS2-27] - IBGateway connection to ccp disconnected.
+2023-05-15 18:03:17.588 [CO] INFO  [JTS-AuthDispatcherS2-18] - Reconnection time cleared: argClearBackoff=true base=0 range=5000 next=0 disconnected=0
+2023-05-15 18:03:17.588 [CO] INFO  [JTS-AuthDispatcherS2-18] - Dispatcher thread terminating [sessionID=2,interrupted=true]...
+2023-05-15 18:03:18.282 [CO] INFO  [JTS-GstatMessageMgr-26] - Received response [errorCode=204,contentLen=-1].
+2023-05-15 18:03:18.294 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: bridge already created
+2023-05-15 18:03:18.294 [CO] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-15 18:03:25.057 [CO] INFO  [AWT-EventQueue-0] - Stopping GstatMessageMgr...
+2023-05-15 18:03:25.058 [CO] INFO  [AWT-EventQueue-0] - Setting dir is F:\IBKR\ibgateway\
+2023-05-15 18:03:25.059 [CO] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2023-05-15 18:03:25.059 [CO] INFO  [AWT-EventQueue-0] - BaseIniFile.saveGatewayFixEndPoint() [host=ndc1.ibllc.com,port=4001]...
+2023-05-15 18:03:25.067 [CO] INFO  [AWT-EventQueue-0] - Contacting cdc1.ibllc.com:4001 as user NOT PRINTED
+2023-05-15 18:03:25.068 [CO] INFO  [AWT-EventQueue-0] - UserCredentials.sessionId() [this=626272621,old=null,new=646249bd.0044].
+2023-05-15 18:03:25.068 [CO] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2023-05-15 18:03:25.069 [CO] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:18:03:25:069
+2023-05-15 18:03:25.069 [CO] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2023-05-15 18:03:25.069 [CO] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2023-05-15 18:03:25.070 [CO] INFO  [JTS-Login-29] - Starting launcher login thread
+2023-05-15 18:03:25.070 [CO] INFO  [JTS-Login-29] - LauncherLoginThread.runLoginWithUI()[hotBackupStrategy=ON,loginAttempt=1,socketDelay=20000].
+2023-05-15 18:03:25.070 [CO] INFO  [JTS-Order-Audit-30] - Starting async queue thread
+2023-05-15 18:03:25.070 [CO] INFO  [JTS-Login-29] - SPLASH Соединение с сервером
+2023-05-15 18:03:25.071 [CO] INFO  [JTS-Login-29] - ### startLogin startTime=1684163005068
+2023-05-15 18:03:25.071 [CO] INFO  [JTS-Login-29] - ### loginAttempt loginAttempt=1
+2023-05-15 18:03:25.072 [CO] INFO  [JTS-Login-29] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000...
+2023-05-15 18:03:25.072 [CO] INFO  [JTS-Login-29] - ### onSocketOpenStart socketOpenStart=1684163005072; endPoint=cdc1.ibllc.com; port=4001
+2023-05-15 18:03:25.245 [CO] INFO  [JTS-Login-29] - ### onSocketOpenEnd socketOpenEnd=1684163005245
+2023-05-15 18:03:25.245 [CO] INFO  [JTS-Login-29] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.168.0.102:62295
+2023-05-15 18:03:25.246 [CO] INFO  [JTS-Login-29] - JTSAuthConnection.onConnected(): lastKnownCipherStatus=INSECURE
+2023-05-15 18:03:25.246 [CO] INFO  [JTS-Login-29] - Changing state for connection from PRELOGON to PRELOGON in B 758699401: SessionSocket:3
+2023-05-15 18:03:25.246 [CO] INFO  [JTS-Login-29] - Authenticating
+2023-05-15 18:03:25.246 [CO] INFO  [JTS-Login-29] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-15 18:03:25.247 [CO] INFO  [JTS-Login-29] - AuthTimeoutMonitor-CCP: timeout=20000
+2023-05-15 18:03:25.247 [CO] INFO  [JTS-CCPListenerS3-32] - Starting listener thread [sessionID=3]...
+2023-05-15 18:03:25.247 [CO] INFO  [JTS-Login-29] - AuthTimeoutMonitor-CCP: activate
+2023-05-15 18:03:25.247 [CO] INFO  [JTS-Login-29] - SPLASH -0001 step 1 AuthDispatcher.connect
+2023-05-15 18:03:25.247 [CO] INFO  [JTS-AuthTimeoutMonitorThread-CCP-34] - Starting auth timeout monitor thread for CCP
+2023-05-15 18:03:25.248 [CO] INFO  [JTS-Login-29] - Sending connect request
+2023-05-15 18:03:25.248 [CO] INFO  [JTS-Login-29] - AuthDispatcher.initNSMsgVersionLimits: minVersion=38, maxVersion=47
+2023-05-15 18:03:25.248 [CO] INFO  [JTS-AuthDispatcherS3-33] - Starting dispatcher thread [sessionID=3]...
+2023-05-15 18:03:25.248 [CO] INFO  [JTS-Login-29] - AuthDispatcher.NSConnectRequest: userSessionID=646249bd.0044, beeDemoType=NULL
+2023-05-15 18:03:25.249 [CO] INFO  [JTS-Login-29] - ### onNsMsg loginMessageReq=1684163005249; brandNewUser=false
+2023-05-15 18:03:25.249 [CO] INFO  [JTS-Login-29] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2023-05-15 18:03:25.249 [CO] INFO  [JTS-Login-29] - NSConnectRequest: sending CLIENT_USE_SSL=0x80000
+2023-05-15 18:03:25.765 [CO] INFO  [JTS-Login-29] - SPLASH Аутентификация
+2023-05-15 18:03:25.765 [CO] INFO  [JTS-CCPListenerS3-32] - Initial listener buffer size is 65536.
+2023-05-15 18:03:25.765 [CO] INFO  [JTS-CCPListenerS3-32] - Listener thread [sessionID=3] is ready to process messages.
+2023-05-15 18:03:25.766 [CO] INFO  [JTS-Login-29] - Terminating launcher login thread
+2023-05-15 18:03:25.935 [CO] INFO  [JTS-AuthDispatcherS3-33] - SPLASH 0688 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:03:25.935 [CO] INFO  [JTS-AuthDispatcherS3-33] - set nsMsgVersion: context=AuthStart; version=47
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received NS_AUTH_START: 1
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - pwd time to expiry ms: 2418213395000 days: 27989
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - Long pwd allowed: true
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] -  NS_AUTH_START version=47 pwd=1 soft=0 token(s)=[token=4, tokenSubtype=2[Одноразовый код доступа]] initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=825065642
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onStartAuthentication
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - Starting password Authentication
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onXyzAuthQuery
+2023-05-15 18:03:25.936 [CO] INFO  [JTS-AuthDispatcherS3-33] - sendXYZMessage: 777
+2023-05-15 18:03:25.937 [CO] INFO  [JTS-AuthDispatcherS3-33] - UserCredentials.setFrom() [this=626272621,other=626272621,old=646249bd.0044,new=646249bd.0044].
+2023-05-15 18:03:26.107 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 777
+2023-05-15 18:03:26.107 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:03:26.107 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:03:26.107 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received AUTH_PARAMS
+2023-05-15 18:03:26.108 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onXyzAuthParams
+2023-05-15 18:03:26.108 [CO] INFO  [JTS-AuthDispatcherS3-33] - sendXYZMessage: 777
+2023-05-15 18:03:26.280 [CO] INFO  [JTS-AuthDispatcherS3-33] - SPLASH 0345 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:03:26.280 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 777
+2023-05-15 18:03:26.280 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:03:26.280 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:03:26.280 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received SERVER_PARAMS
+2023-05-15 18:03:26.282 [CO] INFO  [JTS-AuthDispatcherS3-33] - Session Token received in AuthenticationMessageXYZ=e3d6eXXXXX.., messageId=SERVER_KEY (4)
+2023-05-15 18:03:26.282 [CO] INFO  [JTS-AuthDispatcherS3-33] - sendXYZMessage: 777
+2023-05-15 18:03:26.452 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 777
+2023-05-15 18:03:26.452 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:03:26.452 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 777, protocol version: 47
+2023-05-15 18:03:26.452 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received AUTH_RESULT
+2023-05-15 18:03:26.453 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onXyzAuthServerProof
+2023-05-15 18:03:26.453 [CO] INFO  [JTS-AuthDispatcherS3-33] - Passed pwd authentication.
+2023-05-15 18:03:26.453 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onStartTokenAuth
+2023-05-15 18:03:26.453 [CO] INFO  [JTS-AuthDispatcherS3-33] - Requesting Sms
+2023-05-15 18:03:26.453 [CO] INFO  [JTS-AuthDispatcherS3-33] - sendXYZMessage: 774
+2023-05-15 18:03:27.563 [CO] INFO  [JTS-AuthDispatcherS3-33] - SPLASH 1283 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:03:27.564 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 774
+2023-05-15 18:03:27.564 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:03:27.564 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 774, protocol version: 47
+2023-05-15 18:03:27.564 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received Result_Sms
+2023-05-15 18:03:27.564 [CO] INFO  [JTS-AuthDispatcherS3-33] - AuthTimeoutMonitor-CCP: pause
+2023-05-15 18:03:27.583 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:03:27.583 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:03:27.586 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:03:27.587 [CO] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-15 18:03:46.623 [CO] INFO  [JTS-AuthDispatcherS3-33] - SPLASH 19060 step 2 AuthDispatcher.processDataItr
+2023-05-15 18:03:46.624 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received NS_TEST_REQUEST
+2023-05-15 18:03:46.624 [CO] INFO  [JTS-AuthDispatcherS3-33] - Sent NS_HEART_BEAT:#%#%0000MISC47;531;20230515-15:03:45;
+2023-05-15 18:04:02.155 [CO] INFO  [AWT-EventQueue-0] - Security code: ***
+2023-05-15 18:04:02.155 [CO] INFO  [AWT-EventQueue-0] - AuthTimeoutMonitor-CCP: resume, idleTime=34591
+2023-05-15 18:04:02.155 [CO] INFO  [AWT-EventQueue-0] - sendXYZMessage: 774
+2023-05-15 18:04:02.156 [CO] INFO  [AWT-EventQueue-0] - SPLASH 15533 step 3 AuthDispatcher.send
+2023-05-15 18:04:02.325 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 774
+2023-05-15 18:04:02.325 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:04:02.325 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 774, protocol version: 47
+2023-05-15 18:04:02.325 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received Result
+2023-05-15 18:04:02.325 [CO] INFO  [JTS-AuthDispatcherS3-33] - Passed token authentication.
+2023-05-15 18:04:02.326 [CO] INFO  [JTS-AuthDispatcherS3-33] - Receiver: 771
+2023-05-15 18:04:02.327 [CO] ERROR [JTS-AuthDispatcherS3-33] - ERROR: Received twslaunch.jauthentication.L with userName NOT PRINTED in it - this is not expected
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - processXYZMessage: 771, protocol version: 47
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received Finish
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - Finished authentication.
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - Authentication completed.
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onAuthenticationCompleted tokenProtocol=4; authenticated=true
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=825065642 new=XYZSessionToken[type=SOFT,token=e3d6eXXXXX..] old=null ctciOld=null
+2023-05-15 18:04:02.327 [CO] INFO  [JTS-AuthDispatcherS3-33] - ccp session token non-CTCI is set as XYZSessionToken[type=SOFT,token=e3d6eXXXXX..] 
+2023-05-15 18:04:02.328 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received NS_CONNECT_RESPONSE
+2023-05-15 18:04:02.328 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received CCP connect features: [TST, ONELOGON].
+2023-05-15 18:04:02.328 [CO] INFO  [JTS-AuthDispatcherS3-33] - Log encryption support is enabled [authType=MARKET_DATA_CONNECTION,logKeyId=aaa,logKey=***,logUploadKey=dlqkjpwuu].
+2023-05-15 18:04:02.329 [CO] INFO  [JTS-AuthDispatcherS3-33] - AuthDispatcher.newCommPort()[userDirname=pgjokcefhnlpnonindbogdjnfiompeneadbplgnk,restart=].
+2023-05-15 18:04:02.329 [CO] INFO  [JTS-AuthDispatcherS3-33] - Daily auto-restart is not enabled.
+2023-05-15 18:04:02.329 [CO] INFO  [JTS-AuthDispatcherS3-33] - Sending NSNewcommPort [publishTokens=0]...
+2023-05-15 18:04:02.500 [CO] INFO  [JTS-AuthDispatcherS3-33] - SPLASH 0344 step 4 AuthDispatcher.processDataItr
+2023-05-15 18:04:02.500 [CO] INFO  [JTS-AuthDispatcherS3-33] - Received NS_FIX_START
+2023-05-15 18:04:02.500 [CO] INFO  [JTS-AuthDispatcherS3-33] - ### onNsFixStart
+2023-05-15 18:04:02.501 [CO] INFO  [JTS-PostAuthenticateS3-40] - Interrupting dispatcher [sessionID=3]...
+2023-05-15 18:04:02.502 [CO] INFO  [JTS-AuthDispatcherS3-33] - Dispatcher thread terminating [sessionID=3,interrupted=true]...
+2023-05-15 18:04:02.502 [CO] INFO  [JTS-PostAuthenticateS3-40] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-15 18:04:02.502 [CO] INFO  [JTS-AuthTimeoutMonitorThread-CCP-34] - Terminating auth timeout monitor thread for CCP
+2023-05-15 18:04:02.502 [CO] INFO  [JTS-PostAuthenticateS3-40] - Authentication complete
+2023-05-15 18:04:02.502 [CO] INFO  [JTS-PostAuthenticateS3-40] - Creating a FixLogonHandlerFactory instance...
+2023-05-15 18:04:02.518 [CO] INFO  [JTS-PostAuthenticateS3-40] - Instance created.
+2023-05-15 18:04:02.523 [CO] INFO  [AWT-EventQueue-0] - initPreUI() - entry
+2023-05-15 18:04:02.524 [CO] INFO  [AWT-EventQueue-0] - jtsLookAndFeel uninitialized
+2023-05-15 18:04:02.525 [CO] INFO  [AWT-EventQueue-0] - JtsLookAndFeel initialized
+2023-05-15 18:04:02.526 [CO] INFO  [AWT-EventQueue-0] - Current LAF: TWS LAF
+2023-05-15 18:04:02.526 [CO] INFO  [AWT-EventQueue-0] - initPreUI() - exit
+2023-05-15 18:04:02.544 [CO] INFO  [JTS-PostAuthenticateS3-40] - JDOMFactory Class =interface org.jdom.JDOMFactory
+2023-05-15 18:04:02.597 [CO] INFO  [JTS-PostAuthenticateS3-40] - hsqldb jdbc =class org.hsqldb.jdbcDriver 2.4
+2023-05-15 18:04:02.622 [CO] INFO  [JTS-PostAuthenticateS3-40] - Changing state for connection from PRELOGON to PRELOGON in B 758699401: SessionSocket:3
+2023-05-15 18:04:02.622 [CO] INFO  [JTS-PostAuthenticateS3-40] - createOrRenameToNewStyleUserDirectory: no action: use existing newDir=F:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk
+2023-05-15 18:04:02.623 [CO] INFO  [JTS-PostAuthenticateS3-40] - performLogSwitch() [force=false]
+2023-05-15 18:04:02.645 [CO] INFO  [JTS-PostAuthenticateS3-40] - Switching to a new encrypted log...

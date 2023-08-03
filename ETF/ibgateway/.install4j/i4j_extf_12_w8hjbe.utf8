@@ -1,0 +1,544 @@
+﻿SetupAppTitle=Seadistus
+SetupWindowTitle=Seadistus - {0}
+UninstallAppTitle=Deinstall
+UninstallAppFullTitle={0} Deinstall
+InformationTitle=Info
+ConfirmTitle=Kinnita
+ErrorTitle=Viga
+SetupLdrStartupMessage=See installib programmi {0}. Kas soovid jätkata?
+LdrCannotCreateTemp=Ei õnnestu luua faili. Seadistus katkestatud
+LdrCannotExecTemp=Ei õnnestu käivitada kaustas asuvat faili. Seadistus katkestatud
+LastErrorMessage={0}.\n\nViga {1}: {2}
+SetupFileMissing=File {0} on installikataloogist puudu. Palun paranda viga või hangi uus programmi koopia.
+SetupFileCorrupt=Seadete fail on rikutud. Palun hangi uus programmi koopia.
+SetupFileCorruptOrWrongVer=TSeadete fail on rikutud või ei ühildu selle seadistuse versiooniga. Palun paranda viga või hangi uus programmi koopia.
+NotOnThisPlatform=See programm ei tööta {0}.
+OnlyOnThisPlatform=See programm peab töötama {0}.
+WinVersionTooLowError=See programm eeldab  {0} versiooni {1} või uuemat.
+WinVersionTooHighError=Seda programmi ei saa salvestada {0} versioonile {1} või uuemale.
+AdminPrivilegesRequired=Selle programmi salvestamiseks peavad sul olema administraatori õigused. 
+PowerUserPrivilegesRequired=Selle programmi installimiseks pead sa olema sisse logitud adminina või kõrgema taseme kasutajaõigustega kasutajana. 
+SetupAppRunningError=Seadistuse käigus tuvastati, et {0} on avatud.\n\nPalun sulge kõik rakendused, seejärel vajuta OK jätkamiseks või Tühista väljumiseks.
+UninstallAppRunningError=Deinstalli käigus tuvastati, et {0} on avatud.\n\nPalun sulge kõik rakendused, seejärel vajuta OK jätkamiseks või Tühista väljumiseks.
+ErrorCreatingDir=Seadistuse käigus ei õnnestu luua kataloogi "{0}"
+ErrorTooManyFilesInDir=Ei õnnestu luua faili kataloogi "{0}" kuna see sisaldab liiga palju faile
+ExitSetupTitle=Välju seadistusest
+ExitSetupMessage=Seadistus ei ole valmis. Kui väljud, siis programmi ei installita.\n\nVõid käivitada Seaditsuse programmi igal ajal uuesti installi lõpetamiseks.\n\nVälju seadistuses?
+AboutSetupMenuItem=Seadistusest ...
+AboutSetupTitle=Seadistusest
+AboutSetupMessage={0} versioon {1}\n{2}\n\n{0} koduleht:\n{3}
+ButtonBack=Tagasi
+ButtonNext=Edasi
+ButtonInstall=Installi
+ButtonOK=OK
+ButtonCancel=Tühista
+ButtonYes=Jah
+ButtonYesToAll=Jah kõigile
+ButtonNo=Ei
+ButtonNoToAll=Ei kõigile
+ButtonFinish=Lõpeta
+ButtonBrowse=Sirvi ...
+ClickNext=Jätkamiseks vajuta Edasi, katkestamiseks vajuta Tühista.
+WelcomeLabel1=Tere tulemast {0} seadistuse haldurisse.
+WelcomeLabel2=See installib programmi {0} sinu arvutisse.\n\nEnne jätkamist on soovitav sulgeda kõik teised rakendused.
+WizardPassword=Salasõna
+PasswordLabel1=See install on salasõnaga kaitstud.
+PasswordLabel3=Palun paku välja salasõna, seejärel  vajuta Edasi. Salasõna on tõstutundlik.
+PasswordEditLabel=Salasõna:
+IncorrectPassword=Sisestatud salasõna on vale. Palun proovi uuesti.
+WizardLicense=Litsentsileping
+LicenseLabel=Enne jätkamist loe järgnevat olulist informatsiooni.
+LicenseLabel3=Palun loe järgnevad litsentsilepingut. Installi jätkamiseks pead selle lepingu tingimused aktsepteerima.
+LicenseAccepted=Nõustun lepingu tingimustega
+LicenseNotAccepted=Ei nõustu lepingu tingimustega
+WizardInfoBefore=Info
+InfoBeforeLabel=Enne jätkamist loe järgnevat olulist informatsiooni.
+InfoBeforeClickLabel=Kui oled seadistuse jätkamiseks valmis, siis vajuta Edasi.
+WizardInfoAfter=Info
+InfoAfterLabel=Enne jätkamist loe järgnevat olulist informatsiooni.
+InfoAfterClickLabel=Kui oled seadistuse jätkamiseks valmis, siis vajuta Edasi.
+WizardUserInfo=Kasutaja andmed
+UserInfoDesc=Palun sisesta oma andmed.
+UserInfoName=Kasutajanimi:
+UserInfoOrg=Organisatsioon:
+UserInfoSerial=Seerianumber:
+UserInfoNameRequired=Pead sisestama nime.
+WizardSelectDir=Vali kataloog
+SelectDirDesc=Kuhu programm {0} installitakse?
+SelectDirLabel=Vali kataloog kuhu programm {0} installitakse ja vajuta Edasi.
+DiskSpaceMBLabel=programm eeldab vähemalt {0} MB vaba ruumi.
+ToUNCPathname=Seadistus ei saa installida UNC nime alla. If you are trying to install to a network, you will need to map a network drive.
+InvalidPath=You must enter a full path with drive letter; for example:\n\nC:\APP\n\nor a UNC path in the form:\n\n\\server\share
+InvalidDrive=The drive or UNC share you selected does not exist or is not accessible. Please select another.
+DiskSpaceWarningTitle=Pole piisavalt vaba ruumi
+DiskSpaceWarning=Seadistus eeldab vähemalt {0} KB ovaba ruumi, valitud kettal on ainult {1} KB vaba.\n\nSoovid jätkata?
+BadDirName32=Kataloogi nimi ei  või sisaldada järgmisi sümboleid:\n\n{0}
+DirExistsTitle=Kataloog eksisteerib
+DirExists=Kataloog:\n\n{0}\n\non juba olemas. Soovid sinna kataloogi salvestada?
+DirDoesntExistTitle=Kataloogi ei ole
+DirDoesntExist=Kataloogi:\n\n{0}\n\nei ole loodud. Soovid kataloogi luua?
+WizardSelectComponents=Vali komponendid
+SelectComponentsDesc=Millised komponendid tuleb installida?
+SelectComponentsLabel2=Vali komponendid, mida soovid installida; eemalda komponendid, mida ei soovi installida. Vajuta Edasi kui oled valmis jätkama.
+FullInstallation=Täisinstall
+CompactInstallation=Kompaktne install
+CustomInstallation=Tavainstall
+NoUninstallWarningTitle=Komponent on olemas
+NoUninstallWarning=Seadistuse käigus tuvastati, et vastav komponent on arvutisse installitud: \n\n{0}\n\nEemaldades need komponendid, jäävad need siiski arvutisse alles.\n\nKas soovid jätkata?
+ComponentSize1={0} KB
+ComponentSize2={0} MB
+ComponentSize3={0} GB
+ComponentsDiskSpaceMBLabel=Praegune valik eeldab {0} MB vaba ruumi.
+WizardSelectTasks=Vali lisavõimalused 
+SelectTasksDesc=Milliseid lisavõimalusi tuleks kasutada? 
+SelectTasksLabel2=Vali lisavõimalused, mida soovid seadistuse käigus installida {0}, seejärel vali Edasi.
+CreateDesktopIcon=Loo töölauale ikoon 
+WizardSelectProgramGroup=Vali Start menüü kataloog 
+SelectStartMenuFolderDesc=Kuhu tuleks paigutada programmi kiirvalikud?
+SelectStartMenuFolderLabel=Vali Start menüü kataloog kuhu soovid paigutada programmi kiirvalikud, seejärel vali Edasi.
+NoIconsCheck=Ära tekita ikoone.
+MustEnterGroupName=Pead sisestama kataloogi nime.
+BadGroupName=Kataloogi nimi ei tohi sisaldada järgmisi parameetreid:\n\n{0}
+NoProgramGroupCheck2=Ära tekita Start menüü kataloogi
+WizardReady=Valmis installima
+ReadyLabel1=Seadistus on valmis installeerima programmi {0} osinu arvutisse.
+ReadyLabel2a=Vajuta Installi jätkamaks installiga või Tagasi kui soovid seadeid üle vaadata või muuta.
+ReadyLabel2b=Vajuta Installi jätkamaks installiga.
+ReadyMemoUserInfo=Kasutaja andmed:
+ReadyMemoDir=Kataloog:
+ReadyMemoType=Seadistuse tüüp:
+ReadyMemoComponents=Valitud komponendid:
+ReadyMemoGroup=Peamenüü kataloog:
+ReadyMemoTasks=Lisavõimalused:
+WizardPreparing=Valmistun installiks
+PreparingDesc=Seadistus valmistub installima programmi {0} sinu arvutisse.
+PreviousInstallNotCompleted=Install/eemdalamine ei ole lõpule viidud. Installi lõpule viimiseks pead oma arvutile tegema restardi.\n\nPeale arvuti restarti käivita Seadistus uuesti lõpetamaks {0} installi.
+CannotContinue=Ei saa jätkata. Väljumiseks vajuta Välju.
+WizardInstalling=Installin
+InstallingLabel=Palun oota kuni Seadistus installib {0} sinu arvutisse.
+FinishedHeadingLabel=Lõpetan {0} Seadistuse haldurit
+FinishedLabelNoIcons=Installitud programm {0} sinu arvutisse.
+FinishedLabel=SInstallitud programm {0} sinu arvutisse. Rakenduse saad käivitada installitud ikoonile vajutades. 
+ClickFinish=Seadistusest väljumiseks vajuta Lõpeta. 
+FinishedRestartLabel=Lõpetamaks programmi {0} installi tuleb teha arvutile restart. Kas  soovid arvutile teha restarti?
+FinishedRestartMessage=Lõpetamaks programmi {0}installi tuleb teha arvutile restart.\n\nKas  soovid arvutile teha restarti?
+ShowReadmeCheck=Jah, soovin lugeda README faili
+YesRadio=Jah, soovin arvutile teha restarti
+NoRadio=Ei, teen arvutile restarti hiljem
+RunEntryExec=Käivita {0}
+RunEntryShellExec=Vaata {0}
+ChangeDiskTitle=Seadistus vajab järgmist ketast
+SelectDirectory=Vali kataloog
+SelectDiskLabel2=Palun sisesta ketas {0} ja vajuta OK.\n\nIf the files on this disk can be found in a folder other than the one displayed below, enter the correct path or click Browse.
+PathLabel=Path:
+FileNotInDir2=Faili "{0}" ei leitud "{1}". Palun sisesta õige ketas või vali teine kataloog.
+SelectDirectoryLabel=Palun täpsusta teise ketta asukoht.
+SetupAborted=Installi ei viidud lõpuni.\n\nPalun paranda viga ja käivita install uuesti.
+EntryAbortRetryIgnore=Uuesti proovimiseks vajuta nupule Korda, jätkamiseks nupule Ignoreeri või installi katkestamiseks nupule Katkesta.
+StatusCreateDirs=Loon katalooge...
+StatusExtractFiles=Pakun faile ...
+StatusCreateIcons=Loon programmi ikoone ...
+StatusCreateIniEntries=Loon INI kandeid ...
+StatusCreateRegistryEntries=Loon registri kandeid ...
+StatusRegisterFiles=Registreerin faile ...
+StatusSavingUninstall=Salvestan deinstalli infot ...
+StatusRunProgram=Lõpetan installi ...
+StatusRollback=Taastan seadeid ...
+ErrorInternal2=Sisemine viga: {0}
+ErrorFunctionFailedNoCode={0} ebaõnnestus
+ErrorFunctionFailed={0} ebaõnnestus; kood {1}
+ErrorFunctionFailedWithMessage={0} ebaõnnestus; kood {1}.\n{2}
+ErrorExecutingProgram=Ei õnnestu käivitada faili:\n{0}
+ErrorRegOpenKey=Viga registri võtme avamisel:\n{0}\{1}
+ErrorRegCreateKey=Viga registri võtme loomisel:\n{0}\{1}
+ErrorRegWriteKey=Viga registri võtmesse kirjutamisel:\n{0}\{1}
+ErrorIniEntry=Viga INI kande tegemisel faili "{0}".
+FileAbortRetryIgnore=Uuesti proovimiseks vajuta Korda nupule, faili vahelejätmiseks nupule Jäta vahele (mittesoovitav),installi katkestamiseks nupule Katkesta.
+FileAbortRetryIgnore2=Uuesti proovimiseks vajuta Korda nupule, jätkamiseks nupule Ignoreeri (mittesoovitav), installi katkestamiseks nupule Katkesta.
+SourceIsCorrupted=Lähtefail on vigane
+SourceDoesntExist=Lähtefaili "{0}" ei eksisteeri
+ExistingFileReadOnly=The existing file is marked as read-only.\n\nClick Retry to remove the read-only attribute and try again, Ignore to skip this file, or Abort to cancel installation.
+ErrorReadingExistingDest=Faili lugemisel tekkis viga:
+FileExists=Fail on juba loodud.\n\nSoovid selle üle kirjutada?
+ExistingFileNewer=Olemasolev fail on uuem kui installitav fail. Soovitav on säilitada olemasolev fail.\n\nKas soovid olemsaolevat faili säilitada?
+ErrorChangingAttr=Olemasoleva faili atribuutide muutmisel tekkis viga: 
+ErrorCreatingTemp=Faili loomidel kataloogi tekkis viga:
+ErrorReadingSource=Lähtefaili lugemisel tekkis viga:
+ErrorCopying=Faili kopeerimisel tekkis viga: 
+ErrorReplacingExistingFile=Olemasoleva faili asendamisel tekkis viga:
+ErrorRestartReplace=Restart ebaõnnestus:
+ErrorRenamingTemp=Faili ümbernimetamisel tekkis viga: 
+ErrorRegisterServer=Ei õnnestu registreerida DLL/OCX: {0}
+ErrorRegisterServerMissingExport=Dllregistriserverit ei leitud
+ErrorRegisterTypeLib=Unable to register the type library: {0}
+ErrorOpeningReadme=README faili avamisel tekkis viga.
+ErrorRestartingComputer=Restardi tegemine ei õnnestunud.Palun restari arvuti ise.
+UninstallNotFound=Faili "{0}" ei eksisteeri. Deinstall ei õnnestu.
+UninstallUnsupportedVer=Uninstalli logifail "{0}" ei ole sellele versioonile äratuntav. Deinstall ei õnnestu 
+UninstallUnknownEntry=Tundmatu viga ({0}) tekkis deinstalli logisse
+ConfirmUninstall=Oled kindel, et soovid täielikult eemdaldada {0} ja kõiki selle komponente?
+OnlyAdminCanUninstall=Programmi saab deinstallida ainult admini privileegidega kasutaja.
+UninstallStatusLabel=Palun oota kuni {0} on arvutist eemaldatud.
+UninstalledAll={0} on arvutist edukalt eemaldatud.
+UninstalledMost={0} deinstall lõpetatud.\n\nMõnda elementi ei õnnestunud eemaldada. Need saab eemaldada käsitsi.
+UninstalledAndNeedsRestart=Lõpetamaks {0} deinstallimist pead arvutile restarti tegema.\n\nSoovid arvutile teha restarti?
+UninstallDataCorrupted="{0}" fail on vigane. Deinstall ei õnnestu
+ConfirmDeleteSharedFileTitle=eemalda jagatud fail?
+ConfirmDeleteSharedFile2=Süsteemi indikaatorite järgi ei ole jagatud fail ühegi programmi poolt enam kasutuses. Kas soovid selle jagatud faili deinstallida? \n\nKui mõni programm seda faili siiski kasutab ning see eemaldatakse, siis see programm ei pruugi korrektselt funktsioneerida. Kui sa ei ole kindel, siis vali Ei. Faili säilitamine ei tekita mingeid probleeme.
+SharedFileNameLabel=Faili nimi:
+SharedFileLocationLabel=Asukoht:
+WizardUninstalling=Deinstalli staatus
+StatusUninstalling=Deinstallin {0} ...
+MustEnterDirectory=Pead sisestama kataloogi.
+InvalidDirectory=Kataloog:\n\n{0}\n\non vigane.
+CreateQuickLaunchIcon=Loo kiirkäivituse ikoon
+CreateIconsGroup=Lisaikoonid:
+PrepareCancel=Valmistun katkestama ...
+
+Downloading=Laen alla ...
+# {0} on faili nimi
+DownloadingWithFileName=Laen alla {0} ...
+# {0} on deinstallitud rakendus
+UninstallerMenuEntry={0} Deinstaller
+# {0} on faili nimi
+AskRetryInstallFile={0}\nEi õnnestu faili luua. Proovin uuesti?
+WindowsServicesTitle=Windows teenused
+WindowsServicesSubtitle=Palun vali detailid kuidas teenused tuleb installida.
+# {0} on Windows teenuste nimi
+WindowsServiceInstallCheckbox=Installi teenus "{0}"
+WindowsServiceStartOnBootupCheckbox=Start on bootup
+UnixDaemonsTitle=Daemons
+# {0} on rakenduse nimi
+UnixDaemonsSubTitle=Please note the daemons that are provided by {0}.
+# {0} on Unix daemon nimi
+UnixDaemonStartStopScriptLabel=Start/stop script for daemon "{0}":
+MacosStartupItemsTitle=Käivitamise kirjed
+MacosStartupItemsSubTitle=Palun vali detailid kuidas käivitamise kirjed tuleb installida.
+# {0} on the Mac OS X käivitamise kirje nimi
+MacosStartupItemInstallCheckbox=Installi käivitamise kirje "{0}"
+# {0} on teenuse nimi
+ErrorInstallService=Ei õnnestunud installida teenust "{0}"
+# {0} on teenuse nimi
+ErrorUninstallService=Ei õnnestunud deinstallida teenust "{0}"
+ErrorInstallIcons=Ei õnnestunud installida ikoone. 
+# {0} on versiooni number, {1} rakenduse nimi
+AppleJavaMinVersionError=Installiks vajad vähemalt {0} Java virtuaalmasinat  {1}.\nPalun lae alla http://java.com
+# {0} on faili nimi
+AskContinue=Faili ei õnnestunud installida \n{0}\nKas soovid installiga jätkata?
+UninstallFailureTitle=Deinstalleri tulemused
+# {0} on rakenduse nimi
+UninstallFailureSubTitle=Ei õnnestunud kõiki {0} faile deinstallida.
+UninstallFailureLabel=Järgmisi faile ja katalooge ei õnnestunud kustutada:
+# {0} on rakenduse nimi
+DownloadingJre={0} laeb alla Java(TM) Runtime Environment. Palun oota.
+ErrorWininet=Ei õnnestunud tuvastada wininet.dll. Palun installi \nInternet Explorer 3.0 või uuem.
+DownloadJreError=Viga Java(TM) Runtime Environment allalaadimisel.\nPalun kontrolli oma internetiühendust ja käivita seadistus hiljem.
+ChooseJavaExe=Palun vali fail "java.exe" JRE alt
+# {0} on rakenduse nimi
+PrepareInstaller={0} Käivitab install4j abi, mis juhendab sind kogu seadistuse protsessi jooksul.
+InitConnection=Määran ühendust ...
+# {0} on senine allalaetud kogus, {1} faili kogusuurus, {3} on allalaadimise kiirus, mõõdetuna kb/s
+DownloadProgress={0} MB of {1} MB ({2}%) kiirusega {3} kb/s
+ButtonDownload=Lae alla
+ButtonLocate=Lokeeri
+WizardCaption=install4j abi
+JvmStartError=Ei õnnestunud käivitada Java(TM) VM. Palun tee restart. \nVõid kasutada parameetrit "/manual"\nallalaadmiseks või vali käsitsi teine VM.
+NoDirNameWithSpace=Kataloogi nimi ei tohi sisaldada tühimikke.
+ConfirmReboot=Installi lõpuleviimiseks pead süsteemi taaskäivitama. Soovid Windos süsteemi taaskäivitada?
+ProgramGroupAllUsers=Loo otseteed kõikidele kasutajatele
+# {0} on rakenduse nimi
+FinishedLabelUnix=Sinu arvutis on  {0} installimine lõpetatud. Rakenduse saad käivitada käivitades installi startkirjed.
+WizardSelectLinkDir=Vali kataloog Symlinks jaoks
+SelectLinkDirDesc=Kuhu peaks  {0} looma symlinks käivitamiseks?
+NoSymlinksCheck=Ära loo symlinks
+SelectLinkDirLabel=Vali kaust kuhu soovid {0} loomaks symlinks, seejärel vali Edasi.
+LastRunFailed=Viimasel käivitamisel ei avanenud installer korrektselt.\nSee on tõenäoliselt põhjustatud vigasest Java VM programmist.\nKas soovid alla laadida või käsitsi valida JVM?
+WizardSelectAssociations=Vali faili seosed. 
+SelectAssociationsDesc=Millised faili seosed tuleb luua?
+SelectAssociationsLabel=Vali faili seosed, mida soovid luua; kustuta faili seosed, mida ei soovi luua. Kui oled valmis jätkama vajuta Edasi.
+LocateBrowserExecutable=Määra käivitatava faili asukoht oma interneti brauseris.
+ErrorStartingBrowser=Brauseri avamisel tekkis viga. 
+NoWritePermissions=Sul ei ole kataloogis kirjutamise õigusi. Vali teine kataloog.
+LocateOrDownloadJre2=Programm install4j abi ei leidnud Java(TM) Runtime Environment programmi. Määra asukoht või lae alla JRE. (minimaalne versioon: {0}, maksimaalne versioon: {1})
+LocateJre2=Programm install4j abi ei leidnud Java(TM) Runtime Environment programmi. Määra sobiliku JRE asukoht. (minimaalne versioon: {0}, maksimaalne versioon: {1})
+EnterPassword=Palun sisesta salasõna:
+AdminGroupRequired=Pead olema admin grupi liige
+EnterPasswordTitle=Sisesta salasõna
+WrongPassword=Sisestatud salasõna ei ole korrektne. Proovi uuesti.
+FileCorrupted=Installifail on vigane. Proovi uuesti alla laadida.
+StatusStoppingServices=Peatan teenused
+StatusUninstallingPrevious=Deinstallin praeguse versiooni
+DifferentApplication=See kataloog sisaldab erinevat rakendust. Palun vali teine kataloog.
+NoTargetApplication=See on add on installer. Kataloog mille oled valinud \nei sisalda vajalikku rakendust.\nPalun vali teine kataloog.
+DifferentApplication2=Installikataloog sisaldab erinevat rakendust.\nInstall ei ole võimalik. .
+NoTargetApplication2=Selle add-on-installeri jaoks vajalikku rakendust ei ole võimalik süsteemist leida.\nInstall ei ole võimlaik.
+InternetConnection=Internetiühendus
+DirectConnection=Mul on otseühendusega internet
+ProxyConnection=Ma kasutan proxy ühendust
+ProxyAuthentication=Proxy autentimine nõutav
+ProxyHost=Proxy host
+ProxyPort=Proxy port
+UserName=Kasutajanimi
+Password=Parool
+PortValueError=ainult numbrid vahemikus 1 kuni 65536 on lubatud.
+DownloadError=Ei õnnestunud ühenduda allalaadimise serveriga.
+ConnectionParametersRequest=Palun sisesta oma interneti ühenduse parameetrid:
+ProxySettings=Proxy seadeds
+EnterInformation=Palun sisesta kogu nõutav info.
+ComponentHideDescription=Peida kirjeldus
+ComponentShowDescription=Näita kirjeldust
+ComponentDownloadedFromInternet=Komponenti laetakse internetist
+ComponentIncludedInInstaller=Komponent on lisatud installerisse
+exe4j.MessageBoxTitle=Viga
+exe4j.NoJvmFound=JVM could be found on your system.\nPlease define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE or download a JRE from www.java.com.
+exe4j.JvmInPath=The JVM found in your path is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE.
+# {0} on keskkonnamuutuja nimi
+exe4j.JvmEnvVar=The {0} environment variable does not\npoint to a working JDK or JRE.
+# {0} on kataloogi nimi
+exe4j.JvmDefinedPath=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE.
+exe4j.JvmStart=JVM ei õnnetsunud käivitada. Maksimaalne heap suurus (-Xmx) võib olla ületatud või antiviiruse või tulemüüri programm võib selle käivitamist takistada.
+# do not translate "heap" and "-Xmx"
+exe4j.JvmStart2=JVM ei õnnetsunud käivitada. Maksimaalne heap suurus (-Xmx) võib olla ületatud või antiviiruse või tulemüüri programm võib selle käivitamist takistada.
+# {0} on faili nimi
+exe4j.FileNotFound=Faili või kataloogi {0} ei leitud või on tühi\n
+exe4j.WrongParameters=Vigane parameetri kasutamine
+# {0} on keskkonnamuutuja nimi
+exe4j.EnvVarNotDefined=Keskkonnamuutuja {0} peab olema defineeritud
+# {0} on sisemine veakood
+exe4j.InternalError=Tekkis sisemine viga (veakood: {0})
+exe4j.MainClassNotFound=Ei õnnestunud laadida peamist klassi.
+exe4j.MainMethodNotFound=Ei leidnud peamist meetodit.
+exe4j.ErrorDialogCaption=Viga
+exe4j.ErrorDialogOk=Ok
+# {0} on rakenduse nimi
+exe4j.ErrorDialogText=Tekkis viga {0} käivitamisel:
+WizardInstallationType=Vali installi tüüp
+SelectInstallationType=Millist installi tüüpi peaks kasutama?
+SelectInstallationTypeLabel=Vali installi tüüp mida soovid kasutada. Jätkamiseks vajuta Edasi.
+StandardInstallation=Standard install
+StandardInstallationDescription=Tavakasutuse kõik komponendid on installitud. Kettaruumi kokkuhoidmiseks jäid mõned harva kasutatavad komponendid installimata.
+FullInstallationDescription=Kõik installeris sisalduvad komponendid on installitud.
+CustomInstallationDescription=Järgmise sammuna võite kohandada intsalleeritavaid komponente. Vaikimisi valiku on standardinstall. 
+SelectAll=Vali kõik
+SelectNone=Ära vali midagi
+# See the NoProgramGroupCheck2 message, this is just the positive version of the question with a question mark
+ConsoleProgramGroupCheck=Loon Start menüü kausta?
+# See the NoSymlinksCheck message, this is just the positive version of the question with a question mark
+ConsoleSymlinksCheck=Create symlinks?
+# {0} on rakenduse nimi
+updater.WindowTitle=Uuendaja - {0}
+# {0} on rakenduse nimi
+updater.WelcomeTitle=Teretulemast {0} uuendajasse
+updater.WelcomeInfoText=See kontrollib kas mõni uuendus on saadaval {0}.
+updater.CheckForUpdateTitle=Kontrollin uuendusi
+updater.CheckForUpdateSubtitle=Palun ootas kuni Uuendaja kontrollib uuenduste olemasolu
+updater.CheckForUpdateLabel=Kontrollin uuendusi...
+# {0} on URL
+updater.CheckForUpdateError=Uuendusi ei õnnestunud alla laadida \n\n{0}\n\nPalun kontrolli võrguühendust.
+updater.UpToDateTitle=Kõik on uuendatud
+# {0} on rakenduse nimi
+updater.UpToDateInfoText=Kasutad viimast {0} versiooni
+updater.NewVersionAvailableTitle=Uus versioon saadaval
+updater.NewVersionAvailableSubtitle=Uus {0} versioon saadaval, vaata detaile.
+updater.CurrentVersionLabel=Praegune versioon:
+updater.NewVersionLabel=Uus versioon:
+updater.ShowComments=Näita kommentaare
+updater.DownloadLocationLabel=Järgmise sammuna laetakse alla installer. Enne installeri avamist antakse sellest märku. Kui sa ei soovi installerit alla laadida, siis vajuta Tühista.
+updater.DownloadToLabel=Lae alla:
+updater.DownloadSizeLabel=Faili suurus:
+
+updater.CommentsTitle=Kommentaarid
+updater.CommentsSubTitle=Palun loe uuendusega seotud kommentaare.
+updater.CommentsLabel=Kommentaarid
+updater.DownloadTitle=Laen alla installerit
+updater.DownloadSubTitle=Palun oota, uuenduste installerit laetakse alla
+# {0} on URL
+updater.DownloadError=Tekkis viga allalaadmisel \n\n{0}\n\nPalun kontrolli võrguühendust.
+
+updater.FinishTitle=Allalaadimine lõpetatud
+updater.FinishInfoText=Sinu arvutisse on {0} uuendus alla laetud.
+updater.LaunchError=Uuenduste installerit ei õnnestu avada.
+updater.LaunchUpdaterQuestion=Kas soovid uuenduste installerit käivitada?
+updater.LaunchUpdaterLabel=Jah, käivita uuenduste installer
+updater.DoNotLaunchUpdaterLabel=Ei, käivitan uuenduste installer hiljem
+updater.OpenContainingFolderLabel=Avan kausta
+
+WaitLabel=Palun oota ...
+
+# {0} on rakenduse nimi
+ConsoleWelcomeLabel=See installib {0} sinu arvutisse.
+# {0} on rakenduse nimi
+SelectTasksUninstallLabel=Vali lisavõimalused, mida soovid {0} deinstallimisel kasutada, seejärel vajuta Edasi.
+RollbackWindowTitle=Tagasimuudetavad muudatused
+ExitUninstallerMessage=Deinstall ei ole lõpetatud. Kui sa praegu katkestad, siis programmi ei deinstallita.\n\nVõid käivitada deinstallimise programmi hiljem.\n\nVälju deinstallerist?
+ExitApplication=Kas soovid väljuda?
+exe4j.PowerUserRequired=Pead omama kõrgema taseme ligipääse, et programmi käivitada.
+
+# "root" is the Unix super-user, do not translate
+RootPrivilegesRequired=You must be logged in as root when installing this program.
+
+# "root" is the Unix super-user, do not translate
+RootPrivilegesRequired2=This operation requires root privileges.
+
+UseSudo=use sudo (please enter your own password)
+# "root" is the Unix super-user, do not translate
+UseSu=use su (please enter the root password)
+
+
+languages.zh_CN=Hiina (lihtsustatud)
+languages.zh_TW=Hiina (traditsionaalne)
+languages.hr=Horvaatia
+languages.cs=Tsehhi
+languages.hr=Taani
+languages.nl=Hollandi
+languages.en=Inglise
+languages.fi=Soome
+languages.fr=Prantsuse
+languages.de=Saksa
+languages.el=Kreeka
+languages.hu=Ungari
+languages.it=Itaalia
+languages.ja=Jaapani
+languages.ko=Korea
+languages.no=Norra
+languages.pl=Poola
+languages.pt=Portugali
+languages.pt_BR=Portugali (Brasiilia)
+languages.ru=Vene
+languages.es=Hispaania
+languages.sv=Rootsi
+languages.tr=Türgi
+languages.ro=Rumeenia
+
+LanguageSelectionDialogTitle=Keele valik
+LanguageSelectionLabel=Vali keel:
+ConsoleMultipleSelectionLabel=Palun sisesta valitud väärtuste komaga eraldatud nimekiri või vajuta [Enter] nupule vaikimisi valikuteks:
+# See on "Enter" nupp klaviatuuril
+ConsoleEnter=Enter
+
+RequiredDiskSpaceLabel=Nõutav ketta maht:
+FreeDiskSpaceLabel=Vaba ketta maht:
+
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+exe4j.NoJvmFound3264=No JVM could be found on your system.\nPlease define EXE4J_JAVA_HOME\nto point to an installed {0}-bit JDK or JRE or download a JRE from www.java.com.
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+exe4j.JvmInPath3264=The JVM found in your path is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed {0}-bit JDK or JRE.
+# {0} is the name of an environment variable, don't translate 32-bit
+exe4j.JvmEnvVar32=The {0} environment variable does not\npoint to a working 32-bit JDK or JRE.
+# {0} is the name of an environment variable, don't translate 64-bit
+exe4j.JvmEnvVar64=The {0} environment variable does not\npoint to a working 64-bit JDK or JRE.
+# {0} is a directory name, don't translate 32-bit
+exe4j.JvmDefinedPath32=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed 32-bit JDK or JRE.
+# {0} is a directory name, don't translate 64-bit
+exe4j.JvmDefinedPath64=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed 64-bit JDK or JRE.
+
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+LocateOrDownloadJre3=The install4j wizard could not find a Java(TM) Runtime Environment on your system. You can locate or download a suitable {0}-bit JRE.
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+LocateJre3=The install4j wizard could not find a Java(TM) Runtime Environment on your system. Please locate a suitable {0}-bit JRE.
+
+MinimumVersion=miinimum versioon:
+MaximumVersion=maksimum versioon:
+
+ReadLicenseFirst=Palun loe esmalt kogu litsents.
+
+UnattendedRunningFailure=Rakendus töötab. Palun sulge kõik alamprogrammid ja käivita installer uuesti.
+# don't translate -DproxyAuthPassword=[password]
+ProxyPasswordRequired=Proxy password required. Please set the parameter -DproxyAuthPassword=[password].
+EnterCredentialsTitle=Enter Credentials
+# {0} on URL
+EnterCredentialsLabel=Please enter your credentials for the download site {0}
+# don't translate -DserverAuthUser=[user] / -DproxyAuthPassword=[password]
+ServerPasswordRequired=Server password required. Please set the parameters -DserverAuthUser=[user] and -DserverAuthPassword=[password].
+
+CheckForUpdatesLabel=Kontrolli uuendusi:
+updateSchedule.start=Igal käivitamisel
+updateSchedule.daily=Igapäevaselt
+updateSchedule.weekly=Iganädalaselt
+updateSchedule.monthly=Igakuiselt
+updateSchedule.start=Mitte kunagi
+
+DirectoryChooserLabel=Sisesta uue kausta nimi:
+DirectoryChooserTitle=Loo uus kaust
+DirectoryChooserTooltip=Uus kasut
+
+#Same as ConsoleProgramGroupCheck, only not phrased as a question
+ProgramGroupCheck=Loo Start menüü kaust
+#Same as ConsoleSymlinksCheck, only not phrased as a question
+SymlinksCheck=Loo symlinks
+ButtonIgnore=Ignoreeri
+ButtonRetry=Korda
+ButtonQuit=Välju
+ButtonCreateUser=Loo kasutaja
+UserNameLabel=Kasutajanimi:
+PasswordLabel=Parool:
+DescriptionLabel=Kirjeldus:
+LocalGroupNameLabel=Kohalik grupp:
+CreateUserHeader=Loo uus kohalik kasutaja järgmiste omadustega:
+CreateUserError=Kasutaja loomisel tekkis viga.
+CreateUserErrorAccessDenied=Ligipääs piiratud.
+CreateUserErrorGroupExists=Valitud grupp on juba kasutusel.
+CreateUserErrorGroupNotFound=Valitud gruppi ei leitud.
+CreateUserErrorPasswordRequirements=Parooli nõuded ei olnud täidetud.
+CreateUserErrorUserExists=Kasutaja on juba olemas.
+CreateUserSuccess=Kasutaja edukalt loodud.
+# Similar to SetupAppRunningError
+SetupAppRunningErrorAddOn=Süsteem tuvastas, et rakendus on juba töös.\n\nPalun sulge kõik alamprogrammid, jätkamiseks vajuta OK, väljumiseks  Tühista.
+# Reageeriv fail sisaldab eelenva kasutaja sisendit
+HelpResponseFile=Kasuta reageerivat faili
+# "Console" on käsureaga aken, nagu DOS kast
+HelpConsoleMode=Käivita console vaade
+# "Unattended" tähendab vaikselt, ilma kasutaja sisendita
+HelpUnattendedMode=Käivita unattended vaade
+HelpUnattendedDir=Unattended vaates, määra installi kataloogis
+HelpUnattendedOverwrite=Unattended mode, kirjuta kõik failid üle
+HelpUnattendedSplash=Unattended vaates, näita progressi akent
+HelpUnattendedConsole=Unattended vaates, ava konsool mis näitab väljundit
+# "GUI" tähendab graphic user interface
+HelpGuiMode=Käivita GUI vaates
+HelpManual=Vali käsitsi Java runtime environment
+HelpSystemProperties=Määra süsteemi parameetrid
+HelpHelp=Näita abi
+HelpHeaderLabel=Järgmised käsurea valikud on saadaval:
+# {0} on numbrite nimekiri, kogu sõnum peab olema sulgudes
+ConsoleComponentHelpLabel=(Komponendi kirjelduse näitamiseks, sisesta üks {0})
+PreviousInstallationLabel=Varasem install on leitud. Kas soovid installi uuendada?
+RadioUpdateInstallation=Jah, uuenda olemasolev install
+RadioNewInstallation=Ei, installi teise kataloogi
+WelcomeLabel3=See installib {0} sinu arvutisse. Sind juhatatakse samm sammult läbi installi protsessi.
+# {0} on kataloog
+NoWritePermissions2=Sul ei ole kataloogi kirjutamise õigust\n\n{0}\n\nPalun vali teine kataloog.
+# Translate "directory", but not "-dir"
+DestinationDirHelp=You can set the destination directory by passing -dir [directory].
+UnattendedInstallationDir=Installitav kataloog on seatud  {0}.
+ProgramGroupExists=Valitud programmigrupp on juba loodud. Soovid seda ikkagi kasutada?
+ButtonExit=Välju
+ButtonContinue=Jätka
+UninstallerFinish=Lõpetan deinstalli ...
+ProcessElevationTitle=Alustan protsessi suuremate õigustega
+TextfieldEmptyWarning=See tekstiväli ei tohi olla tühi.
+# {0} ja {1} on rakenduste nimed, "Retry" peab olema nagu ButtonRetry, "Cancel" 
+AppRunningError={0} tuvastas et {1} on jätkuvalt töös.\n\nPalun sulge see protsess, seejärel vajuta jätkamiseks Korda Retry või väljumiseks Tühista.
+AppRunningErrorAddOn={0} tuvastaset rakendus on jätkuvalt töös.\n\nPalun sulge see protsess, seejärel vajuta jätkamiseks Korda Retry või väljumiseks Tühista.
+ButtonCloseProcesses=Sulge protsess
+ButtonTerminateProcesses=Peata protsess
+RunningProcessesDetected=Töös protsess tuvastatud
+DownloadFileCorrupt=Allalaetud fail on vigane. Soovid uuesti proovida? 
+DownloadInterrupted=Allalaadimist segati. Soovid uuesti proovida? 
+DownloadContentError=Ei õnnestunud sisufaile alla laadida. Soovid uuesti proovida? ?
+# Do not translate "dock", it is a UI element on Mac OS X
+AddToDock=Lisa dokile
+UploadingWithFileName=Laen üles {0} ...
+Uploading=Laen üles ...
+UploadInterrupted=Üleslaadimist segati. Kas soovid uuesti proovida?
+InstallerName={0} Installer
+PasswordsDoNotMatch=Parool ei sobi.
+# Like PasswordLabel above only for a repetition, with colon at the end
+RepeatPasswordLabel=korda parooli:
+UninstallerPreparing=Valmistun deinstalliks 
+# Same as AdminPrivilegesRequired, only use "execute" instead of "install"
+AdminPrivilegesRequiredExecute=Sul peavad olema admini õigused programmi käivitamiseks
+# Same as RootPrivilegesRequired, only use "execute" instead of "install"
+RootPrivilegesRequiredExecute=Pead sisse logime root kasutajana programmi käivitamiseks.
+# Same as StatusRunProgram, only use "execute" instead of "install"
+StatusRunProgramExecute=Lõpetan käivitamist ...

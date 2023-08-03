@@ -1,0 +1,491 @@
+2023-05-13 11:36:22.010 [VU] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2023-05-13 11:36:22.018 [VU] INFO  [JTS-Main] - installer version: 4.6.8, installer type: standalone, install dir: 'F:\IBKR\ibgateway\', Jts dir: 'F:\IBKR\ibgateway', VM options file: 'F:\IBKR\ibgateway\ibgateway.vmoptions'
+2023-05-13 11:36:22.030 [VU] INFO  [JTS-Main] - Verifying environment [entryPoint=IBGATEWAY_STANDALONE]...
+2023-05-13 11:36:22.050 [VU] INFO  [JTS-Main] - Install4jAutoUpdateService initialized [props=LauncherProperties[updateDownloadUrl=null,skipUpdateCheck=false,nightlyEnabled=true,channelNameArg=null,channelName=stable,channelChanged=false,jtsConfigDir=F:\IBKR\ibgateway,apiPort=null,sessionId=null,installDir=F:\IBKR\ibgateway\,exeName=null]].
+2023-05-13 11:36:22.055 [VU] INFO  [JTS-Main] - PROXY Installed custom selector
+2023-05-13 11:36:22.061 [VU] INFO  [JTS-Main] - useSsl=true,FIX endPoint=ndc1.ibllc.com:4001
+2023-05-13 11:36:22.113 [VU] INFO  [JTS-Main] - Setting custom timezone: Europe/Moscow
+2023-05-13 11:36:22.117 [VU] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2023-05-13 11:36:22.120 [VU] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2023-05-13 11:36:22.121 [VU] INFO  [JTS-Main] - Region: America
+2023-05-13 11:36:22.122 [VU] INFO  [JTS-Main] - Starting to download 'https://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'https://download2.interactivebrokers.com/java/classes/locales.jar'
+2023-05-13 11:36:23.559 [VU] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=F:\IBKR\ibgateway\jars\locales.jar  sourceMod=2019-11-07 18:30:14  destMod=2019-11-07 18:30:14  sourceSize=114646  destSize=114646  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2023-05-13 11:36:23.559 [VU] INFO  [JTS-Main] - LOCALE: F:\IBKR\ibgateway\jars\locales.jar already up-to-date
+2023-05-13 11:36:23.562 [VU] INFO  [JTS-Main] - DocumentBuilderFactory=jar:file:/C:/Users/Anton/AppData/Local/Programs/Common/i4j_jres/Oda-jK0QgTEmVssfllLP/1.8.0_202_64/lib/rt.jar!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderFactoryImpl.class
+2023-05-13 11:36:23.590 [VU] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2023-05-13 11:36:23.599 [VU] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2023-05-13 11:36:23.604 [VU] INFO  [JTS-Main] - Locale from ini: ru
+2023-05-13 11:36:23.604 [VU] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@624ea235 with file:/F:/IBKR/ibgateway/jars/locales.jar, parent: sun.misc.Launcher$AppClassLoader@c387f44
+2023-05-13 11:36:23.605 [VU] INFO  [JTS-Main] - Locale=ru_RU  country=Russia  variant=
+2023-05-13 11:36:23.609 [VU] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2023-05-13 11:36:23.611 [VU] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru]
+2023-05-13 11:36:23.616 [VU] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru_RU]
+2023-05-13 11:36:23.616 [VU] INFO  [JTS-Main] - LOCALE:  type: launcher intended: ru_RU actual: ru size: 490
+2023-05-13 11:36:23.617 [VU] INFO  [JTS-Main] - settings dir: 'F:\IBKR\ibgateway'
+2023-05-13 11:36:23.790 [VU] INFO  [JTS-Main] - LauncherFontUpdater: simulatehighdefscreen=false
+2023-05-13 11:36:23.790 [VU] INFO  [JTS-Main] - LauncherFontUpdater: Screen dimensions=1600x900
+2023-05-13 11:36:23.790 [VU] INFO  [JTS-Main] - LauncherFontUpdater: highres=false
+2023-05-13 11:36:23.790 [VU] INFO  [JTS-Main] - LauncherFontUpdater: FontSize=16
+2023-05-13 11:36:23.790 [VU] INFO  [JTS-Main] - initPreUI() - entry
+2023-05-13 11:36:23.802 [VU] INFO  [JTS-Main] - Build 10.19.1k, Jan 23, 2023 5:13:03 PM
+2023-05-13 11:36:23.841 [VU] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2023-05-13 11:36:23.845 [VU] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2023-05-13 11:36:24.197 [VU] INFO  [JTS-Main] - Current LAF: TWS LAF
+2023-05-13 11:36:24.197 [VU] INFO  [JTS-Main] - initPreUI() - exit
+2023-05-13 11:36:24.203 [VU] INFO  [JTS-MiscUlrsRequester-5] - Connecting cdc1.ibllc.com:4000 timeout=10000...
+2023-05-13 11:36:24.492 [VU] INFO  [JTS-MiscUlrsRequester-5] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.168.30.10:62723
+2023-05-13 11:36:24.494 [VU] INFO  [JTS-MiscUlrsRequester-5] - Resolving mac address
+2023-05-13 11:36:24.652 [VU] INFO  [JTS-MiscUlrsRequester-5] - MACNetworkInfo created <6edcb1b5|5E:49:94:F7:64:01|192.168.30.10>
+2023-05-13 11:36:24.660 [VU] INFO  [JTS-MISC URLsListenerS1-6] - Starting listener thread [sessionID=1]...
+2023-05-13 11:36:24.712 [VU] INFO  [JTS-MiscUlrsRequester-5] - Sending MiscUrls request
+2023-05-13 11:36:24.713 [VU] INFO  [JTS-AuthDispatcherS1-7] - Starting dispatcher thread [sessionID=1]...
+2023-05-13 11:36:24.717 [VU] INFO  [JTS-MiscUlrsRequester-5] - LOGIN_TIME_MONITOR	 false 11:36:24:716 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2023-05-13 11:36:24.718 [VU] INFO  [JTS-MISC URLsListenerS1-6] - Initial listener buffer size is 65536.
+2023-05-13 11:36:24.717 [VU] INFO  [JTS-AuthResponseMonitor-8] - Starting auth response monitor thread
+2023-05-13 11:36:24.718 [VU] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread [sessionID=1] is ready to process messages.
+2023-05-13 11:36:24.912 [VU] INFO  [JTS-AuthDispatcherS1-7] - Received NS_MISC_URLS
+2023-05-13 11:36:24.924 [VU] INFO  [JTS-AuthDispatcherS1-7] - IBMiscUrl.miscUrlMessage()[sslRequired=true]
+2023-05-13 11:36:24.925 [VU] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: scope is blank - setting userScope to EXTERNAL
+2023-05-13 11:36:24.925 [VU] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: setting userScope to EXTERNAL
+2023-05-13 11:36:24.930 [VU] INFO  [JTS-AuthDispatcherS1-7] - Disconnecting cdc1.ibllc.com:4000 [disconnectDetails=DisconnectDetails[sessionID=1,endPoint=cdc1.ibllc.com:4000,reason=DISCONNECT_BY_DESIGN,cause=null,systemMessage=null,keepSocketOpen=false]]...
+2023-05-13 11:36:24.930 [VU] INFO  [JTS-AuthDispatcherS1-7] - Socket closed.
+2023-05-13 11:36:24.930 [VU] INFO  [JTS-AuthDispatcherS1-7] - Interrupting dispatcher [sessionID=1]...
+2023-05-13 11:36:24.930 [VU] INFO  [JTS-MISC URLsListenerS1-6] - Socket or stream for connection cdc1.ibllc.com:4000 was closed by another thread.
+2023-05-13 11:36:24.930 [VU] INFO  [JTS-AuthDispatcherS1-7] - Interrupting listener [sessionID=1,disconnectSocket=true]...
+2023-05-13 11:36:24.931 [VU] INFO  [JTS-AuthDispatcherS1-7] - Dispatcher thread terminating [sessionID=1,interrupted=true]...
+2023-05-13 11:36:24.931 [VU] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread terminating [sessionID=1] [seen=1168,totalShifted=1168,moreAvailable=0]
+2023-05-13 11:36:24.931 [VU] INFO  [JTS-AuthResponseMonitor-8] - Terminating auth response monitor thread
+2023-05-13 11:36:25.099 [VU] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow
+2023-05-13 11:36:25.100 [VU] INFO  [AWT-EventQueue-0] - Starting GstatMessageMgr...
+2023-05-13 11:36:25.104 [VU] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-13 11:36:25.173 [VU] INFO  [AWT-EventQueue-0] - Started on 20230513-08:36:25
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow name:Moscow Standard Time dst:0
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - java version = 1.8.0_202
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - os = Windows 10
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - os version = 10.0
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - os architecture = 64
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2023-05-13 11:36:25.174 [VU] INFO  [AWT-EventQueue-0] - username = 'Anton'
+2023-05-13 11:36:25.676 [VU] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 7 (Sat), YYYYMMofToday: 202305, YYYYMMDDofToday: 20230513, m_todayDate: 20230513, dueToChangeInTimezone: false
+2023-05-13 11:36:25.875 [VU] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=200,contentLen=12088].
+2023-05-13 11:36:26.502 [VU] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-13 11:36:27.054 [VU] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=693,696KB HeapUsage: Max=786,432KB used=91,197KB committed=262,144KB NonHeapUsage: Max=0KB used=68,737KB committed=70,464KB
+2023-05-13 11:36:28.056 [VU] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.39% avg=0.39% 30 min avg=0.39% 10 min avg=0.39% 5 min avg=0.39% 1 min avg=0.39%
+GC:called=3 times CPU used=0.03%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=28 curr daemon=22
+2023-05-13 11:36:32.333 [VU] INFO  [AWT-EventQueue-0] - Stopping GstatMessageMgr...
+2023-05-13 11:36:32.335 [VU] INFO  [AWT-EventQueue-0] - Setting dir is F:\IBKR\ibgateway\
+2023-05-13 11:36:32.335 [VU] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2023-05-13 11:36:32.337 [VU] INFO  [AWT-EventQueue-0] - BaseIniFile.saveGatewayFixEndPoint() [host=ndc1.ibllc.com,port=4001]...
+2023-05-13 11:36:32.337 [VU] INFO  [AWT-EventQueue-0] - SPLASH Creating screen with 5 steps
+2023-05-13 11:36:32.381 [VU] INFO  [AWT-EventQueue-0] - SplashScreen: using ads manager
+2023-05-13 11:36:32.383 [VU] INFO  [AWT-EventQueue-0] - AdImageContainer: start build ads UI
+2023-05-13 11:36:32.414 [VU] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-13 11:36:32.420 [VU] INFO  [AWT-EventQueue-0] - AdManager: sending request with header X-USERNAME
+2023-05-13 11:36:32.786 [VU] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request is ok
+2023-05-13 11:36:32.793 [VU] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw"}
+2023-05-13 11:36:32.837 [VU] INFO  [AWT-EventQueue-0] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw
+
+2023-05-13 11:36:33.325 [VU] INFO  [AWT-EventQueue-0] - initAutoEncryptionMenu(): autoEncryption set to true
+2023-05-13 11:36:33.335 [VU] INFO  [AWT-EventQueue-0] - Contacting cdc1.ibllc.com:4001 as user NOT PRINTED
+2023-05-13 11:36:33.394 [VU] INFO  [AWT-EventQueue-0] - UserCredentials.sessionId() [this=1772894502,old=null,new=645f4c11.0172].
+2023-05-13 11:36:33.394 [VU] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2023-05-13 11:36:33.394 [VU] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:11:36:33:394
+2023-05-13 11:36:33.394 [VU] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2023-05-13 11:36:33.396 [VU] INFO  [JTS-Login-14] - Starting launcher login thread
+2023-05-13 11:36:33.397 [VU] INFO  [JTS-Login-14] - LauncherLoginThread.runLoginWithUI()[hotBackupStrategy=ON,loginAttempt=1,socketDelay=20000].
+2023-05-13 11:36:33.397 [VU] INFO  [JTS-Login-14] - SPLASH Соединение с сервером
+2023-05-13 11:36:33.400 [VU] INFO  [JTS-Login-14] - ### startLogin startTime=1683966993394
+2023-05-13 11:36:33.401 [VU] INFO  [JTS-Login-14] - ### loginAttempt loginAttempt=1
+2023-05-13 11:36:33.401 [VU] INFO  [JTS-Login-14] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000...
+2023-05-13 11:36:33.401 [VU] INFO  [JTS-Login-14] - ### onSocketOpenStart socketOpenStart=1683966993401; endPoint=cdc1.ibllc.com; port=4001
+2023-05-13 11:36:33.409 [VU] INFO  [JTS-Order-Audit-16] - Starting async queue thread
+2023-05-13 11:36:33.409 [VU] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2023-05-13 11:36:33.467 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdImageContainer: ad image is shown
+2023-05-13 11:36:33.468 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN request https://api.ibkr.com/tws.proxy/info/show/dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkxMDUw
+2023-05-13 11:36:33.583 [VU] ERROR [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN service 411
+2023-05-13 11:36:33.583 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: request image to put in cache
+2023-05-13 11:36:33.583 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-13 11:36:33.584 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: sending request with header X-USERNAME
+2023-05-13 11:36:33.595 [VU] INFO  [JTS-Login-14] - ### onSocketOpenEnd socketOpenEnd=1683966993595
+2023-05-13 11:36:33.595 [VU] INFO  [JTS-Login-14] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.168.30.10:62730
+2023-05-13 11:36:33.596 [VU] INFO  [JTS-Login-14] - JTSAuthConnection.onConnected(): lastKnownCipherStatus=INSECURE
+2023-05-13 11:36:33.596 [VU] INFO  [JTS-Login-14] - Changing state for connection from PRELOGON to PRELOGON in B 911215016: SessionSocket:2
+2023-05-13 11:36:33.596 [VU] INFO  [JTS-Login-14] - Authenticating
+2023-05-13 11:36:33.597 [VU] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-13 11:36:33.597 [VU] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: timeout=20000
+2023-05-13 11:36:33.597 [VU] INFO  [JTS-CCPListenerS2-17] - Starting listener thread [sessionID=2]...
+2023-05-13 11:36:33.597 [VU] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: activate
+2023-05-13 11:36:33.598 [VU] INFO  [JTS-Login-14] - SPLASH -0001 step 1 AuthDispatcher.connect
+2023-05-13 11:36:33.597 [VU] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Starting auth timeout monitor thread for CCP
+2023-05-13 11:36:33.598 [VU] INFO  [JTS-Login-14] - Sending connect request
+2023-05-13 11:36:33.599 [VU] INFO  [JTS-AuthDispatcherS2-18] - Starting dispatcher thread [sessionID=2]...
+2023-05-13 11:36:33.599 [VU] INFO  [JTS-Login-14] - AuthDispatcher.initNSMsgVersionLimits: minVersion=38, maxVersion=47
+2023-05-13 11:36:33.600 [VU] INFO  [JTS-Login-14] - AuthDispatcher.NSConnectRequest: userSessionID=645f4c11.0172, beeDemoType=NULL
+2023-05-13 11:36:33.600 [VU] INFO  [JTS-Login-14] - ### onNsMsg loginMessageReq=1683966993600; brandNewUser=false
+2023-05-13 11:36:33.600 [VU] INFO  [JTS-Login-14] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2023-05-13 11:36:33.600 [VU] INFO  [JTS-Login-14] - NSConnectRequest: sending CLIENT_USE_SSL=0x80000
+2023-05-13 11:36:33.925 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request is ok
+2023-05-13 11:36:33.926 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2"}
+2023-05-13 11:36:33.926 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTY2OTkyMTg2
+
+2023-05-13 11:36:33.926 [VU] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: try to save image  inF:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk\\149-1-1200x1000-ru.jpeg
+2023-05-13 11:36:34.228 [VU] INFO  [JTS-Login-14] - SPLASH Аутентификация
+2023-05-13 11:36:34.228 [VU] INFO  [JTS-CCPListenerS2-17] - Initial listener buffer size is 65536.
+2023-05-13 11:36:34.228 [VU] INFO  [JTS-CCPListenerS2-17] - Listener thread [sessionID=2] is ready to process messages.
+2023-05-13 11:36:34.229 [VU] INFO  [JTS-Login-14] - Terminating launcher login thread
+2023-05-13 11:36:34.419 [VU] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0821 step 2 AuthDispatcher.processDataItr
+2023-05-13 11:36:34.419 [VU] INFO  [JTS-AuthDispatcherS2-18] - set nsMsgVersion: context=AuthStart; version=47
+2023-05-13 11:36:34.420 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received NS_AUTH_START: 1
+2023-05-13 11:36:34.422 [VU] INFO  [JTS-AuthDispatcherS2-18] - pwd time to expiry ms: 2418409408000 days: 27991
+2023-05-13 11:36:34.423 [VU] INFO  [JTS-AuthDispatcherS2-18] - Long pwd allowed: true
+2023-05-13 11:36:34.423 [VU] INFO  [JTS-AuthDispatcherS2-18] -  NS_AUTH_START version=47 pwd=1 soft=0 token(s)=[token=4, tokenSubtype=2[Одноразовый код доступа]] initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=861184610
+2023-05-13 11:36:34.424 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onStartAuthentication
+2023-05-13 11:36:34.424 [VU] INFO  [JTS-AuthDispatcherS2-18] - Starting password Authentication
+2023-05-13 11:36:34.425 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthQuery
+2023-05-13 11:36:34.425 [VU] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 11:36:34.425 [VU] INFO  [JTS-AuthDispatcherS2-18] - UserCredentials.setFrom() [this=1772894502,other=1772894502,old=645f4c11.0172,new=645f4c11.0172].
+2023-05-13 11:36:34.614 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 11:36:34.614 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:36:34.615 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 11:36:34.615 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_PARAMS
+2023-05-13 11:36:34.615 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthParams
+2023-05-13 11:36:34.615 [VU] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 11:36:34.805 [VU] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0387 step 2 AuthDispatcher.processDataItr
+2023-05-13 11:36:34.805 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 11:36:34.805 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:36:34.805 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 11:36:34.805 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received SERVER_PARAMS
+2023-05-13 11:36:34.807 [VU] INFO  [JTS-AuthDispatcherS2-18] - Session Token received in AuthenticationMessageXYZ=1514aXXXXX.., messageId=SERVER_KEY (4)
+2023-05-13 11:36:34.808 [VU] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 11:36:34.997 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 11:36:34.998 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_RESULT
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthServerProof
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - Passed pwd authentication.
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onStartTokenAuth
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - Requesting Sms
+2023-05-13 11:36:34.998 [VU] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 774
+2023-05-13 11:36:35.187 [VU] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0382 step 2 AuthDispatcher.processDataItr
+2023-05-13 11:36:35.187 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-13 11:36:35.187 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:36:35.187 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-13 11:36:35.188 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received Result_Sms
+2023-05-13 11:36:35.188 [VU] INFO  [JTS-AuthDispatcherS2-18] - AuthTimeoutMonitor-CCP: pause
+2023-05-13 11:36:35.232 [VU] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 11:36:35.233 [VU] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 11:36:35.238 [VU] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 11:36:35.238 [VU] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 11:36:55.187 [VU] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 20000 step 2 AuthDispatcher.processDataItr
+2023-05-13 11:36:55.188 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received NS_TEST_REQUEST
+2023-05-13 11:36:55.188 [VU] INFO  [JTS-AuthDispatcherS2-18] - Sent NS_HEART_BEAT:#%#%0000MISC47;531;20230513-08:36:53;
+2023-05-13 11:37:06.437 [VU] INFO  [AWT-EventQueue-0] - Security code: ***
+2023-05-13 11:37:06.437 [VU] INFO  [AWT-EventQueue-0] - AuthTimeoutMonitor-CCP: resume, idleTime=31249
+2023-05-13 11:37:06.437 [VU] INFO  [AWT-EventQueue-0] - sendXYZMessage: 774
+2023-05-13 11:37:06.437 [VU] INFO  [AWT-EventQueue-0] - SPLASH 11250 step 3 AuthDispatcher.send
+2023-05-13 11:37:06.627 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-13 11:37:06.627 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:37:06.627 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-13 11:37:06.627 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received Result
+2023-05-13 11:37:06.628 [VU] INFO  [JTS-AuthDispatcherS2-18] - Passed token authentication.
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0328 step 4 AuthDispatcher.processDataItr
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 771
+2023-05-13 11:37:06.765 [VU] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.L with userName NOT PRINTED in it - this is not expected
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 771, protocol version: 47
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received Finish
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - Finished authentication.
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - Authentication completed.
+2023-05-13 11:37:06.765 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onAuthenticationCompleted tokenProtocol=4; authenticated=true
+2023-05-13 11:37:06.766 [VU] INFO  [JTS-AuthDispatcherS2-18] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=861184610 new=XYZSessionToken[type=SOFT,token=1514aXXXXX..] old=null ctciOld=null
+2023-05-13 11:37:06.766 [VU] INFO  [JTS-AuthDispatcherS2-18] - ccp session token non-CTCI is set as XYZSessionToken[type=SOFT,token=1514aXXXXX..] 
+2023-05-13 11:37:06.766 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received NS_CONNECT_RESPONSE
+2023-05-13 11:37:06.766 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received CCP connect features: [TST, ONELOGON].
+2023-05-13 11:37:06.767 [VU] INFO  [JTS-AuthDispatcherS2-18] - Log encryption support is enabled [authType=MARKET_DATA_CONNECTION,logKeyId=aaa,logKey=***,logUploadKey=dlqkjpwuu].
+2023-05-13 11:37:06.767 [VU] INFO  [JTS-AuthDispatcherS2-18] - AuthDispatcher.newCommPort()[userDirname=pgjokcefhnlpnonindbogdjnfiompeneadbplgnk,restart=].
+2023-05-13 11:37:06.767 [VU] INFO  [JTS-AuthDispatcherS2-18] - Daily auto-restart is not enabled.
+2023-05-13 11:37:06.767 [VU] INFO  [JTS-AuthDispatcherS2-18] - Sending NSNewcommPort [publishTokens=0]...
+2023-05-13 11:37:06.956 [VU] INFO  [JTS-AuthDispatcherS2-18] - Received NS_FIX_START
+2023-05-13 11:37:06.956 [VU] INFO  [JTS-AuthDispatcherS2-18] - ### onNsFixStart
+2023-05-13 11:37:06.957 [VU] INFO  [JTS-PostAuthenticateS2-25] - Interrupting dispatcher [sessionID=2]...
+2023-05-13 11:37:06.958 [VU] INFO  [JTS-AuthDispatcherS2-18] - Dispatcher thread terminating [sessionID=2,interrupted=true]...
+2023-05-13 11:37:06.958 [VU] INFO  [JTS-PostAuthenticateS2-25] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-13 11:37:06.958 [VU] INFO  [JTS-PostAuthenticateS2-25] - Authentication complete
+2023-05-13 11:37:06.958 [VU] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Terminating auth timeout monitor thread for CCP
+2023-05-13 11:37:06.958 [VU] INFO  [JTS-PostAuthenticateS2-25] - Creating a FixLogonHandlerFactory instance...
+2023-05-13 11:37:06.959 [VU] INFO  [JTS-PostAuthenticateS2-25] - Instance created.
+2023-05-13 11:37:06.963 [VU] INFO  [AWT-EventQueue-0] - initPreUI() - entry
+2023-05-13 11:37:06.964 [VU] INFO  [AWT-EventQueue-0] - jtsLookAndFeel uninitialized
+2023-05-13 11:37:06.964 [VU] INFO  [AWT-EventQueue-0] - JtsLookAndFeel initialized
+2023-05-13 11:37:06.965 [VU] INFO  [JTS-PostAuthenticateS2-25] - JDOMFactory Class =interface org.jdom.JDOMFactory
+2023-05-13 11:37:06.966 [VU] INFO  [AWT-EventQueue-0] - Current LAF: TWS LAF
+2023-05-13 11:37:06.966 [VU] INFO  [AWT-EventQueue-0] - initPreUI() - exit
+2023-05-13 11:37:07.020 [VU] INFO  [JTS-PostAuthenticateS2-25] - hsqldb jdbc =class org.hsqldb.jdbcDriver 2.4
+2023-05-13 11:37:07.031 [VU] INFO  [JTS-PostAuthenticateS2-25] - Changing state for connection from PRELOGON to PRELOGON in B 911215016: SessionSocket:2
+2023-05-13 11:37:07.031 [VU] INFO  [JTS-PostAuthenticateS2-25] - createOrRenameToNewStyleUserDirectory: no action: use existing newDir=F:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk
+2023-05-13 11:37:07.032 [VU] INFO  [JTS-PostAuthenticateS2-25] - performLogSwitch() [force=false]
+2023-05-13 11:37:07.150 [VU] INFO  [JTS-PostAuthenticateS2-25] - Switching to a new encrypted log...
+2023-05-13 16:06:42.208 [CJ] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2023-05-13 16:06:42.214 [CJ] INFO  [JTS-Main] - installer version: 4.6.8, installer type: standalone, install dir: 'F:\IBKR\ibgateway\', Jts dir: 'F:\IBKR\ibgateway', VM options file: 'F:\IBKR\ibgateway\ibgateway.vmoptions'
+2023-05-13 16:06:42.227 [CJ] INFO  [JTS-Main] - Verifying environment [entryPoint=IBGATEWAY_STANDALONE]...
+2023-05-13 16:06:42.253 [CJ] INFO  [JTS-Main] - Install4jAutoUpdateService initialized [props=LauncherProperties[updateDownloadUrl=null,skipUpdateCheck=false,nightlyEnabled=true,channelNameArg=null,channelName=stable,channelChanged=false,jtsConfigDir=F:\IBKR\ibgateway,apiPort=null,sessionId=null,installDir=F:\IBKR\ibgateway\,exeName=null]].
+2023-05-13 16:06:42.259 [CJ] INFO  [JTS-Main] - PROXY Installed custom selector
+2023-05-13 16:06:42.266 [CJ] INFO  [JTS-Main] - useSsl=true,FIX endPoint=ndc1.ibllc.com:4001
+2023-05-13 16:06:42.328 [CJ] INFO  [JTS-Main] - Setting custom timezone: Europe/Moscow
+2023-05-13 16:06:42.335 [CJ] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2023-05-13 16:06:42.339 [CJ] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2023-05-13 16:06:42.342 [CJ] INFO  [JTS-Main] - Region: America
+2023-05-13 16:06:42.345 [CJ] INFO  [JTS-Main] - Starting to download 'https://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'https://download2.interactivebrokers.com/java/classes/locales.jar'
+2023-05-13 16:06:43.917 [CJ] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=F:\IBKR\ibgateway\jars\locales.jar  sourceMod=2019-11-07 18:30:14  destMod=2019-11-07 18:30:14  sourceSize=114646  destSize=114646  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2023-05-13 16:06:43.917 [CJ] INFO  [JTS-Main] - LOCALE: F:\IBKR\ibgateway\jars\locales.jar already up-to-date
+2023-05-13 16:06:43.920 [CJ] INFO  [JTS-Main] - DocumentBuilderFactory=jar:file:/C:/Users/Anton/AppData/Local/Programs/Common/i4j_jres/Oda-jK0QgTEmVssfllLP/1.8.0_202_64/lib/rt.jar!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderFactoryImpl.class
+2023-05-13 16:06:43.950 [CJ] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2023-05-13 16:06:43.960 [CJ] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2023-05-13 16:06:43.965 [CJ] INFO  [JTS-Main] - Locale from ini: ru
+2023-05-13 16:06:43.965 [CJ] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@5884a914 with file:/F:/IBKR/ibgateway/jars/locales.jar, parent: sun.misc.Launcher$AppClassLoader@c387f44
+2023-05-13 16:06:43.966 [CJ] INFO  [JTS-Main] - Locale=ru_RU  country=Russia  variant=
+2023-05-13 16:06:43.968 [CJ] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2023-05-13 16:06:43.970 [CJ] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru]
+2023-05-13 16:06:43.974 [CJ] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru_RU]
+2023-05-13 16:06:43.975 [CJ] INFO  [JTS-Main] - LOCALE:  type: launcher intended: ru_RU actual: ru size: 490
+2023-05-13 16:06:43.977 [CJ] INFO  [JTS-Main] - settings dir: 'F:\IBKR\ibgateway'
+2023-05-13 16:06:44.172 [CJ] INFO  [JTS-Main] - LauncherFontUpdater: simulatehighdefscreen=false
+2023-05-13 16:06:44.172 [CJ] INFO  [JTS-Main] - LauncherFontUpdater: Screen dimensions=1600x900
+2023-05-13 16:06:44.172 [CJ] INFO  [JTS-Main] - LauncherFontUpdater: highres=false
+2023-05-13 16:06:44.172 [CJ] INFO  [JTS-Main] - LauncherFontUpdater: FontSize=16
+2023-05-13 16:06:44.172 [CJ] INFO  [JTS-Main] - initPreUI() - entry
+2023-05-13 16:06:44.184 [CJ] INFO  [JTS-Main] - Build 10.19.1k, Jan 23, 2023 5:13:03 PM
+2023-05-13 16:06:44.219 [CJ] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2023-05-13 16:06:44.223 [CJ] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2023-05-13 16:06:44.630 [CJ] INFO  [JTS-Main] - Current LAF: TWS LAF
+2023-05-13 16:06:44.631 [CJ] INFO  [JTS-Main] - initPreUI() - exit
+2023-05-13 16:06:44.636 [CJ] INFO  [JTS-MiscUlrsRequester-5] - Connecting cdc1.ibllc.com:4000 timeout=10000...
+2023-05-13 16:06:45.045 [CJ] INFO  [JTS-MiscUlrsRequester-5] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.168.0.102:62490
+2023-05-13 16:06:45.047 [CJ] INFO  [JTS-MiscUlrsRequester-5] - Resolving mac address
+2023-05-13 16:06:45.232 [CJ] INFO  [JTS-MiscUlrsRequester-5] - MACNetworkInfo created <6edcb1b5|B4:B0:24:7E:68:3E|192.168.0.102>
+2023-05-13 16:06:45.234 [CJ] INFO  [JTS-MISC URLsListenerS1-6] - Starting listener thread [sessionID=1]...
+2023-05-13 16:06:45.249 [CJ] INFO  [JTS-MiscUlrsRequester-5] - Sending MiscUrls request
+2023-05-13 16:06:45.249 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Starting dispatcher thread [sessionID=1]...
+2023-05-13 16:06:45.252 [CJ] INFO  [JTS-MiscUlrsRequester-5] - LOGIN_TIME_MONITOR	 false 16:06:45:252 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2023-05-13 16:06:45.253 [CJ] INFO  [JTS-AuthResponseMonitor-8] - Starting auth response monitor thread
+2023-05-13 16:06:45.253 [CJ] INFO  [JTS-MISC URLsListenerS1-6] - Initial listener buffer size is 65536.
+2023-05-13 16:06:45.253 [CJ] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread [sessionID=1] is ready to process messages.
+2023-05-13 16:06:45.413 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Received NS_MISC_URLS
+2023-05-13 16:06:45.414 [CJ] INFO  [JTS-AuthDispatcherS1-7] - IBMiscUrl.miscUrlMessage()[sslRequired=true]
+2023-05-13 16:06:45.415 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: scope is blank - setting userScope to EXTERNAL
+2023-05-13 16:06:45.415 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: setting userScope to EXTERNAL
+2023-05-13 16:06:45.419 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Disconnecting cdc1.ibllc.com:4000 [disconnectDetails=DisconnectDetails[sessionID=1,endPoint=cdc1.ibllc.com:4000,reason=DISCONNECT_BY_DESIGN,cause=null,systemMessage=null,keepSocketOpen=false]]...
+2023-05-13 16:06:45.419 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Socket closed.
+2023-05-13 16:06:45.419 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Interrupting dispatcher [sessionID=1]...
+2023-05-13 16:06:45.419 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Interrupting listener [sessionID=1,disconnectSocket=true]...
+2023-05-13 16:06:45.419 [CJ] INFO  [JTS-MISC URLsListenerS1-6] - Socket or stream for connection cdc1.ibllc.com:4000 was closed by another thread.
+2023-05-13 16:06:45.420 [CJ] INFO  [JTS-AuthDispatcherS1-7] - Dispatcher thread terminating [sessionID=1,interrupted=true]...
+2023-05-13 16:06:45.420 [CJ] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread terminating [sessionID=1] [seen=1168,totalShifted=1168,moreAvailable=0]
+2023-05-13 16:06:45.420 [CJ] INFO  [JTS-AuthResponseMonitor-8] - Terminating auth response monitor thread
+2023-05-13 16:06:45.493 [CJ] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow
+2023-05-13 16:06:45.496 [CJ] INFO  [AWT-EventQueue-0] - Starting GstatMessageMgr...
+2023-05-13 16:06:45.500 [CJ] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-13 16:06:45.544 [CJ] INFO  [AWT-EventQueue-0] - Started on 20230513-13:06:45
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow name:Moscow Standard Time dst:0
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - java version = 1.8.0_202
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - os = Windows 10
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - os version = 10.0
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - os architecture = 64
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2023-05-13 16:06:45.545 [CJ] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2023-05-13 16:06:45.546 [CJ] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2023-05-13 16:06:45.546 [CJ] INFO  [AWT-EventQueue-0] - username = 'Anton'
+2023-05-13 16:06:45.990 [CJ] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 7 (Sat), YYYYMMofToday: 202305, YYYYMMDDofToday: 20230513, m_todayDate: 20230513, dueToChangeInTimezone: false
+2023-05-13 16:06:47.255 [CJ] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=715,576KB HeapUsage: Max=786,432KB used=68,846KB committed=262,144KB NonHeapUsage: Max=0KB used=61,505KB committed=62,912KB
+2023-05-13 16:06:48.258 [CJ] INFO  [JTS-DeadlockMonitor-2] - CPU:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+GC:called=3 times CPU used=0.03%
+Finalizer:cur=0.00% avg=0.00% 30 min avg=0.00% 10 min avg=0.00% 5 min avg=0.00% 1 min avg=0.00%
+Threads Count:curr live=25 curr daemon=19
+2023-05-13 16:06:48.586 [CJ] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-13 16:06:48.886 [CJ] INFO  [JavaFX Application Thread] - GstatMessagePanel: setup web app is done
+2023-05-13 16:06:52.273 [CJ] INFO  [AWT-EventQueue-0] - Stopping GstatMessageMgr...
+2023-05-13 16:06:52.276 [CJ] INFO  [AWT-EventQueue-0] - Setting dir is F:\IBKR\ibgateway\
+2023-05-13 16:06:52.276 [CJ] INFO  [AWT-EventQueue-0] - PROXY Cleared HTTP proxy: no valid proxy is present (passing on :0)
+2023-05-13 16:06:52.279 [CJ] INFO  [AWT-EventQueue-0] - BaseIniFile.saveGatewayFixEndPoint() [host=ndc1.ibllc.com,port=4001]...
+2023-05-13 16:06:52.279 [CJ] INFO  [AWT-EventQueue-0] - SPLASH Creating screen with 5 steps
+2023-05-13 16:06:52.329 [CJ] INFO  [AWT-EventQueue-0] - SplashScreen: using ads manager
+2023-05-13 16:06:52.333 [CJ] INFO  [AWT-EventQueue-0] - AdImageContainer: start build ads UI
+2023-05-13 16:06:52.335 [CJ] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-13 16:06:52.338 [CJ] INFO  [AWT-EventQueue-0] - AdManager: sending request with header X-USERNAME
+2023-05-13 16:06:52.701 [CJ] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD request is ok
+2023-05-13 16:06:52.704 [CJ] INFO  [AWT-EventQueue-0] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5"}
+2023-05-13 16:06:52.735 [CJ] INFO  [AWT-EventQueue-0] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5
+
+2023-05-13 16:06:53.179 [CJ] INFO  [AWT-EventQueue-0] - initAutoEncryptionMenu(): autoEncryption set to true
+2023-05-13 16:06:53.186 [CJ] INFO  [AWT-EventQueue-0] - Contacting cdc1.ibllc.com:4001 as user NOT PRINTED
+2023-05-13 16:06:53.201 [CJ] INFO  [AWT-EventQueue-0] - UserCredentials.sessionId() [this=1068992165,old=null,new=645f8b6d.00c4].
+2023-05-13 16:06:53.201 [CJ] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection attempt time is cleared!
+2023-05-13 16:06:53.201 [CJ] INFO  [AWT-EventQueue-0] - CONN CALC: Last connection set as now:16:06:53:201
+2023-05-13 16:06:53.201 [CJ] INFO  [AWT-EventQueue-0] - Prelogin delay:0
+2023-05-13 16:06:53.203 [CJ] INFO  [JTS-Login-14] - Starting launcher login thread
+2023-05-13 16:06:53.203 [CJ] INFO  [JTS-Login-14] - LauncherLoginThread.runLoginWithUI()[hotBackupStrategy=ON,loginAttempt=1,socketDelay=20000].
+2023-05-13 16:06:53.204 [CJ] INFO  [JTS-Login-14] - SPLASH Соединение с сервером
+2023-05-13 16:06:53.207 [CJ] INFO  [JTS-Login-14] - ### startLogin startTime=1683983213200
+2023-05-13 16:06:53.207 [CJ] INFO  [JTS-Login-14] - ### loginAttempt loginAttempt=1
+2023-05-13 16:06:53.207 [CJ] INFO  [JTS-Login-14] - Connecting cdc1.ibllc.com:4001 (SSL) timeout=20000...
+2023-05-13 16:06:53.207 [CJ] INFO  [JTS-Login-14] - ### onSocketOpenStart socketOpenStart=1683983213207; endPoint=cdc1.ibllc.com; port=4001
+2023-05-13 16:06:53.214 [CJ] INFO  [JTS-Order-Audit-16] - Starting async queue thread
+2023-05-13 16:06:53.214 [CJ] INFO  [AWT-EventQueue-0] - Network monitor is activated
+2023-05-13 16:06:53.273 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdImageContainer: ad image is shown
+2023-05-13 16:06:53.273 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN request https://api.ibkr.com/tws.proxy/info/show/dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEwOTY5
+2023-05-13 16:06:53.395 [CJ] INFO  [JTS-Login-14] - ### onSocketOpenEnd socketOpenEnd=1683983213395
+2023-05-13 16:06:53.395 [CJ] INFO  [JTS-Login-14] - Connected to cdc1.ibllc.com:4001 (SSL) on local port 0 socket local addrs:port /192.168.0.102:62516
+2023-05-13 16:06:53.396 [CJ] INFO  [JTS-Login-14] - JTSAuthConnection.onConnected(): lastKnownCipherStatus=INSECURE
+2023-05-13 16:06:53.396 [CJ] INFO  [JTS-Login-14] - Changing state for connection from PRELOGON to PRELOGON in B 298648731: SessionSocket:2
+2023-05-13 16:06:53.396 [CJ] INFO  [JTS-Login-14] - Authenticating
+2023-05-13 16:06:53.397 [CJ] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-13 16:06:53.397 [CJ] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: timeout=20000
+2023-05-13 16:06:53.397 [CJ] INFO  [JTS-CCPListenerS2-17] - Starting listener thread [sessionID=2]...
+2023-05-13 16:06:53.398 [CJ] INFO  [JTS-Login-14] - AuthTimeoutMonitor-CCP: activate
+2023-05-13 16:06:53.398 [CJ] INFO  [JTS-Login-14] - SPLASH -0001 step 1 AuthDispatcher.connect
+2023-05-13 16:06:53.398 [CJ] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Starting auth timeout monitor thread for CCP
+2023-05-13 16:06:53.398 [CJ] INFO  [JTS-Login-14] - Sending connect request
+2023-05-13 16:06:53.399 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Starting dispatcher thread [sessionID=2]...
+2023-05-13 16:06:53.400 [CJ] INFO  [JTS-Login-14] - AuthDispatcher.initNSMsgVersionLimits: minVersion=38, maxVersion=47
+2023-05-13 16:06:53.400 [CJ] INFO  [JTS-Login-14] - AuthDispatcher.NSConnectRequest: userSessionID=645f8b6d.00c4, beeDemoType=NULL
+2023-05-13 16:06:53.400 [CJ] INFO  [JTS-Login-14] - ### onNsMsg loginMessageReq=1683983213400; brandNewUser=false
+2023-05-13 16:06:53.400 [CJ] INFO  [JTS-Login-14] - mapProdToPaper: In NSConnectRequest: sending PAPER_CONNECT=0x2000
+2023-05-13 16:06:53.400 [CJ] INFO  [JTS-Login-14] - NSConnectRequest: sending CLIENT_USE_SSL=0x80000
+2023-05-13 16:06:53.505 [CJ] ERROR [ForkJoinPool.commonPool-worker-9] - AdManager: IMAGE_SHOWN service 411
+2023-05-13 16:06:53.505 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: request image to put in cache
+2023-05-13 16:06:53.505 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request https://api.ibkr.com/tws.proxy/info/next?platform=dTWS&size=1200x1000&lang=ru&version=10191&build=stable
+2023-05-13 16:06:53.505 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: sending request with header X-USERNAME
+2023-05-13 16:06:53.964 [CJ] INFO  [JTS-CCPListenerS2-17] - Initial listener buffer size is 65536.
+2023-05-13 16:06:53.964 [CJ] INFO  [JTS-Login-14] - SPLASH Аутентификация
+2023-05-13 16:06:53.965 [CJ] INFO  [JTS-CCPListenerS2-17] - Listener thread [sessionID=2] is ready to process messages.
+2023-05-13 16:06:53.966 [CJ] INFO  [JTS-Login-14] - Terminating launcher login thread
+2023-05-13 16:06:54.151 [CJ] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0752 step 2 AuthDispatcher.processDataItr
+2023-05-13 16:06:54.151 [CJ] INFO  [JTS-AuthDispatcherS2-18] - set nsMsgVersion: context=AuthStart; version=47
+2023-05-13 16:06:54.152 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received NS_AUTH_START: 1
+2023-05-13 16:06:54.153 [CJ] INFO  [JTS-AuthDispatcherS2-18] - pwd time to expiry ms: 2418393188000 days: 27991
+2023-05-13 16:06:54.153 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Long pwd allowed: true
+2023-05-13 16:06:54.154 [CJ] INFO  [JTS-AuthDispatcherS2-18] -  NS_AUTH_START version=47 pwd=1 soft=0 token(s)=[token=4, tokenSubtype=2[Одноразовый код доступа]] initialTokenType=PWD authenticationType=MARKET_DATA_CONNECTION identityHashcode=1671209430
+2023-05-13 16:06:54.155 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onStartAuthentication
+2023-05-13 16:06:54.155 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Starting password Authentication
+2023-05-13 16:06:54.155 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthQuery
+2023-05-13 16:06:54.155 [CJ] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 16:06:54.156 [CJ] INFO  [JTS-AuthDispatcherS2-18] - UserCredentials.setFrom() [this=1068992165,other=1068992165,old=645f8b6d.00c4,new=645f8b6d.00c4].
+2023-05-13 16:06:54.340 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 16:06:54.340 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:06:54.340 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 16:06:54.340 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_PARAMS
+2023-05-13 16:06:54.340 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthParams
+2023-05-13 16:06:54.341 [CJ] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 16:06:54.349 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD request is ok
+2023-05-13 16:06:54.350 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdManager: NEXT_AD receive raw response {"imagePath":"/info/image/149-1-1200x1000-ru.jpeg","expire":1735639200000,"id":"dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0","target_alt":"https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0","target":"https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0"}
+2023-05-13 16:06:54.350 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: parsed json object: 
+id: dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0
+expire: 1735639200000
+imagePath: /info/image/149-1-1200x1000-ru.jpeg
+target: https://www1.interactivebrokers.com/ru/index.php?f=1556&adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0
+target_alt: https://www.interactivebrokers.com?adid=dGVzdDIxMDAtZFRXUy0xNDktMS0xNjgzOTgzMjEyNjE0
+
+2023-05-13 16:06:54.350 [CJ] INFO  [ForkJoinPool.commonPool-worker-9] - AdsManager: try to save image  inF:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk\\149-1-1200x1000-ru.jpeg
+2023-05-13 16:06:54.526 [CJ] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0376 step 2 AuthDispatcher.processDataItr
+2023-05-13 16:06:54.526 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 16:06:54.527 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:06:54.527 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 16:06:54.527 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received SERVER_PARAMS
+2023-05-13 16:06:54.530 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Session Token received in AuthenticationMessageXYZ=61489XXXXX.., messageId=SERVER_KEY (4)
+2023-05-13 16:06:54.530 [CJ] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 777
+2023-05-13 16:06:54.714 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 777
+2023-05-13 16:06:54.715 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.M with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 777, protocol version: 47
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received AUTH_RESULT
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onXyzAuthServerProof
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Passed pwd authentication.
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onStartTokenAuth
+2023-05-13 16:06:54.715 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Requesting Sms
+2023-05-13 16:06:54.716 [CJ] INFO  [JTS-AuthDispatcherS2-18] - sendXYZMessage: 774
+2023-05-13 16:06:54.908 [CJ] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0382 step 2 AuthDispatcher.processDataItr
+2023-05-13 16:06:54.909 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-13 16:06:54.909 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:06:54.909 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-13 16:06:54.909 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received Result_Sms
+2023-05-13 16:06:54.910 [CJ] INFO  [JTS-AuthDispatcherS2-18] - AuthTimeoutMonitor-CCP: pause
+2023-05-13 16:06:54.947 [CJ] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 16:06:54.948 [CJ] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 16:06:54.951 [CJ] INFO  [AWT-EventQueue-0] - Parent for Dialog does not implement IToFrontAsGroupWindow, isAlwaysOnTop: false parent: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 16:06:54.951 [CJ] INFO  [AWT-EventQueue-0] - Parent for Dialog is not isAlwaysOnTop: twslaunch.feature.welcome.D[frame0,499,264,602x372,layout=java.awt.BorderLayout,title=Аутентификация...,normal,defaultCloseOperation=DO_NOTHING_ON_CLOSE,rootPane=twslaunch.feature.welcome.F[,0,0,602x372,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=449,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+2023-05-13 16:07:14.901 [CJ] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 19993 step 2 AuthDispatcher.processDataItr
+2023-05-13 16:07:14.902 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received NS_TEST_REQUEST
+2023-05-13 16:07:14.902 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Sent NS_HEART_BEAT:#%#%0000MISC47;531;20230513-13:07:13;
+2023-05-13 16:07:25.247 [CJ] INFO  [AWT-EventQueue-0] - Security code: ***
+2023-05-13 16:07:25.247 [CJ] INFO  [AWT-EventQueue-0] - AuthTimeoutMonitor-CCP: resume, idleTime=30337
+2023-05-13 16:07:25.248 [CJ] INFO  [AWT-EventQueue-0] - sendXYZMessage: 774
+2023-05-13 16:07:25.248 [CJ] INFO  [AWT-EventQueue-0] - SPLASH 10347 step 3 AuthDispatcher.send
+2023-05-13 16:07:25.434 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 774
+2023-05-13 16:07:25.434 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.K with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:07:25.434 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 774, protocol version: 47
+2023-05-13 16:07:25.434 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received Result
+2023-05-13 16:07:25.434 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Passed token authentication.
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Receiver: 771
+2023-05-13 16:07:25.435 [CJ] ERROR [JTS-AuthDispatcherS2-18] - ERROR: Received twslaunch.jauthentication.L with userName NOT PRINTED in it - this is not expected
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - processXYZMessage: 771, protocol version: 47
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received Finish
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Finished authentication.
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Authentication completed.
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onAuthenticationCompleted tokenProtocol=4; authenticated=true
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - setting session token in AuthenticationHandler: authenticationType=MARKET_DATA_CONNECTION hashCode=1671209430 new=XYZSessionToken[type=SOFT,token=61489XXXXX..] old=null ctciOld=null
+2023-05-13 16:07:25.435 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ccp session token non-CTCI is set as XYZSessionToken[type=SOFT,token=61489XXXXX..] 
+2023-05-13 16:07:25.686 [CJ] INFO  [JTS-AuthDispatcherS2-18] - SPLASH 0438 step 4 AuthDispatcher.processDataItr
+2023-05-13 16:07:25.686 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received NS_CONNECT_RESPONSE
+2023-05-13 16:07:25.687 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received CCP connect features: [TST, ONELOGON].
+2023-05-13 16:07:25.687 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Log encryption support is enabled [authType=MARKET_DATA_CONNECTION,logKeyId=aaa,logKey=***,logUploadKey=dlqkjpwuu].
+2023-05-13 16:07:25.688 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Competition detected: from IP=5.42.213.164 logged at=2023-05-13T13:51:57.000+0300
+2023-05-13 16:07:25.689 [CJ] INFO  [JTS-AuthDispatcherS2-18] - CONN CALC: Last connection attempt time is cleared!
+2023-05-13 16:07:25.689 [CJ] INFO  [JTS-AuthDispatcherS2-18] - AuthTimeoutMonitor-CCP: pause
+2023-05-13 16:07:25.707 [CJ] ERROR [AWT-EventQueue-0] - Competition ip: 5.42.213.164
+2023-05-13 16:07:31.102 [CJ] INFO  [AWT-EventQueue-0] - Competing selection: disconnect another session
+2023-05-13 16:07:31.102 [CJ] INFO  [AWT-EventQueue-0] - Reconnection time cleared: argClearBackoff=true base=0 range=5000 next=0 disconnected=0
+2023-05-13 16:07:31.102 [CJ] INFO  [AWT-EventQueue-0] - Continue logon
+2023-05-13 16:07:31.102 [CJ] INFO  [AWT-EventQueue-0] - AuthTimeoutMonitor-CCP: resume, idleTime=35750
+2023-05-13 16:07:31.103 [CJ] INFO  [JTS-NewCommPort-27] - AuthDispatcher.newCommPort()[userDirname=pgjokcefhnlpnonindbogdjnfiompeneadbplgnk,restart=].
+2023-05-13 16:07:31.104 [CJ] INFO  [JTS-NewCommPort-27] - Daily auto-restart is not enabled.
+2023-05-13 16:07:31.104 [CJ] INFO  [JTS-NewCommPort-27] - Sending NSNewcommPort [publishTokens=0]...
+2023-05-13 16:07:31.104 [CJ] INFO  [JTS-NewCommPort-27] - SPLASH 5418 step 5 AuthDispatcher.send
+2023-05-13 16:07:31.289 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Received NS_FIX_START
+2023-05-13 16:07:31.290 [CJ] INFO  [JTS-AuthDispatcherS2-18] - ### onNsFixStart
+2023-05-13 16:07:31.290 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Interrupting dispatcher [sessionID=2]...
+2023-05-13 16:07:31.291 [CJ] INFO  [JTS-AuthDispatcherS2-18] - Dispatcher thread terminating [sessionID=2,interrupted=true]...
+2023-05-13 16:07:31.292 [CJ] INFO  [JTS-PostAuthenticateS2-28] - AuthTimeoutMonitor-CCP: deactivate
+2023-05-13 16:07:31.292 [CJ] INFO  [JTS-AuthTimeoutMonitorThread-CCP-19] - Terminating auth timeout monitor thread for CCP
+2023-05-13 16:07:31.292 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Authentication complete
+2023-05-13 16:07:31.293 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Creating a FixLogonHandlerFactory instance...
+2023-05-13 16:07:31.294 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Instance created.
+2023-05-13 16:07:31.298 [CJ] INFO  [AWT-EventQueue-0] - initPreUI() - entry
+2023-05-13 16:07:31.299 [CJ] INFO  [AWT-EventQueue-0] - jtsLookAndFeel uninitialized
+2023-05-13 16:07:31.300 [CJ] INFO  [AWT-EventQueue-0] - JtsLookAndFeel initialized
+2023-05-13 16:07:31.300 [CJ] INFO  [JTS-PostAuthenticateS2-28] - JDOMFactory Class =interface org.jdom.JDOMFactory
+2023-05-13 16:07:31.301 [CJ] INFO  [AWT-EventQueue-0] - Current LAF: TWS LAF
+2023-05-13 16:07:31.302 [CJ] INFO  [AWT-EventQueue-0] - initPreUI() - exit
+2023-05-13 16:07:31.303 [CJ] INFO  [JTS-PostAuthenticateS2-28] - hsqldb jdbc =class org.hsqldb.jdbcDriver 2.4
+2023-05-13 16:07:31.305 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Changing state for connection from PRELOGON to PRELOGON in B 298648731: SessionSocket:2
+2023-05-13 16:07:31.305 [CJ] INFO  [JTS-PostAuthenticateS2-28] - createOrRenameToNewStyleUserDirectory: no action: use existing newDir=F:\IBKR\ibgateway\pgjokcefhnlpnonindbogdjnfiompeneadbplgnk
+2023-05-13 16:07:31.305 [CJ] INFO  [JTS-PostAuthenticateS2-28] - performLogSwitch() [force=false]
+2023-05-13 16:07:31.318 [CJ] INFO  [JTS-PostAuthenticateS2-28] - Switching to a new encrypted log...

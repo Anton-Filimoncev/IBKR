@@ -1,0 +1,745 @@
+[INFO] Logger started at 2023-03-15 11:00:49
+[INFO] Executable name: C:\Users\Anton\Desktop\ibgateway-stable-standalone-windows-x64.exe
+[INFO] install4j version: 9.0.8 (build 9199)
+[INFO] Properties: 
+-- listing properties --
+java.runtime.name=Java(TM) SE Runtime Environment
+exe4j.moduleName=C:\Users\Anton\Desktop\ibgateway-stab...
+sun.boot.library.path=c:\users\anton\appdata\local\temp\e4j...
+exe4j.semaphoreName=Local\c:_users_anton_desktop_ibgatewa...
+java.vm.version=25.202-b08
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+exe4j.consoleCodepage=cp0
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.script=
+user.country=RU
+sun.os.patch.level=
+install4j.exeDir=C:\Users\Anton\Desktop\
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\Anton\AppData\Local\Temp\e4j...
+java.runtime.version=1.8.0_202-b08
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=c:\users\anton\appdata\local\temp\e4j...
+os.arch=amd64
+java.io.tmpdir=C:\Users\Anton\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+exe4j.tempDir=C:\Users\Anton\AppData\Local\Temp\e4j...
+os.name=Windows 10
+jdk.http.auth.tunneling.disabledSchemes=
+sun.jnu.encoding=Cp1251
+java.library.path=c:\users\anton\appdata\local\temp\e4j...
+jdk.lang.Process.allowAmbiguousCommands=false
+sun.awt.enableExtraMouseButtons=true
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+exe4j.isInstall4j=true
+os.version=10.0
+user.home=C:\Users\Anton
+user.timezone=Europe/Moscow
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+java.specification.version=1.8
+file.encoding=Cp1251
+user.name=Anton
+java.class.path=C:\Users\Anton\AppData\Local\Temp\e4j...
+java.vm.specification.version=1.8
+sun.arch.data.model=64
+java.home=c:\users\anton\appdata\local\temp\e4j...
+sun.java.command=C:\Users\Anton\Desktop\ibgateway-stab...
+exe4j.launchName=C:\Users\Anton\Desktop\ibgateway-stab...
+java.specification.vendor=Oracle Corporation
+user.language=ru
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+exe4j.unextractedPosition=55805227
+java.version=1.8.0_202
+java.ext.dirs=c:\users\anton\appdata\local\temp\e4j...
+sun.boot.class.path=c:\users\anton\appdata\local\temp\e4j...
+java.vendor=Oracle Corporation
+install4j.appDir=C:\Users\Anton\AppData\Local\Temp\
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+sun.desktop=windows
+sun.cpu.isalist=amd64
+[INFO] Variable changed: sys.resolveUserSpecificInstallationDir=true[class java.lang.String]
+[INFO] System language 'ru'
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3121]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_1
+       Property variableName: installerType
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: installerType=standalone[class java.lang.String]
+       Execute action successful after 32 ms
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 1597]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_2
+       Property rollbackSupported: false
+       Variable changed: sys.installationDir=C:\Jts\ibgateway\1019[class java.lang.String]
+       Execute action successful after 4 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 1892]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_4
+       Property variableName: exeName
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: exeName=ibgateway[class java.lang.String]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 1]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2738]: Show screen
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2738]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 3784]: Show screen
+       Variable changed: sys.installationDir=F:\IBKR\ibgateway[class java.lang.String]
+       checking writable with maximum
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 3784]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Show screen
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3778]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_6
+       Property variableName: jtsConfigDir
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: jtsConfigDir=F:\IBKR\ibgateway[class java.lang.String]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3779]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_7
+       Property variableName: cmdLineArgs
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: true
+       Property rollbackSupported: false
+       Variable changed: cmdLineArgs=[F:\IBKR\ibgateway, ndc1.ibllc.com:4000][class [Ljava.lang.String;]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3780]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_8
+       Property variableName: iconArgs
+       Property failIfNull: false
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: iconArgs=-J-DjtsConfigDir="F:\IBKR\ibgateway"[class java.lang.String]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3781]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_11
+       Property variableName: vmOptionsPath
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: vmOptionsPath=F:\IBKR\ibgateway\ibgateway.vmoptions[class java.lang.String]
+       Execute action successful after 0 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3782]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_12
+       Property variableName: savedVmOptions
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       VM options file not found: F:\IBKR\ibgateway\ibgateway.vmoptions
+       Variable changed: savedVmOptions={content=}[class java.util.HashMap]
+       Execute action successful after 2 ms
+[INFO] com.install4j.runtime.beans.actions.control.SetVariableAction [ID 3783]: Execute action
+       Property script: com.install4j.script.I4jScript_Internal_13
+       Property variableName: mergedVmOptions
+       Property failIfNull: true
+       Property onlyIfUndefined: false
+       Property responseFileVariable: false
+       Property rollbackSupported: false
+       Variable changed: mergedVmOptions=#
+# This file contains VM parameters for IB Gateway 10.19.
+# Each parameter should be defined in a separate line and the
+# last line must be followed by a line feed. No leading or
+# trailing whitespaces are allowed in the same line, where a
+# parameter is defined.
+#
+# Lines starting with a '#' character are treated as comments
+# and ignored. Additionally, if a line contains a
+# '### keep on update' string, all parameters defined below will
+# be preserved on update.
+#
+
+# maximum Java heap size
+-Xmx768m
+
+# GC settings
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=200
+-XX:ParallelGCThreads=20
+-XX:ConcGCThreads=5
+-XX:InitiatingHeapOccupancyPercent=70
+
+-Dinstaller.uuid=d98372ed-691e-4cf9-af1d-093688390d68
+-DvmOptionsPath=F:\IBKR\ibgateway\ibgateway.vmoptions
+-Dsun.awt.nopixfmt=true
+-Dsun.java2d.noddraw=true
+-Dswing.boldMetal=false
+-Dsun.locale.formatasdefault=true
+
+### keep on update
+[class java.lang.String]
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 3419]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_15
+       Property rollbackSupported: false
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.InstallFilesAction [ID 9]: Execute action
+       Property directoryResolverScript: null
+       Property fileFilterScript: null
+       Property sizeCalculatorScript: null
+       Property acceptAllCertificates: false
+       Property checkFreeSpace: true
+       Property delay: false
+       Property installRuntime: true
+       Property rollbackSupported: true
+       Property saveDownloadedFiles: false
+       Property showFileNames: true
+       Property triggerReboot: true
+       Property validateApplicationId: false
+       checking writable with maximum
+       (+3)
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-console-l1-1-0.dll; size: 19264 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-datetime-l1-1-0.dll; size: 18752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-debug-l1-1-0.dll; size: 18752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-errorhandling-l1-1-0.dll; size: 18752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-file-l1-1-0.dll; size: 22336 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-file-l1-2-0.dll; size: 18752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-file-l2-1-0.dll; size: 18744 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-handle-l1-1-0.dll; size: 18752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-heap-l1-1-0.dll; size: 19264 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-interlocked-l1-1-0.dll; size: 18752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-libraryloader-l1-1-0.dll; size: 19264 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-localization-l1-2-0.dll; size: 21312 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-memory-l1-1-0.dll; size: 19264 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-namedpipe-l1-1-0.dll; size: 18752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-processenvironment-l1-1-0.dll; size: 19776 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-processthreads-l1-1-0.dll; size: 20800 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-processthreads-l1-1-1.dll; size: 19256 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-profile-l1-1-0.dll; size: 18240 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-rtlsupport-l1-1-0.dll; size: 19264 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-string-l1-1-0.dll; size: 18752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-synch-l1-1-0.dll; size: 20800 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-synch-l1-2-0.dll; size: 19264 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-sysinfo-l1-1-0.dll; size: 19776 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-timezone-l1-1-0.dll; size: 18752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-core-util-l1-1-0.dll; size: 18752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-conio-l1-1-0.dll; size: 19776 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-convert-l1-1-0.dll; size: 22848 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-environment-l1-1-0.dll; size: 19264 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-filesystem-l1-1-0.dll; size: 20800 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-heap-l1-1-0.dll; size: 19776 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-locale-l1-1-0.dll; size: 19264 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-math-l1-1-0.dll; size: 27968 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-multibyte-l1-1-0.dll; size: 26944 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-private-l1-1-0.dll; size: 71488 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-process-l1-1-0.dll; size: 19768 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-runtime-l1-1-0.dll; size: 23360 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-stdio-l1-1-0.dll; size: 24896 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-string-l1-1-0.dll; size: 24896 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-time-l1-1-0.dll; size: 21312 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\api-ms-win-crt-utility-l1-1-0.dll; size: 19256 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\awt.dll; size: 1523576 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\bci.dll; size: 17784 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\concrt140.dll; size: 332456 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\dcpr.dll; size: 160632 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\decora_sse.dll; size: 87928 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\deploy.dll; size: 583544 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\dtplugin\deployJava1.dll; size: 1027448 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\dtplugin\npdeployJava1.dll; size: 1151864 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\dt_shmem.dll; size: 30584 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\dt_socket.dll; size: 25464 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\eula.dll; size: 137080 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\fontmanager.dll; size: 275320 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\fxplugins.dll; size: 190328 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\glass.dll; size: 285048 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\glib-lite.dll; size: 650616 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\gstreamer-lite.dll; size: 899448 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\hprof.dll; size: 159096 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\instrument.dll; size: 124792 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\j2pcsc.dll; size: 19832 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\j2pkcs11.dll; size: 64376 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jaas_nt.dll; size: 21368 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jabswitch.exe; size: 35192 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\java-rmi.exe; size: 16760 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\java.dll; size: 159608 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\java.exe; size: 207736 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\JavaAccessBridge-64.dll; size: 143224 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javacpl.cpl; size: 189440 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javacpl.exe; size: 84856 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javafx_font.dll; size: 74616 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javafx_font_t2k.dll; size: 547704 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javafx_iio.dll; size: 140664 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javaw.exe; size: 208248 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\javaws.exe; size: 354680 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\java_crw_demo.dll; size: 30584 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jawt.dll; size: 15224 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\JAWTAccessBridge-64.dll; size: 16248 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jdwp.dll; size: 203128 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jfr.dll; size: 28024 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jfxmedia.dll; size: 147320 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jfxwebkit.dll; size: 62511480 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jjs.exe; size: 16760 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jli.dll; size: 175992 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jp2iexp.dll; size: 306552 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jp2launcher.exe; size: 123768 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jp2native.dll; size: 20856 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jp2ssv.dll; size: 245112 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jpeg.dll; size: 187768 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jsdt.dll; size: 19320 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jsound.dll; size: 36216 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\jsoundds.dll; size: 32120 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\keytool.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\kinit.exe; size: 17272 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\klist.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\ktab.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\lcms.dll; size: 244088 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\management.dll; size: 37752 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\mlib_image.dll; size: 654712 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\msvcp140.dll; size: 627368 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\msvcr100.dll; size: 829264 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\net.dll; size: 98680 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\nio.dll; size: 61816 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\npt.dll; size: 19832 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\orbd.exe; size: 17272 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\pack200.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\plugin2\msvcr100.dll; size: 829264 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\plugin2\npjp2.dll; size: 245624 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\policytool.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\prism_common.dll; size: 62328 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\prism_d3d.dll; size: 134520 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\prism_sw.dll; size: 100216 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\resource.dll; size: 16248 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\rmid.exe; size: 16760 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\rmiregistry.exe; size: 17272 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\server\jvm.dll; size: 8842616 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\server\Xusage.txt; size: 1423 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\servertool.exe; size: 17272 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\splashscreen.dll; size: 207224 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\ssv.dll; size: 582008 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\ssvagent.exe; size: 76152 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\sunec.dll; size: 136568 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\sunmscapi.dll; size: 33656 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\t2k.dll; size: 257912 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\tnameserv.exe; size: 17272 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\ucrtbase.dll; size: 1001792 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\unpack.dll; size: 80760 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\unpack200.exe; size: 200568 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\vcruntime140.dll; size: 87224 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\verify.dll; size: 50040 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\w2k_lsa_auth.dll; size: 24952 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\WindowsAccessBridge-64.dll; size: 110968 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\wsdetect.dll; size: 193400 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\bin\zip.dll; size: 79224 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\COPYRIGHT; size: 3244 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\accessibility.properties; size: 149 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\amd64\jvm.cfg; size: 634 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\calendars.properties; size: 1378 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\charsets.jar; size: 3090355 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\classlist; size: 84355 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\cmm\CIEXYZ.pf; size: 51236 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\cmm\GRAY.pf; size: 632 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\cmm\LINEAR_RGB.pf; size: 1044 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\cmm\PYCC.pf; size: 274474 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\cmm\sRGB.pf; size: 3144 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\content-types.properties; size: 5548 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\currency.data; size: 4134 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\ffjcext.zip; size: 14156 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages.properties; size: 2860 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_de.properties; size: 3306 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_es.properties; size: 3600 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_fr.properties; size: 3409 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_it.properties; size: 3223 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_ja.properties; size: 6349 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_ko.properties; size: 5712 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_pt_BR.properties; size: 3285 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_sv.properties; size: 3384 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_zh_CN.properties; size: 4072 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_zh_HK.properties; size: 3752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\messages_zh_TW.properties; size: 3752 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\splash.gif; size: 8590 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\splash@2x.gif; size: 15276 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\splash_11-lic.gif; size: 7805 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy\splash_11@2x-lic.gif; size: 12250 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\deploy.jar; size: 2290707 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\access-bridge-64.jar; size: 195778 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:46 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\cldrdata.jar; size: 3837830 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\dnsns.jar; size: 8150 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\jaccess.jar; size: 43839 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:47 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\jfxrt.jar; size: 18214985 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\localedata.jar; size: 1174481 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\meta-index; size: 1461 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\nashorn.jar; size: 1983134 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:47 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\sunec.jar; size: 41672 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\sunjce_provider.jar; size: 279326 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\sunmscapi.jar; size: 33138 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\sunpkcs11.jar; size: 250218 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\ext\zipfs.jar; size: 67503 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:47 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\flavormap.properties; size: 3928 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fontconfig.bfc; size: 3778 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fontconfig.properties.src; size: 10578 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaBrightDemiBold.ttf; size: 75144 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaBrightDemiItalic.ttf; size: 75124 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaBrightItalic.ttf; size: 80856 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaBrightRegular.ttf; size: 344908 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaSansDemiBold.ttf; size: 317896 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaSansRegular.ttf; size: 698236 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaTypewriterBold.ttf; size: 234068 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\fonts\LucidaTypewriterRegular.ttf; size: 242700 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\hijrah-config-umalqura.properties; size: 13962 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\cursors.properties; size: 1280 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\invalid32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_CopyDrop32x32.gif; size: 165 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_CopyNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_LinkDrop32x32.gif; size: 168 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_LinkNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_MoveDrop32x32.gif; size: 147 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\images\cursors\win32_MoveNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\javafx.properties; size: 56 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\javaws.jar; size: 480103 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jce.jar; size: 115646 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jfr\default.jfc; size: 20109 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jfr\profile.jfc; size: 20065 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jfr.jar; size: 558903 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jfxswt.jar; size: 33473 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jsse.jar; size: 672992 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\jvm.hprof.txt; size: 4226 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\logging.properties; size: 2455 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\management\jmxremote.access; size: 3998 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\management\jmxremote.password.template; size: 2856 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\management\management.properties; size: 14630 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\management\snmp.acl.template; size: 3376 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\management-agent.jar; size: 370 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\meta-index; size: 2126 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\net.properties; size: 5352 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\plugin.jar; size: 1003073 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\psfont.properties.ja; size: 2796 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\psfontj2d.properties; size: 10393 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\resources.jar; size: 3492446 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:44 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\rt.jar; size: 63580228 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:46 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\blacklist; size: 4054 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\blacklisted.certs; size: 1253 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\cacerts; size: 104430 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\java.policy; size: 2466 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\java.security; size: 42622 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\javaws.policy; size: 98 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\policy\limited\local_policy.jar; size: 3527 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\policy\limited\US_export_policy.jar; size: 3026 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\policy\unlimited\local_policy.jar; size: 3035 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\policy\unlimited\US_export_policy.jar; size: 3023 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\security\trusted.libraries; size: 0 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\sound.properties; size: 1210 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\tzdb.dat; size: 105734 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\lib\tzmappings; size: 9577 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\LICENSE; size: 40 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\README.txt; size: 46 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\release; size: 426 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:43 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\THIRDPARTYLICENSEREADME-JAVAFX.txt; size: 112724 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:00:42 MSK 2023, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: Never, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\THIRDPARTYLICENSEREADME.txt; size: 153824 bytes; exists: false
+       Install file: C:\Users\Anton\AppData\Local\Programs\Common\i4j_jres\Oda-jK0QgTEmVssfllLP\1.8.0_202_64\Welcome.html; size: 955 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4jdel.exe; size: 93448 bytes; exists: false
+       File options set to: [fileTime: Thu Sep 29 10:44:58 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\.install4j\i4jinst.dll; size: 217400 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\restarter.exe; size: 328360 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 24 07:32:08 MSK 2023, mode: 755, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\data\audit.xsl; size: 52128 bytes; exists: false
+       File options set to: [fileTime: Fri May 28 17:44:06 MSK 2021, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\data\auditsummary.xsl; size: 47751 bytes; exists: false
+       File options set to: [fileTime: Fri May 28 17:44:28 MSK 2021, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\ibgateway.exe; size: 648872 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 24 07:32:06 MSK 2023, mode: 755, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\jackson-core-2.12.3.jar; size: 274676 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 04 20:28:02 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\jts4launch-1019.jar; size: 47437103 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 24 01:30:26 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\jxbrowser-7.26.jar; size: 6377758 bytes; exists: false
+       File options set to: [fileTime: Fri Jul 22 22:07:30 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\jxbrowser-swing-7.26.jar; size: 78743 bytes; exists: false
+       File options set to: [fileTime: Fri Jul 22 23:13:58 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\jxbrowser-win64-7.26.jar; size: 78482074 bytes; exists: false
+       File options set to: [fileTime: Fri Jul 22 23:31:50 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\locales.jar; size: 104614 bytes; exists: false
+       File options set to: [fileTime: Mon May 07 20:08:24 MSK 2018, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\log4j-api-2.17.1.jar; size: 219430 bytes; exists: false
+       File options set to: [fileTime: Wed Jan 05 19:29:46 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\log4j-core-2.17.1.jar; size: 921285 bytes; exists: false
+       File options set to: [fileTime: Wed Jan 05 19:32:48 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\total-2020.jar; size: 7869644 bytes; exists: false
+       File options set to: [fileTime: Wed Apr 01 17:36:54 MSK 2020, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\twslaunch-1019.jar; size: 3624596 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 24 01:30:22 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\jars\twslaunch-install4j-1.12.jar; size: 13252 bytes; exists: false
+       File options set to: [fileTime: Wed Aug 31 22:50:52 MSK 2022, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\uninstall.exe; size: 784552 bytes; exists: false
+       File options set to: [fileTime: Tue Jan 24 07:32:10 MSK 2023, mode: 700, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\.install4j\inst_jre.cfg; size: 65 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:19 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\.install4j\pref_jre.cfg; size: 89 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:19 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\.install4j\i4jruntime.jar; size: 1972674 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:19 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: F:\IBKR\ibgateway\.install4j\MessagesDefault; size: 34821 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4jparams.conf; size: 95318 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\stats.properties; size: 366 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\user.jar; size: 29905 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\user\flatlaf.jar; size: 709187 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_0_w8hjbe.utf8; size: 34821 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_10_w8hjbe.utf8; size: 33860 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_11_w8hjbe.properties; size: 791 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_12_w8hjbe.utf8; size: 31894 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_13_w8hjbe.properties; size: 872 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_14_w8hjbe.utf8; size: 32795 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_15_w8hjbe.utf8; size: 38924 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_16_w8hjbe.properties; size: 987 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_17_w8hjbe.utf8; size: 37403 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_18_w8hjbe.properties; size: 1021 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_19_w8hjbe.utf8; size: 48909 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_1_w8hjbe.properties; size: 1337 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_20_w8hjbe.utf8; size: 36818 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_21_w8hjbe.utf8; size: 34856 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_22_w8hjbe.properties; size: 935 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_23_w8hjbe.utf8; size: 44207 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_24_w8hjbe.properties; size: 2138 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_25_w8hjbe.utf8; size: 38575 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_26_w8hjbe.utf8; size: 34140 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_27_w8hjbe.properties; size: 926 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_28_w8hjbe.utf8; size: 32414 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_29_w8hjbe.utf8; size: 34755 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_2_w8hjbe.utf8; size: 28354 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_30_w8hjbe.utf8; size: 37656 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_31_w8hjbe.utf8; size: 35441 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_32_w8hjbe.properties; size: 1075 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_33_w8hjbe.utf8; size: 37422 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_34_w8hjbe.utf8; size: 53106 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_35_w8hjbe.properties; size: 3187 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_36_w8hjbe.utf8; size: 36306 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_37_w8hjbe.properties; size: 930 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_38_w8hjbe.utf8; size: 31913 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_39_w8hjbe.utf8; size: 37551 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_3_w8hjbe.properties; size: 1034 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_40_w8hjbe_czgnkz.ico; size: 146982 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_41_w8hjbe_d36cl.png; size: 955 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_42_w8hjbe_18gg8kx.png; size: 9202 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_42_w8hjbe_18gg8kx@2x.png; size: 15419 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_42_w8hjbe_18gg8kx@2x_dark.png; size: 15837 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_42_w8hjbe_18gg8kx_dark.png; size: 8891 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_4_w8hjbe.utf8; size: 27664 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_5_w8hjbe.properties; size: 1034 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_6_w8hjbe.utf8; size: 34268 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_7_w8hjbe.utf8; size: 33738 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_8_w8hjbe.properties; size: 1202 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\i4j_extf_9_w8hjbe.utf8; size: 32122 bytes; exists: false
+       Install file: F:\IBKR\ibgateway\.install4j\installer.ico; size: 15749 bytes; exists: false
+       Execute action successful after 53172 ms
+[INFO] com.install4j.runtime.beans.actions.text.WriteTextFileAction [ID 2307]: Execute action
+       Property encoding: 
+       Property file: F:\IBKR\ibgateway\ibgateway.vmoptions
+       Property text: #
+# This file contains VM parameters for IB Gateway 10.19.
+# Each parameter should be defined in a separate line and the
+# last line must be followed by a line feed. No leading or
+# trailing whitespaces are allowed in the same line, where a
+# parameter is defined.
+#
+# Lines starting with a '#' character are treated as comments
+# and ignored. Additionally, if a line contains a
+# '### keep on update' string, all parameters defined below will
+# be preserved on update.
+#
+
+# maximum Java heap size
+-Xmx768m
+
+# GC settings
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=200
+-XX:ParallelGCThreads=20
+-XX:ConcGCThreads=5
+-XX:InitiatingHeapOccupancyPercent=70
+
+-Dinstaller.uuid=d98372ed-691e-4cf9-af1d-093688390d68
+-DvmOptionsPath=F:\IBKR\ibgateway\ibgateway.vmoptions
+-Dsun.awt.nopixfmt=true
+-Dsun.java2d.noddraw=true
+-Dswing.boldMetal=false
+-Dsun.locale.formatasdefault=true
+
+### keep on update
+
+       Property append: false
+       Property escaped: false
+       Property logText: true
+       Property rollbackSupported: true
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction [ID 10]: Execute action
+       Property categories: Application
+       Property linkDirectory: /usr/local/bin
+       Property programGroupEntryConfigs: []
+       Property programGroupName: IB Gateway 10.19
+       Property uninstallerMenuName: IB Gateway 10.19 Деинсталлятор
+       Property addDefaultLauncherLinks: true
+       Property addUninstaller: true
+       Property allUsers: true
+       Property failForSymlinksNotCreated: false
+       Property rollbackSupported: true
+       Property unixMenuEntries: true
+       Property unixSymlinks: true
+       Variable changed: sys.programGroupName=IB Gateway 10.19[class java.lang.String]
+       Variable changed: sys.symlinkDir=/usr/local/bin[class java.lang.String]
+       Install file: C:\Users\Anton\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\IB Gateway 10.19\IB Gateway 10.19.lnk; size: 746 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:20 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: C:\Users\Anton\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\IB Gateway 10.19\IB Gateway 10.19 Деинсталлятор.lnk; size: 746 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:20 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Execute action successful after 143 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction [ID 11]: Execute action
+       Property icon: i4j_extf_40_w8hjbe_czgnkz.ico
+       Property iconSource: Custom icon
+       Property itemName: IB Gateway 10.19
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Could not set app version: For input string: "("
+       Execute action successful after 14 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateDesktopLinkAction [ID 54]: Execute action
+       Property additionalDesktopFileEntries: 
+       Property arguments: -J-DjtsConfigDir="F:\IBKR\ibgateway"
+       Property description: IB Gateway 10.19
+       Property file: ibgateway
+       Property name: IB Gateway 10.19
+       Property startIn: null
+       Property unixIconFile: null
+       Property winIconFile: null
+       Property allUsers: true
+       Property macSingleBundleTarget: false
+       Property rollbackSupported: true
+       Property runAsAdministrator: false
+       Install file: C:\Users\Public\Desktop\IB Gateway 10.19.lnk; size: 854 bytes; exists: false
+       File options set to: [fileTime: Wed Mar 15 11:02:20 MSK 2023, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Execute action successful after 64 ms
+[INFO] com.install4j.runtime.beans.actions.control.RunScriptAction [ID 1569]: Execute action
+       Property rollbackScript: null
+       Property script: com.install4j.script.I4jScript_Internal_20
+       Property rollbackSupported: false
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\.ibgatewaydemo]...
+       Setting a registry value [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\.ibgatewaydemo, valueName: , value: ibgateway]...
+       Setting a registry value [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\.ibgatewaydemo, valueName: Content Type, value: application/x-ibllc-ibgatewaydemo]...
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway]...
+       Setting a registry value [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway, valueName: , value: IB Gateway 10.19 Launch File]...
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway\shell]...
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway\shell\open]...
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway\shell\open\command]...
+       Setting a registry value [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\ibgateway\shell\open\command, valueName: , value: "F:\IBKR\ibgateway\ibgateway.exe" "%1"]...
+       Creating a registry key [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\MIME\Database\Content Type\application/x-ibllc-ibgatewaydemo]...
+       Setting a registry value [root: HKEY_CURRENT_USER, keyName: SOFTWARE\Classes\MIME\Database\Content Type\application/x-ibllc-ibgatewaydemo, valueName: Extension, value: .ibgatewaydemo]...
+       Execute action successful after 2 ms
+[INFO] com.install4j.runtime.beans.actions.text.WriteTextFileAction [ID 2244]: Execute action
+       Property encoding: 
+       Property file: F:\IBKR\ibgateway\.install4j\.installSuccess
+       Property text: .
+       Property append: false
+       Property escaped: true
+       Property logText: true
+       Property rollbackSupported: true
+       Execute action successful after 1 ms
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Rollback barrier reached
+       command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2790]: Show screen
+       Variable changed: executeLauncherAction=true[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.actions.finish.ExecuteLauncherAction [ID 2791]: Execute action
+       Property arguments: null
+       Property launcherId: 22
+       Property rollbackSupported: false
+       execute directly
+       Execute action successful after 505 ms
+[INFO] com.install4j.runtime.beans.screens.FormScreen [ID 2790]: command: finish
+       cleaning up
+       Finished at 2023-03-15 11:02:25

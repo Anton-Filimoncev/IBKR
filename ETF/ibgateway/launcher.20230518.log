@@ -1,0 +1,75 @@
+2023-05-18 16:38:30.624 [EY] INFO  [JTS-Main] - ------------------------------- IB GATEWAY RESTART --------------------------------
+2023-05-18 16:38:30.646 [EY] INFO  [JTS-Main] - installer version: 4.6.8, installer type: standalone, install dir: 'F:\IBKR\ibgateway\', Jts dir: 'F:\IBKR\ibgateway', VM options file: 'F:\IBKR\ibgateway\ibgateway.vmoptions'
+2023-05-18 16:38:30.658 [EY] INFO  [JTS-Main] - Verifying environment [entryPoint=IBGATEWAY_STANDALONE]...
+2023-05-18 16:38:30.679 [EY] INFO  [JTS-Main] - Install4jAutoUpdateService initialized [props=LauncherProperties[updateDownloadUrl=null,skipUpdateCheck=false,nightlyEnabled=true,channelNameArg=null,channelName=stable,channelChanged=false,jtsConfigDir=F:\IBKR\ibgateway,apiPort=null,sessionId=null,installDir=F:\IBKR\ibgateway\,exeName=null]].
+2023-05-18 16:38:30.685 [EY] INFO  [JTS-Main] - PROXY Installed custom selector
+2023-05-18 16:38:30.691 [EY] INFO  [JTS-Main] - useSsl=true,FIX endPoint=ndc1.ibllc.com:4001
+2023-05-18 16:38:30.748 [EY] INFO  [JTS-Main] - Setting custom timezone: Europe/Moscow
+2023-05-18 16:38:30.752 [EY] INFO  [JTS-Main] - LOCALE: Property locale_to_use=null
+2023-05-18 16:38:30.754 [EY] INFO  [JTS-Main] - LOCALE: JTS Locale=en_US  country=United States  variant=
+2023-05-18 16:38:30.755 [EY] INFO  [JTS-Main] - Region: America
+2023-05-18 16:38:30.757 [EY] INFO  [JTS-Main] - Starting to download 'https://download2.interactivebrokers.com/java/classes/locales.jar' using HotBackup 'https://download2.interactivebrokers.com/java/classes/locales.jar'
+2023-05-18 16:38:32.381 [EY] INFO  [JTS-Main] - LOCALE: needToUpdate  dest=F:\IBKR\ibgateway\jars\locales.jar  sourceMod=2019-11-07 18:30:14  destMod=2019-11-07 18:30:14  sourceSize=114646  destSize=114646  conditions=[NEWER_REMOTE, LOCAL_IN_FUTURE, SIZE_DIFFERS]  download=false
+2023-05-18 16:38:32.381 [EY] INFO  [JTS-Main] - LOCALE: F:\IBKR\ibgateway\jars\locales.jar already up-to-date
+2023-05-18 16:38:32.385 [EY] INFO  [JTS-Main] - DocumentBuilderFactory=jar:file:/C:/Users/Anton/AppData/Local/Programs/Common/i4j_jres/Oda-jK0QgTEmVssfllLP/1.8.0_202_64/lib/rt.jar!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderFactoryImpl.class
+2023-05-18 16:38:32.410 [EY] INFO  [JTS-Main] - LOCALE: loaded 9 supported locales
+2023-05-18 16:38:32.419 [EY] INFO  [JTS-Main] - LOCALE: loaded 8 countries
+2023-05-18 16:38:32.424 [EY] INFO  [JTS-Main] - Locale from ini: ru
+2023-05-18 16:38:32.425 [EY] INFO  [JTS-Main] - LOCALE: created classloader java.net.URLClassLoader@624ea235 with file:/F:/IBKR/ibgateway/jars/locales.jar, parent: sun.misc.Launcher$AppClassLoader@c387f44
+2023-05-18 16:38:32.425 [EY] INFO  [JTS-Main] - Locale=ru_RU  country=Russia  variant=
+2023-05-18 16:38:32.428 [EY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage]
+2023-05-18 16:38:32.431 [EY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru]
+2023-05-18 16:38:32.435 [EY] INFO  [JTS-Main] - prohibiting class lookup [twslaunch.ji18n.LauncherLanguage_ru_RU]
+2023-05-18 16:38:32.436 [EY] INFO  [JTS-Main] - LOCALE:  type: launcher intended: ru_RU actual: ru size: 490
+2023-05-18 16:38:32.436 [EY] INFO  [JTS-Main] - settings dir: 'F:\IBKR\ibgateway'
+2023-05-18 16:38:32.606 [EY] INFO  [JTS-Main] - LauncherFontUpdater: simulatehighdefscreen=false
+2023-05-18 16:38:32.606 [EY] INFO  [JTS-Main] - LauncherFontUpdater: Screen dimensions=1600x900
+2023-05-18 16:38:32.606 [EY] INFO  [JTS-Main] - LauncherFontUpdater: highres=false
+2023-05-18 16:38:32.606 [EY] INFO  [JTS-Main] - LauncherFontUpdater: FontSize=16
+2023-05-18 16:38:32.607 [EY] INFO  [JTS-Main] - initPreUI() - entry
+2023-05-18 16:38:32.618 [EY] INFO  [JTS-Main] - Build 10.19.1k, Jan 23, 2023 5:13:03 PM
+2023-05-18 16:38:32.648 [EY] INFO  [JTS-Main] - LookAndFeelChangedListener installed
+2023-05-18 16:38:32.652 [EY] INFO  [JTS-Main] - JtsLookAndFeel initialized
+2023-05-18 16:38:33.023 [EY] INFO  [JTS-Main] - Current LAF: TWS LAF
+2023-05-18 16:38:33.023 [EY] INFO  [JTS-Main] - initPreUI() - exit
+2023-05-18 16:38:33.029 [EY] INFO  [JTS-MiscUlrsRequester-5] - Connecting cdc1.ibllc.com:4000 timeout=10000...
+2023-05-18 16:38:33.404 [EY] INFO  [JTS-MiscUlrsRequester-5] - Connected to cdc1.ibllc.com:4000 on local port 0 socket local addrs:port /192.168.0.102:53735
+2023-05-18 16:38:33.406 [EY] INFO  [JTS-MiscUlrsRequester-5] - Resolving mac address
+2023-05-18 16:38:33.564 [EY] INFO  [JTS-MiscUlrsRequester-5] - MACNetworkInfo created <6edcb1b5|B4:B0:24:7E:68:3E|192.168.0.102>
+2023-05-18 16:38:33.567 [EY] INFO  [JTS-MISC URLsListenerS1-6] - Starting listener thread [sessionID=1]...
+2023-05-18 16:38:33.581 [EY] INFO  [JTS-MiscUlrsRequester-5] - Sending MiscUrls request
+2023-05-18 16:38:33.581 [EY] INFO  [JTS-AuthDispatcherS1-7] - Starting dispatcher thread [sessionID=1]...
+2023-05-18 16:38:33.584 [EY] INFO  [JTS-MiscUlrsRequester-5] - LOGIN_TIME_MONITOR	 false 16:38:33:584 since start = 0 thread delay = 0 global delay = 0 tag=null, cls=AuthDispatcher method=send
+2023-05-18 16:38:33.585 [EY] INFO  [JTS-MISC URLsListenerS1-6] - Initial listener buffer size is 65536.
+2023-05-18 16:38:33.585 [EY] INFO  [JTS-AuthResponseMonitor-8] - Starting auth response monitor thread
+2023-05-18 16:38:33.585 [EY] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread [sessionID=1] is ready to process messages.
+2023-05-18 16:38:33.750 [EY] INFO  [JTS-AuthDispatcherS1-7] - Received NS_MISC_URLS
+2023-05-18 16:38:33.751 [EY] INFO  [JTS-AuthDispatcherS1-7] - IBMiscUrl.miscUrlMessage()[sslRequired=true]
+2023-05-18 16:38:33.756 [EY] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: scope is blank - setting userScope to EXTERNAL
+2023-05-18 16:38:33.757 [EY] INFO  [JTS-AuthDispatcherS1-7] - Misc URL: setting userScope to EXTERNAL
+2023-05-18 16:38:33.764 [EY] INFO  [JTS-AuthDispatcherS1-7] - Disconnecting cdc1.ibllc.com:4000 [disconnectDetails=DisconnectDetails[sessionID=1,endPoint=cdc1.ibllc.com:4000,reason=DISCONNECT_BY_DESIGN,cause=null,systemMessage=null,keepSocketOpen=false]]...
+2023-05-18 16:38:33.765 [EY] INFO  [JTS-AuthDispatcherS1-7] - Socket closed.
+2023-05-18 16:38:33.765 [EY] INFO  [JTS-MISC URLsListenerS1-6] - Socket or stream for connection cdc1.ibllc.com:4000 was closed by another thread.
+2023-05-18 16:38:33.765 [EY] INFO  [JTS-AuthDispatcherS1-7] - Interrupting dispatcher [sessionID=1]...
+2023-05-18 16:38:33.765 [EY] INFO  [JTS-AuthDispatcherS1-7] - Interrupting listener [sessionID=1,disconnectSocket=true]...
+2023-05-18 16:38:33.766 [EY] INFO  [JTS-AuthDispatcherS1-7] - Dispatcher thread terminating [sessionID=1,interrupted=true]...
+2023-05-18 16:38:33.766 [EY] INFO  [JTS-MISC URLsListenerS1-6] - Listener thread terminating [sessionID=1] [seen=1168,totalShifted=1168,moreAvailable=0]
+2023-05-18 16:38:33.769 [EY] INFO  [JTS-AuthResponseMonitor-8] - Terminating auth response monitor thread
+2023-05-18 16:38:33.957 [EY] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow
+2023-05-18 16:38:33.959 [EY] INFO  [AWT-EventQueue-0] - Starting GstatMessageMgr...
+2023-05-18 16:38:33.964 [EY] INFO  [JTS-GstatMessageMgr-11] - Sending a request to GSTAT [url=https://api.ibkr.com/v1/gstat//bulletins,data='{"p":"10191k","t":"Maintenance","tz":"Europe/Moscow","format":"webapp","theme":"dark","fontSize":"12px","lang":"ru"}']...
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - Started on 20230518-13:38:34
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - Default timezone:Europe/Moscow name:Moscow Standard Time dst:0
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - java version = 1.8.0_202
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - sun.arch.data.model = 64
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - os = Windows 10
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - os version = 10.0
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - os architecture = 64
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - runtime = Java(TM) SE Runtime Environment
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - vendor = Oracle Corporation
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - vm name = Java HotSpot(TM) 64-Bit Server VM
+2023-05-18 16:38:34.018 [EY] INFO  [AWT-EventQueue-0] - username = 'Anton'
+2023-05-18 16:38:34.459 [EY] INFO  [AWT-EventQueue-0] - OvernightManager.dayInit: new values: dayOfTheWeek: 5 (Thu), YYYYMMofToday: 202305, YYYYMMDDofToday: 20230518, m_todayDate: 20230518, dueToChangeInTimezone: false
+2023-05-18 16:38:35.286 [EY] INFO  [JTS-GstatMessageMgr-11] - Received response [errorCode=204,contentLen=-1].
+2023-05-18 16:38:35.683 [EY] INFO  [JTS-DeadlockMonitor-2] - Memory:total=786,432KB free=708,523KB HeapUsage: Max=786,432KB used=76,370KB committed=262,144KB NonHeapUsage: Max=0KB used=64,142KB committed=65,536KB
+2023-05-18 16:38:35.863 [EY] INFO  [AWT-EventQueue-0] - Stopping GstatMessageMgr...

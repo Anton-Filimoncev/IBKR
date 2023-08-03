@@ -1,0 +1,544 @@
+﻿SetupAppTitle=Įdiegimas
+SetupWindowTitle=Instaliuoti - {0}
+UninstallAppTitle=Išinstaliuoti
+UninstallAppFullTitle={0} Išinstaliuoti
+InformationTitle=Informacija
+ConfirmTitle=Patvirtinti
+ErrorTitle=Klaida
+SetupLdrStartupMessage=Bus instaliuota {0}. Ar norite tęsti?
+LdrCannotCreateTemp=Nepavyksta sukurti laikino failo. Instaliavimas atšauktas
+LdrCannotExecTemp=Nepavyksta paleisti failo laikinoje direktorijoje. Instaliavimas atšauktas
+LastErrorMessage={0}.\n\nKlaida {1}: {2}
+SetupFileMissing=Trūksta {0} failo instaliacijos direktorijoje. Ištaisykite šią problemą arba gaukite naują programos kopiją.
+SetupFileCorrupt=Instaliacijos failai sugadinti. Gaukite naują programos kopiją.
+SetupFileCorruptOrWrongVer=Instaliacijos failai sugadinti arba nesuderinami su instaliacijos versija. Ištaisykite šią problemą arba gaukite naują programos kopiją.
+NotOnThisPlatform=Ši programa neveiks su {0}.
+OnlyOnThisPlatform=Ši programa veiks tik su {0}.
+WinVersionTooLowError=Šiai programai reikia {0} versijos {1} ar naujesnės.
+WinVersionTooHighError=Šios programos negalima įrašyti su {0} versija{1} ar naujesne.
+AdminPrivilegesRequired=Turite turėti administratoriaus teises, kad instaliuotumėte programą.
+PowerUserPrivilegesRequired=Turite prisijungti kaip administratorius arba Power Users grupės narys, kuomet instaliuojate programą.
+SetupAppRunningError=Buvo nustatyta, kad šiuo metu {0} yra naudojama taip pat.\n\nUždarykite visus su tuo susijusius langus ir programas, tuomet spauskite OK, norint tęsti, arba Atšaukti, norint išeiti.
+UninstallAppRunningError=Buvo nustatyta, kad šiuo metu {0} yra naudojama taip pat.\n\nUždarykite visus su tuo susijusius langus ir programas, tuomet spauskite OK, norint tęsti, arba Atšaukti, norint išeiti.
+ErrorCreatingDir=Nepavyko sukurti direktorijos "{0}"
+ErrorTooManyFilesInDir=Nepavyko sukurti failų direktorijos "{0}" nes naudojama per daug failų.
+ExitSetupTitle=Išeiti iš instaliacijos
+ExitSetupMessage=Instaliacija nebaigta. Jei išeisite, programa nebus instaliuota.\n\nGalite paleisti Instaliavimo programą kitąkart.\n\nAr norite išeiti?
+AboutSetupMenuItem=Apie instaliaciją ...
+AboutSetupTitle=Apie instaliaciją
+AboutSetupMessage={0} versija {1}\n{2}\n\n{0} namų puslapis:\n{3}
+ButtonBack=Atgal
+ButtonNext=Toliau
+ButtonInstall=Instaliuoti
+ButtonOK=OK
+ButtonCancel=Atšaukti
+ButtonYes=Taip
+ButtonYesToAll=Taip visiems
+ButtonNo=Ne
+ButtonNoToAll=Ne visiems
+ButtonFinish=Baigti
+ButtonBrowse=Browse ...
+ClickNext=Spauskite toliau, kad tęstumėte ir Atšaukti, kad išeitumėte.
+WelcomeLabel1=Sveikiname pasirinkus {0} programą
+WelcomeLabel2=Dabar galėsite instaliuoti {0} savo kompiuteryje.\n\nRekomenduojama uždaryti visas kitas programas prieš tęsiant.
+WizardPassword=Slaptažodis
+PasswordLabel1=Ši instaliacija yra apsaugota slaptažodžiu.
+PasswordLabel3=Įveskite slaptažodį ir spauskite Toliau. Atkreipkite dėmesį į didžiąsias ir mažąsias raides.
+PasswordEditLabel=Slaptažodis:
+IncorrectPassword=Įvedėte neteisingą slaptažodį. Bandykite iš naujo.
+WizardLicense=Licencijos sutartis
+LicenseLabel=Prieš tęsiant, perskaitykite šią svarbią informaciją.
+LicenseLabel3=Perskaitykite šią Licencijos sutartį. Prieš tęsiant instaliaciją turite sutikti su šios sutarties sąlygomis.
+LicenseAccepted=Aš sutinku su sąlygomis
+LicenseNotAccepted=Aš nesutinku su sąlygomisn
+WizardInfoBefore=Informacija
+InfoBeforeLabel=Prieš tęsiant perskaitykite šią svarbią informaciją.
+InfoBeforeClickLabel=Kai būsite pasirengęs pradėti instaliaciją, spauskite Toliau.
+WizardInfoAfter=Informacija
+InfoAfterLabel=Prieš tęsiant perskaitykite šią svarbią informaciją.
+InfoAfterClickLabel=Kai būsite pasirengęs pradėti instaliaciją, spauskite Toliau.
+WizardUserInfo=Vartotojo informacija
+UserInfoDesc=Įveskite savo informaciją.
+UserInfoName=Vartotojo vardas:
+UserInfoOrg=Įmonė:
+UserInfoSerial=Serijos numeris:
+UserInfoNameRequired=Turite įvesti vardą.
+WizardSelectDir=Pasirinkite direktoriją, kur instaliuoti
+SelectDirDesc=Kur instaliuoti {0} programą?
+SelectDirLabel=Pasirinkite aplanką, kuriame norite, kad {0} būtų instaliuota, tada spauskite Toliau.
+DiskSpaceMBLabel=Programai reikia bent {0} MB laisvos vietos.
+ToUNCPathname=Setup cannot install to a UNC path name. If you are trying to install to a network, you will need to map a network drive.
+InvalidPath=You must enter a full path with drive letter; for example:\n\nC:\APP\n\nor a UNC path in the form:\n\n\\server\share
+InvalidDrive=The drive or UNC share you selected does not exist or is not accessible. Please select another.
+DiskSpaceWarningTitle=Nepakanka laisvos vietos diske
+DiskSpaceWarning=Instaliacijai reikia bent {0} KB laisvos vietos, tačiau pasirinktame diske yra tik {1} KB vietos.\n\nVis tiek norite tęsti?
+BadDirName32=Direktorijų pavadinimuose negali būti šių simbolių:\n\n{0}
+DirExistsTitle=Direktorija egzistuoja
+DirExists=Direktorija:\n\n{0}\n\njau egzistuoja. Ar vis tiek norite instaliuoti šioje direktorijoje?
+DirDoesntExistTitle=Direktorija neegzistuoja
+DirDoesntExist=Direktorija:\n\n{0}\n\nneegzistuoja. Ar norite, kad sukurtų šią direktoriją?
+WizardSelectComponents=Pasirinkite komponentus
+SelectComponentsDesc=Kuriuos komponentus norite instaliuoti?
+SelectComponentsLabel2=Pasirinkite komponentus, kuriuos reiktų instaliuoti; pašalinkite komponentus, kurių nenorite instaliuoti. Spauskite Toliau, kai būsite pasirengęs tęsti.
+FullInstallation=Pilna instaliacija
+CompactInstallation=Kompaktiška instaliacija
+CustomInstallation=Pritaikyti instaliaciją sau
+NoUninstallWarningTitle=Komponentai egzistuoja
+NoUninstallWarning=Jūs jau turite instaliavęs šiuos komponentus savo kompiuteryje:\n\n{0}\n\nJei nuimsite jų pažymėjimą, jie išinstaliuoti nebus.\n\nAr vis tiek norite tęsti?
+ComponentSize1={0} KB
+ComponentSize2={0} MB
+ComponentSize3={0} GB
+ComponentsDiskSpaceMBLabel=Pasirinktai instaliacijai reikia bent {0} MB vietos diske.
+WizardSelectTasks=Papildomi darbai
+SelectTasksDesc=Ką dar norite atlikti?
+SelectTasksLabel2=Pasirinkite, ką dar norite atlikti, instaliuojant {0}, tuomet spauskite Toliau.
+CreateDesktopIcon=Sukurti ikoną darbalaukyje
+WizardSelectProgramGroup=Pasirinkite aplanką iš Start meniu
+SelectStartMenuFolderDesc=Kur norite sukurti programos ikonas?
+SelectStartMenuFolderLabel=Pasirinkite aplanką iš Start Meniu, kur norite sukurti programos ikonas, tuomet spauskite Toliau.
+NoIconsCheck=Įkonų kurti nenoriu
+MustEnterGroupName=Turite įvesti aplanko pavadinimą.
+BadGroupName=Aplanko pavadinime negali būti šių simbolių:\n\n{0}
+NoProgramGroupCheck2=Nekurti Start Meniu aplanko
+WizardReady=Pasirengta instaliacijai
+ReadyLabel1=Jau pasirengta {0} instaliacijai jūsų kompiuteryje.
+ReadyLabel2a=Spauskite Instaliuoti, kad tęstumėte instaliaciją, arba Atgal, jei norite peržiūrėti ar keisti atliktus nustatymus.
+ReadyLabel2b=Spauskite Instaliuoti, kad tęstumėte instaliaciją.
+ReadyMemoUserInfo=Vartotojo informacija:
+ReadyMemoDir=Instaliavimo direktorija:
+ReadyMemoType=Instaliacijos tipas:
+ReadyMemoComponents=Pasirinkti komponentai:
+ReadyMemoGroup=Start Meniu aplankas:
+ReadyMemoTasks=Papildomi darbai:
+WizardPreparing=Ruošiama instaliacijai
+PreparingDesc=Ruošiama instaliuoti {0} jūsų kompiuteryje.
+PreviousInstallNotCompleted=Ankstesnės programos instaliavimas/pašalinimas nebuvo pilnai baigtas. Jums reikės perkrauti kompiuterį, kad baigtumėte instaliavimą.\n\nPerkrovus kompiuterį, paleiskite instaliacijos failą vėl, kad įdiegtumėte {0}.
+CannotContinue=Instaliacija negali tęstis. Spauskite Atšaukti, kad išeitumėte.
+WizardInstalling=Instaliuoja
+InstallingLabel=Palaukite, kol jūsų kompiuteryje bus instaliuota {0} programa.
+FinishedHeadingLabel=Ruošiamas {0} instaliavimo vedlys
+FinishedLabelNoIcons=Jūsų kompiuteryje buvo baigta {0} instaliacija.
+FinishedLabel=Jūsų kompiuteryje buvo baigta {0} instaliacija. Programą galite paleisti, rinkdamiesi ikonas, kurios buvo instaliuotos.
+ClickFinish=Spauskite Baigti, kad išeitumėte iš instaliacijos lango.
+FinishedRestartLabel=Kad pilnai baigtumėte instaliuoti {0}, reikia perkrauti kompiuterį. Ar norite perkrauti dabar?
+FinishedRestartMessage=Kad pilnai baigtumėte instaliuoti {0}, reikia perkrauti kompiuterį.\n\nAr norite perkrauti dabar?
+ShowReadmeCheck=Taip, noriu peržiūrėti README failą
+YesRadio=Taip, perkrauti kompiuterį dabar
+NoRadio=Ne, aš perkrausiu kompiuterį vėliau
+RunEntryExec=Paleisti {0}
+RunEntryShellExec=Peržiūrėti {0}
+ChangeDiskTitle=Setup Needs the Next Disk
+SelectDirectory=Pasirinkite direktoriją
+SelectDiskLabel2=Please insert Disk {0} and click OK.\n\nIf the files on this disk can be found in a folder other than the one displayed below, enter the correct path or click Browse.
+PathLabel=Path:
+FileNotInDir2=The file "{0}" could not be located in "{1}". Please insert the correct disk or select another folder.
+SelectDirectoryLabel=Nurodykite kito disko vietą.
+SetupAborted=Instaliavimas nebuvo baigtas.\n\nIštaisykite problemą ir paleiskite instaliaciją iš naujo.
+EntryAbortRetryIgnore=Click Retry to try again, Ignore to proceed anyway, or Abort to cancel installation.
+StatusCreateDirs=Kuria direktorijas ...
+StatusExtractFiles=Išpakuoja failus ...
+StatusCreateIcons=Kuria programos ikonas ...
+StatusCreateIniEntries=Kuria INI įvedimus ...
+StatusCreateRegistryEntries=Kuria registrus ...
+StatusRegisterFiles=Registruoja failus ...
+StatusSavingUninstall=Išsaugo išinstaliavimo informaciją ...
+StatusRunProgram=Baigia instaliaciją ...
+StatusRollback=Rolling back changes ...
+ErrorInternal2=Internal error: {0}
+ErrorFunctionFailedNoCode={0} failed
+ErrorFunctionFailed={0} failed; code {1}
+ErrorFunctionFailedWithMessage={0} failed; code {1}.\n{2}
+ErrorExecutingProgram=Unable to execute file:\n{0}
+ErrorRegOpenKey=Error opening registry key:\n{0}\{1}
+ErrorRegCreateKey=Error creating registry key:\n{0}\{1}
+ErrorRegWriteKey=Error writing to registry key:\n{0}\{1}
+ErrorIniEntry=Error creating INI entry in file "{0}".
+FileAbortRetryIgnore=Click Retry to try again, Ignore to skip this file (not recommended), or Abort to cancel installation.
+FileAbortRetryIgnore2=Click Retry to try again, Ignore to proceed anyway (not recommended), or Abort to cancel installation.
+SourceIsCorrupted=The source file is corrupted
+SourceDoesntExist=The source file "{0}" does not exist
+ExistingFileReadOnly=The existing file is marked as read-only.\n\nClick Retry to remove the read-only attribute and try again, Ignore to skip this file, or Abort to cancel installation.
+ErrorReadingExistingDest=An error occurred while trying to read the existing file:
+FileExists=The file already exists.\n\nWould you like Setup to overwrite it?
+ExistingFileNewer=The existing file is newer than the one Setup is trying to install. It is recommended that you keep the existing file.\n\nDo you want to keep the existing file?
+ErrorChangingAttr=An error occurred while trying to change the attributes of the existing file:
+ErrorCreatingTemp=An error occurred while trying to create a file in the destination directory:
+ErrorReadingSource=An error occurred while trying to read the source file:
+ErrorCopying=An error occurred while trying to copy a file:
+ErrorReplacingExistingFile=An error occurred while trying to replace the existing file:
+ErrorRestartReplace=RestartReplace failed:
+ErrorRenamingTemp=An error occurred while trying to rename a file in the destination directory:
+ErrorRegisterServer=Unable to register the DLL/OCX: {0}
+ErrorRegisterServerMissingExport=DllRegisterServer export not found
+ErrorRegisterTypeLib=Unable to register the type library: {0}
+ErrorOpeningReadme=An error occurred while trying to open the README file.
+ErrorRestartingComputer=Nepavyko automatiškai perkrauti kompiuterio. Atlikite tai patys rankiniu būdu.
+UninstallNotFound=Failas "{0}" neegzistuoja. Negalima išinstaliuoti.
+UninstallUnsupportedVer=The uninstall log file "{0}" is in a format not recognized by this version of the uninstaller. Cannot uninstall
+UninstallUnknownEntry=An unknown entry ({0}) was encountered in the uninstall log
+ConfirmUninstall=Ar tikrai norite pilnai pašalinti {0} ir visus jos komponentus?
+OnlyAdminCanUninstall=This installation can only be uninstalled by a user with administrative privileges.
+UninstallStatusLabel=Prašome palaukti, kol {0} bus pašalintas iš jūsų kompiuterio.
+UninstalledAll={0} buvo sėkmingai pašalintas iš jūsų kompiuterio.
+UninstalledMost={0} išinstaliavimas pavyko.\n\nKai kurių elementų pašalinti nepavyko. Jie gali būti pašalinti rankiniu būdu.
+UninstalledAndNeedsRestart=Norint, kad pilnai būtų išinstaliuotas {0}, jūsų kompiuterį reikia perkrauti.\n\nAr norite perkrauti dabar?
+UninstallDataCorrupted="{0}" failas buvo sugadintas. Išinstaliuoti negalima
+ConfirmDeleteSharedFileTitle=Remove Shared File?
+ConfirmDeleteSharedFile2=The system indicates that the following shared file is no longer in use by any programs. Would you like for Uninstall to remove this shared file?\n\nIf any programs are still using this file and it is removed, those programs may not function properly. If you are unsure, choose No. Leaving the file on your system will not cause any harm.
+SharedFileNameLabel=Failo pavadinimas:
+SharedFileLocationLabel=Vieta:
+WizardUninstalling=Išinstaliavimo būklė
+StatusUninstalling=Išinstaliuoja {0} ...
+MustEnterDirectory=You must enter a destination directory.
+InvalidDirectory=Direktorija:\n\n{0}\n\nyra negalima.
+CreateQuickLaunchIcon=Sukurti Quick Launch ikoną
+CreateIconsGroup=Papildomos ikonos:
+PrepareCancel=Ruošiamasi atšaukimui ...
+
+Downloading=Siunčiama ...
+# {0} is a file name
+DownloadingWithFileName=Siunčiama {0} ...
+# {0} is the application that is uninstalled
+UninstallerMenuEntry={0} išinstaliuoti
+# {0} is a file name
+AskRetryInstallFile={0}\nNepavyko sukurti šio failo. Ar bandyti iš naujo?
+WindowsServicesTitle=Windows Services
+WindowsServicesSubtitle=Please choose the details of how the services should be installed.
+# {0} is the name of the Windows service
+WindowsServiceInstallCheckbox=Install service "{0}"
+WindowsServiceStartOnBootupCheckbox=Start on bootup
+UnixDaemonsTitle=Daemons
+# {0} is the name of the application
+UnixDaemonsSubTitle=Please note the daemons that are provided by {0}.
+# {0} is the name of the Unix daemon
+UnixDaemonStartStopScriptLabel=Start/stop script for daemon "{0}":
+MacosStartupItemsTitle=Startup items
+MacosStartupItemsSubTitle=Please choose the details of how the startup items should be installed.
+# {0} is the name of the Mac OS X startup item
+MacosStartupItemInstallCheckbox=Install startup item "{0}"
+# {0} is the name of the service
+ErrorInstallService=Could not install service "{0}"
+# {0} is the name of the service
+ErrorUninstallService=Could not uninstall service "{0}"
+ErrorInstallIcons=Could not install icons.
+# {0} is a version number, {1} is an application name
+AppleJavaMinVersionError=You need at least a {0} Java Virtual Machine to install {1}.\nPlease download it from http://java.com
+# {0} is a file name
+AskContinue=Could not install file \n{0}\nDo you want to continue the installation?
+UninstallFailureTitle=Results of Uninstaller
+# {0} is an application name
+UninstallFailureSubTitle=Not all files of {0} could be uninstalled.
+UninstallFailureLabel=The following files and directories could not be deleted:
+# {0} is an application name
+DownloadingJre={0} is downloading the Java(TM) Runtime Environment. Please wait.
+ErrorWininet=Cannot initialize wininet.dll. Please install\nInternet Explorer 3.0 or higher.
+DownloadJreError=Error downloading the Java(TM) Runtime Environment.\nPlease check your internet connection and start setup again.
+ChooseJavaExe=Please choose the file "java.exe" of the JRE
+# {0} is an application name
+PrepareInstaller={0} is preparing the install4j Wizard which will guide you through the rest of the setup process.
+InitConnection=Initializing connection ...
+# {0} is the amount downloaded so far, {1} is the total size of the file, {3} is the download speed, measured in kb/s
+DownloadProgress={0} MB of {1} MB ({2}%) at {3} kb/s
+ButtonDownload=Download
+ButtonLocate=Locate
+WizardCaption=install4j Wizard
+JvmStartError=The Java(TM) VM could not be started. Please restart\nthe installation.You may use the parameter "/manual"\nto download or manually select a different VM.
+NoDirNameWithSpace=The directory name must not contain spaces.
+ConfirmReboot=To complete the installation you have to reboot your system. Do you want to reboot Windows now?
+ProgramGroupAllUsers=Create shortcuts for all users
+# {0} is a the application name
+FinishedLabelUnix=Setup has finished installing {0} on your computer. The application may be launched by executing the installed start scripts.
+WizardSelectLinkDir=Select Directory for Symlinks
+SelectLinkDirDesc=Where should {0} create symlinks to the executables?
+NoSymlinksCheck=Don't create symlinks
+SelectLinkDirLabel=Select the folder where you would like {0} to create symlinks, then click Next.
+LastRunFailed=The installer did not start up correctly on the last run.\nThis is probably caused by a corrupted Java VM.\nDo you want to download or manually select the JVM?
+WizardSelectAssociations=Select File Associations
+SelectAssociationsDesc=Which file associations should be created?
+SelectAssociationsLabel=Select the file associations you want to create; clear the file associations you do not want to create. Click Next when you are ready to continue.
+LocateBrowserExecutable=Please locate the executable of your internet browser.
+ErrorStartingBrowser=An error occurred while starting the browser.
+NoWritePermissions=You have no write permissions for this directory. Please choose another one.
+LocateOrDownloadJre2=The install4j wizard could not find a Java(TM) Runtime Environment on your system. You can locate or download a suitable JRE. (minimum version: {0}, maximum version: {1})
+LocateJre2=The install4j wizard could not find a Java(TM) Runtime Environment on your system. Please locate a suitable JRE. (minimum version: {0}, maximum version: {1})
+EnterPassword=Įveskite savo slaptažodį:
+AdminGroupRequired=You must be a member of the Administrator group
+EnterPasswordTitle=Įveskite slaptažodį
+WrongPassword=Įvestas slaptažodis yra neteisingas/ Bandykite iš naujo.
+FileCorrupted=The installation file is corrupted. If it is a download please try it again.
+StatusStoppingServices=Stopping Services
+StatusUninstallingPrevious=Išinstaliuoja ankstesnę versiją
+DifferentApplication=This directory contains a different application. Please choose another one.
+NoTargetApplication=This is an add on installer. The directory you have\nselected doesn't contain the target application.\nPlease choose another one.
+DifferentApplication2=The installation directory contains a different application.\nThe installation cannot be performed.
+NoTargetApplication2=The target application for this add-on-installer cannot be found on your system.\nThe installation cannot be performed.
+InternetConnection=Interneto ryšys
+DirectConnection=Aš jungiuosi prie interneto tiesiogiai
+ProxyConnection=Aš jungiuosi prie interneto per proxy
+ProxyAuthentication=Proxy autorizacija būtina
+ProxyHost=Proxy host
+ProxyPort=Proxy port
+UserName=Vartotojo vardas
+Password=Slaptažodis
+PortValueError=Galima naudoti tik skaičius nuo 1 iki 65536.
+DownloadError=Could not connect to the download server.
+ConnectionParametersRequest=Įveskite savo interneto ryšio parametrus:
+ProxySettings=Proxy nustatymai
+EnterInformation=Prašome įvesti visą reikalaujamą informaciją.
+ComponentHideDescription=Paslėpti aprašymą
+ComponentShowDescription=Rodyti aprašymą
+ComponentDownloadedFromInternet=Komponentą atsiunčia iš interneto
+ComponentIncludedInInstaller=Komponentas yra įtrauktas į instaliacinį failą
+exe4j.MessageBoxTitle=Klaida
+exe4j.NoJvmFound=No JVM could be found on your system.\nPlease define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE or download a JRE from www.java.com.
+exe4j.JvmInPath=The JVM found in your path is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE.
+# {0} is the name of an environment variable
+exe4j.JvmEnvVar=The {0} environment variable does not\npoint to a working JDK or JRE.
+# {0} is a directory name
+exe4j.JvmDefinedPath=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed JDK or JRE.
+exe4j.JvmStart=The JVM could not be started. The maximum heap size (-Xmx) might be too large or an antivirus or firewall tool could block the execution.
+# do not translate "heap" and "-Xmx" 
+exe4j.JvmStart2=The JVM could not be started. The maximum heap size (-Xmx) might be too large or an antivirus or firewall tool could block the execution.
+# {0} is a file name
+exe4j.FileNotFound=File or directory {0} not found or empty\n
+exe4j.WrongParameters=Wrong Parameter Usage
+# {0} is the name of an environment variable
+exe4j.EnvVarNotDefined=The environment variable {0} has to be defined
+# {0} is an internal error code
+exe4j.InternalError=An internal error occurred (error code: {0})
+exe4j.MainClassNotFound=Couldn't load main class.
+exe4j.MainMethodNotFound=Main method not found.
+exe4j.ErrorDialogCaption=Klaida
+exe4j.ErrorDialogOk=Ok
+# {0} is an application name
+exe4j.ErrorDialogText=Įvyko klaida, bandant paleisti {0}:
+WizardInstallationType=Pasirinkite instaliacijos tipą
+SelectInstallationType=Kurią instaliacija norite atlikti?
+SelectInstallationTypeLabel=Pasirinkite instaliacijos tipą, kurį norite atlikti. Spauskite Toliau, kai būsite pasirengęs tęsti.
+StandardInstallation=Standartinė instaliacija
+StandardInstallationDescription=Visi pagrindiniai komponentai yra instaliuojami. Kai kurie rečiau naudojami komponentai neinstaliuojami, kad sutaupytumėte vietos diske.
+FullInstallationDescription=Visi komponentai, esantys šiame instaliaciniame faile, yra instaliuoti.
+CustomInstallationDescription=Kitame žingsnyje galėsite pasirinkti norimus instaliuoti komponentus. Pradiniai pasirinkimai yra standartinės instaliacijos. 
+SelectAll=Pasirinkti visus
+SelectNone=Nieko nesirinkti
+# See the NoProgramGroupCheck2 message, this is just the positive version of the question with a question mark
+ConsoleProgramGroupCheck=Sukurti Start Meniu aplanką?
+# See the NoSymlinksCheck message, this is just the positive version of the question with a question mark
+ConsoleSymlinksCheck=Create symlinks?
+# {0} is the name of the application
+updater.WindowTitle=Updater - {0}
+# {0} is the name of the application
+updater.WelcomeTitle=Čia galite atnaujinti {0} programą
+updater.WelcomeInfoText=Patikrinkite, ar yra programos atnaujinimų {0}.
+updater.CheckForUpdateTitle=Ieškoma atnaujinimų
+updater.CheckForUpdateSubtitle=Palaukite, kol bus patikrinta, ar yra programos atnaujinimų.
+updater.CheckForUpdateLabel=Ieškoma atnaujinimų ...
+# {0} is a URL
+updater.CheckForUpdateError=Atnaujintos informacijos nepavyko atsiųsti iš\n\n{0}\n\nPatikrinkite interneto ryšį.
+updater.UpToDateTitle=Naudojatės naujausia versija
+# {0} is the name of the application
+updater.UpToDateInfoText=Jūs naudojatės naujausia versija {0}
+updater.NewVersionAvailableTitle=Prieinama nauja versija
+updater.NewVersionAvailableSubtitle=Prieinama nauja {0} versija, žiūrėkite informaciją apačioje.
+updater.CurrentVersionLabel=Dabar naudojama versija:
+updater.NewVersionLabel=Nauja versija:
+updater.ShowComments=Rodyti komentarus
+updater.DownloadLocationLabel=Kitame žingsnyje bus atsiųstas instaliacinis failas. Vėliau būsite atskirai įspėtas apie instaliacijos pradžią. Jei nenorite atsisiųsti instaliacinio failo, spauskite Atšaukti.
+updater.DownloadToLabel=Atsiųsti į:
+updater.DownloadSizeLabel=Siunčiamas dydis:
+
+updater.CommentsTitle=Komentarai
+updater.CommentsSubTitle=Perskaitykite atnaujintos versijos komentarus apačioje.
+updater.CommentsLabel=Komentarai
+updater.DownloadTitle=Atsiunčiamas instaliacinis failas
+updater.DownloadSubTitle=Palaukite, kol bus atsiųstas instaliacinis failas
+# {0} is a URL
+updater.DownloadError=Įvyko klaida, kol buvo siunčiama iš\n\n{0}\n\nPatikrinkite interneto ryšį.
+
+updater.FinishTitle=Atsiuntimas baigtas
+updater.FinishInfoText=Buvo atsiųstas {0} atnaujinimas į jūsų kompiuterį.
+updater.LaunchError=Nepavyko paleisti instaliacinio failo
+updater.LaunchUpdaterQuestion=Ar norite paleisti instaliacinį failą dabar?
+updater.LaunchUpdaterLabel=Taip, paleisti atnaujinimo instaliacinį failą dabar
+updater.DoNotLaunchUpdaterLabel=Ne, aš paleisiu atnaujinimo instaliacinį failą vėliau
+updater.OpenContainingFolderLabel=Atidaryti aplanką
+
+WaitLabel=Prašome palaukti ...
+
+# {0} is the name of the application
+ConsoleWelcomeLabel=Dabar galėsite instaliuoti {0} savo kompiuteryje.
+# {0} is the name of the application
+SelectTasksUninstallLabel=Pasirinkite, kuriuos papildomus darbus atlikti, išinstaliuojant {0}, tuomet spauskite Toliau.
+RollbackWindowTitle=Rolling back changes
+ExitUninstallerMessage=Uninstallation is not complete. If you quit now, the program will not be uninstalled.\n\nYou may run the uninstaller program again at another time to complete the uninstallation.\n\nExit Uninstaller?
+ExitApplication=Ar tikrai norite išeiti?
+exe4j.PowerUserRequired=Privalote turėti bent Poweruser teises, kad paleistumėte šią programą.
+
+# "root" is the Unix super-user, do not translate
+RootPrivilegesRequired=You must be logged in as root when installing this program.
+
+# "root" is the Unix super-user, do not translate
+RootPrivilegesRequired2=This operation requires root privileges.
+
+UseSudo=use sudo (please enter your own password)
+# "root" is the Unix super-user, do not translate
+UseSu=use su (please enter the root password)
+
+
+languages.zh_CN=Chinese (Simplified)
+languages.zh_TW=Chinese (Traditional)
+languages.hr=Croatian
+languages.cs=Czech
+languages.da=Danish
+languages.nl=Dutch
+languages.en=English
+languages.fi=Finnish
+languages.fr=French
+languages.de=German
+languages.el=Greek
+languages.hu=Hungarian
+languages.it=Italian
+languages.ja=Japanese
+languages.ko=Korean
+languages.no=Norwegian
+languages.pl=Polish
+languages.pt=Portuguese
+languages.pt_BR=Portuguese (Brazilian)
+languages.ru=Russian
+languages.es=Spanish
+languages.sv=Swedish
+languages.tr=Turkish
+languages.ro=Romanian
+
+LanguageSelectionDialogTitle=Pasirinkite kalbą
+LanguageSelectionLabel=Pasirinkite norimą kalbą:
+ConsoleMultipleSelectionLabel=Please enter a comma-separated list of the selected values or [Enter] for the default selection:
+# This is the "Enter" key on the keyboard
+ConsoleEnter=Enter
+
+RequiredDiskSpaceLabel=Reikalaujama vietos diske:
+FreeDiskSpaceLabel=Laisvos vietos diske:
+
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+exe4j.NoJvmFound3264=No JVM could be found on your system.\nPlease define EXE4J_JAVA_HOME\nto point to an installed {0}-bit JDK or JRE or download a JRE from www.java.com.
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+exe4j.JvmInPath3264=The JVM found in your path is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed {0}-bit JDK or JRE.
+# {0} is the name of an environment variable, don't translate 32-bit
+exe4j.JvmEnvVar32=The {0} environment variable does not\npoint to a working 32-bit JDK or JRE.
+# {0} is the name of an environment variable, don't translate 64-bit
+exe4j.JvmEnvVar64=The {0} environment variable does not\npoint to a working 64-bit JDK or JRE.
+# {0} is a directory name, don't translate 32-bit
+exe4j.JvmDefinedPath32=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed 32-bit JDK or JRE.
+# {0} is a directory name, don't translate 64-bit
+exe4j.JvmDefinedPath64=The JVM found at {0} is damaged.\nPlease reinstall or define EXE4J_JAVA_HOME\nto point to an installed 64-bit JDK or JRE.
+
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+LocateOrDownloadJre3=The install4j wizard could not find a Java(TM) Runtime Environment on your system. You can locate or download a suitable {0}-bit JRE.
+# don't translate {0}-bit, it is either 32-bit or 64-bit
+LocateJre3=The install4j wizard could not find a Java(TM) Runtime Environment on your system. Please locate a suitable {0}-bit JRE.
+
+MinimumVersion=minimum version:
+MaximumVersion=maximum version:
+
+ReadLicenseFirst=Pirmiausia perskaitykite visą licencijos informaciją.
+
+UnattendedRunningFailure=The application is running. Please close all instances and run this installer again.
+# don't translate -DproxyAuthPassword=[password]
+ProxyPasswordRequired=Proxy password required. Please set the parameter -DproxyAuthPassword=[password].
+EnterCredentialsTitle=Enter Credentials
+# {0} is a URL
+EnterCredentialsLabel=Please enter your credentials for the download site {0}
+# don't translate -DserverAuthUser=[user] / -DproxyAuthPassword=[password]
+ServerPasswordRequired=Server password required. Please set the parameters -DserverAuthUser=[user] and -DserverAuthPassword=[password].
+
+CheckForUpdatesLabel=Tikrinti, ar yra atnaujinimų:
+updateSchedule.start=Kaskart paleidžiant programą
+updateSchedule.daily=Kasdien
+updateSchedule.weekly=Kas savaitę
+updateSchedule.monthly=Kas mėnesį
+updateSchedule.never=Niekada
+
+DirectoryChooserLabel=Įveskite naujo aplanko pavadinimą:
+DirectoryChooserTitle=Sukurti naują aplanką
+DirectoryChooserTooltip=Naujas aplankas
+
+#Same as ConsoleProgramGroupCheck, only not phrased as a question
+ProgramGroupCheck=Sukurti Start Meniu aplanką
+#Same as ConsoleSymlinksCheck, only not phrased as a question
+SymlinksCheck=Create symlinks
+ButtonIgnore=Ignore
+ButtonRetry=Retry
+ButtonQuit=Quit
+ButtonCreateUser=Create User
+UserNameLabel=User name:
+PasswordLabel=Password:
+DescriptionLabel=Description:
+LocalGroupNameLabel=Local group:
+CreateUserHeader=Create a new local user with the following properties:
+CreateUserError=Kuriant vartotoją įvyko klaida.
+CreateUserErrorAccessDenied=Access was denied.
+CreateUserErrorGroupExists=Pasirinkta grupė jau egzistuoja.
+CreateUserErrorGroupNotFound=Pasirinkta grupė nerasta.
+CreateUserErrorPasswordRequirements=Slaptažodis neatitiko reikalavimų.
+CreateUserErrorUserExists=Toks vartotojas jau egzistuoja.
+CreateUserSuccess=Vartotojas sėkmingai sukurtas.
+# Similar to SetupAppRunningError
+SetupAppRunningErrorAddOn=Setup has detected that the application is currently running.\n\nPlease close all instances of it now, then click OK to continue, or Cancel to exit.
+# A response file contains previous user input 
+HelpResponseFile=Use a response file
+# "Console" is a command line window, like a DOS box
+HelpConsoleMode=Run in console mode
+# "Unattended" means silently, without user input
+HelpUnattendedMode=Run in unattended mode
+HelpUnattendedDir=In unattended mode, set the installation directory
+HelpUnattendedOverwrite=In unattended mode, overwrite all files
+HelpUnattendedSplash=In unattended mode, show a progress window
+HelpUnattendedConsole=In unattended mode, open a console that shows the output
+# "GUI" means graphical user interface
+HelpGuiMode=Run in GUI mode
+HelpManual=Manually select a Java runtime environment
+HelpSystemProperties=Set system properties
+HelpHelp=Show this help
+HelpHeaderLabel=The following command line options are available:
+# {0} is a list of numbers, the whole message should be in parentheses
+ConsoleComponentHelpLabel=(To show the description of a component, please enter one of {0})
+PreviousInstallationLabel=Buvo aptinkta ankstesnė instaliacija. Ar atnaujinti ankstesnę instaliaciją?
+RadioUpdateInstallation=Taip, atnaujinti esamą instaliaciją
+RadioNewInstallation=Ne, instaliuoti kitoje direktorijoje
+WelcomeLabel3=Dabar instaliuosite {0} savo kompiuteryje. Šis vedlys padės atlikti instaliaciją žingsnis po žingsnio.
+# {0} is a directory
+NoWritePermissions2=You have no write permissions for the directory\n\n{0}\n\nPlease choose another directory.
+# Translate "directory", but not "-dir"
+DestinationDirHelp=You can set the destination directory by passing -dir [directory].
+UnattendedInstallationDir=The installation directory has been set to {0}.
+ProgramGroupExists=The selected program group already exists. Would you like to use it anyway?
+ButtonExit=Išeiti
+ButtonContinue=Tęsti
+UninstallerFinish=Baigiama išinstaliuoti ...
+ProcessElevationTitle=Starting process with elevated permissions
+TextfieldEmptyWarning=Šio teksto laukelio negalima palikti tuščio.
+# {0} and {1} are application names, "Retry" must be like in ButtonRetry, "Cancel" like in ButtonCancel
+AppRunningError={0} has detected that {1} is currently running.\n\nPlease close the following processes, then click Retry to continue, or Cancel to exit.
+AppRunningErrorAddOn={0} has detected that the application is currently running.\n\nPlease close the following processes, then click Retry to continue, or Cancel to exit.
+ButtonCloseProcesses=Close processes
+ButtonTerminateProcesses=Terminate processes
+RunningProcessesDetected=Running Processes Detected
+DownloadFileCorrupt=Atsisiųstas failas yra sugadintas/ Ar norite tęsti?
+DownloadInterrupted=Siuntimasis buvo nutrauktas. Ar norite pabandyti iš naujo?
+DownloadContentError=Nepavyko atsiųsti turinio failų. Ar norite pabandyti iš naujo?
+# Do not translate "dock", it is a UI element on Mac OS X
+AddToDock=Add to the dock
+UploadingWithFileName=Siunčia {0} ...
+Uploading=Siunčia ...
+UploadInterrupted=Siuntimas buvo nutrauktas. Ar norite bandyti iš naujo?
+InstallerName={0} Installer
+PasswordsDoNotMatch=Slaptažodžiai nesutampa.
+# Like PasswordLabel above only for a repetition, with colon at the end
+RepeatPasswordLabel=Pakartokite slaptažodį:
+UninstallerPreparing=Rengiamasi išinstaliuoti
+# Same as AdminPrivilegesRequired, only use "execute" instead of "install"
+AdminPrivilegesRequiredExecute=You must have administrator privileges to executing this program.
+# Same as RootPrivilegesRequired, only use "execute" instead of "install"
+RootPrivilegesRequiredExecute=You must be logged in as root when executing this program.
+# Same as StatusRunProgram, only use "execute" instead of "install"
+StatusRunProgramExecute=Finishing execution ...
