@@ -128,7 +128,7 @@ def ratios_calc(needed_put, needed_call, current_price):
 
     # theta_margin_ratio
     position_margi_calc = needed_put['strike'] * 0.1 * 100 - (needed_put['bid'] - needed_call['ask'])
-    theta_position = needed_put['theta'] + needed_call['theta']
+    theta_position = abs(needed_put['theta']) + abs(needed_call['theta'])
     theta_margin_ratio = (theta_position / position_margi_calc) * 100
 
     return delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio
