@@ -10,7 +10,10 @@ import yfinance as yf
 import pickle
 from support_60_240 import *
 import nest_asyncio
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+import os
 nest_asyncio.apply()
 import mibian
 from contextvars import ContextVar
@@ -97,15 +100,6 @@ def get_BS_prices(current_price, type_option, option_chains_short_FULL):
     return option_chains_short_FULL
 
 
-def get_historical_vol(yahoo_data):
-    TRADING_DAYS = 200
-    returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
-    returns.fillna(0, inplace=True)
-    volatility = returns.rolling(window=TRADING_DAYS).std() * np.sqrt(TRADING_DAYS)
-
-    return volatility[-1]
-
-
 def margin_calc(needed_put, needed_call, current_price):
     # Страйк пута * 0.1*100 - net credit
     margin_put = needed_put['bid'] + np.max(
@@ -131,8 +125,12 @@ def ratios_calc(needed_put, needed_call, current_price):
     vega_theta_ratio = (needed_put['vega'] + needed_call['vega']) / (
                 needed_put['theta'] + needed_call['theta'])
 
-    return delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio
+    # theta_margin_ratio
+    position_margi_calc = needed_put['strike'] * 0.1 * 100 - (needed_put['bid'] - needed_call['ask'])
+    theta_position = needed_put['theta'] + needed_call['theta']
+    theta_margin_ratio = (theta_position / position_margi_calc) * 100
 
+    return delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio
 
 def get_abs_return(price_array, type_option, days_to_exp, history_vol, current_price, strike, prime, vol_opt):
     put_price_list = []
@@ -227,7 +225,7 @@ except:
 # print(gf_screener)
 # ticker_list = gf_screener['Symbol'].tolist()[:5]
 
-# earnings_list, EVR_list, events_available = scraper_earnings([ticker_list])
+
 
 call_strike_list = []
 put_strike_list = []
@@ -235,12 +233,19 @@ possition_margin_list = []
 delta_theta_ratio_list = []
 gamma_theta_ratio_list = []
 vega_theta_ratio_list = []
+theta_margin_ratio_list = []
 expected_return_list = []
 expected_return_percent_list = []
 iv_percentile_list = []
 exp_date_list = []
+liquidity_call_list = []
+liquidity_put_list = []
+hist_vol_list = []
+hist_vol_stage_list = []
+iv_stage_list = []
 
 ticker_list = pd.read_excel('ticker_list.xlsx')['ticker'].tolist()
+# earnings_list, EVR_list, events_available = scraper_earnings(ticker_list)
 
 yahoo_df_native = yf.download(ticker_list)['Close']
 
@@ -256,7 +261,7 @@ for tick in ticker_list:
     limit_date_max = datetime.datetime.now() + relativedelta(days=+240)
 
 
-    current_price, current_iv_percentile = get_ib_data(tick, yahoo_df, ib)
+    current_price, current_iv_percentile, iv_regime  = get_ib_data(tick, yahoo_df, ib)
 
     df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
     df_chains = get_atm_strikes(df_chains, current_price)
@@ -293,10 +298,14 @@ for tick in ticker_list:
     print(needed_call['strike'])
     print(needed_call['delta'])
 
+    # ликвидность
+    liquidity_put = abs(needed_put['ask'] - needed_put['bid']) / needed_put['strike']
+    liquidity_call = abs(needed_call['ask'] - needed_call['bid']) / needed_call['strike']
+
     #     базовые ратио
-    delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio = ratios_calc(needed_put, needed_call, current_price)
+    delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio = ratios_calc(needed_put, needed_call, current_price)
     #  historical volatility
-    hist_vol = get_historical_vol(yahoo_df)
+    hist_vol, hist_vol_regime = get_historical_vol(yahoo_df)
     # expected return
     expected_return = expected_return_calc(needed_call, needed_put, current_price, hist_vol)
     print('expected_return', expected_return)
@@ -318,6 +327,12 @@ for tick in ticker_list:
     expected_return_percent_list.append(expected_return_percent)
     iv_percentile_list.append(current_iv_percentile)
     exp_date_list.append(needed_put['EXP_date'])
+    liquidity_call_list.append(liquidity_call)
+    liquidity_put_list.append(liquidity_put)
+    hist_vol_list.append(hist_vol)
+    hist_vol_stage_list.append(hist_vol_regime)
+    iv_stage_list.append(iv_regime)
+    theta_margin_ratio_list.append(theta_margin_ratio)
     #
     # except:
     #     call_strike_list.append(np.nan)
@@ -341,10 +356,16 @@ FINISH_DF = pd.DataFrame(
         'Delta_Theta_Ratio': delta_theta_ratio_list,
         'Gamma_Theta_Ratio': gamma_theta_ratio_list,
         'Vega_Theta_Ratio': vega_theta_ratio_list,
+        'Theta_Margin_Ratio': theta_margin_ratio_list,
         'Margin': possition_margin_list,
         'Rxpected_Return': expected_return_list,
         'Rxpected_Return_Percent': expected_return_percent_list,
+        'Hist_Volatility': hist_vol_list,
+        'Hist_Vol_Stage': hist_vol_stage_list,
         'IV_Percentile': iv_percentile_list,
+        'IV_Stage': iv_stage_list,
+        'Liquidity_Call': liquidity_call_list,
+        'Liquidity_Put': liquidity_put_list,
 
     }
 )

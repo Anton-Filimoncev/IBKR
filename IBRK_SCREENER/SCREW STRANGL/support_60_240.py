@@ -12,6 +12,7 @@ import pandas_ta as pta
 import scipy.stats as stats
 import asyncio
 import aiohttp
+from sklearn import mixture as mix
 
 KEY = "ckZsUXdiMTZEZVQ3a25TVEFtMm9SeURsQ1RQdk5yWERHS0RXaWNpWVJ2cz0"
 
@@ -83,8 +84,8 @@ def get_ib_data(tick, yahoo_df, ib):
             contract, endDateTime='', durationStr='365 D',
             barSizeSetting='1 day', whatToShow='OPTION_IMPLIED_VOLATILITY', useRTH=True)
         df_iv = util.df(bars)
-        df_iv['IV_percentile'] = df_iv['close'].rolling(364).apply(
-            lambda x: stats.percentileofscore(x, x.iloc[-1]))
+        df_iv = df_iv.set_index('date')
+
     except Exception as e:
         print(e)
         print('Work with ARCA')
@@ -93,9 +94,101 @@ def get_ib_data(tick, yahoo_df, ib):
             contract, endDateTime='', durationStr='365 D',
             barSizeSetting='1 day', whatToShow='OPTION_IMPLIED_VOLATILITY', useRTH=True)
         df_iv = util.df(bars)
-        df_iv['IV_percentile'] = df_iv['close'].rolling(364).apply(
-            lambda x: stats.percentileofscore(x, x.iloc[-1]))
+        df_iv = df_iv.set_index('date')
 
     current_price = yahoo_df['Close'].iloc[-1]
 
-    return current_price, df_iv['IV_percentile'].iloc[-1]
+    # STAGE =========================================================================
+
+    unsup = mix.GaussianMixture(n_components=4,
+                                covariance_type="spherical",
+                                n_init=100,
+                                random_state=42)
+
+    unsup.fit(np.reshape(df_iv, (-1, df_iv.shape[1])))
+
+    regime = unsup.predict(np.reshape(df_iv, (-1, df_iv.shape[1])))
+    df_iv['Return'] = np.log(df_iv['close'] / df_iv['close'].shift(1))
+    Regimes = pd.DataFrame(regime, columns=['Regime'], index=df_iv.index) \
+        .join(df_iv, how='inner') \
+        .assign(market_cu_return=df_iv.Return.cumsum()) \
+        .reset_index(drop=False) \
+        .rename(columns={'index': 'Date'})
+
+    Regimes = Regimes.dropna()
+
+    one_period_price_mean = Regimes[Regimes['Regime'] == 0]['close'].max()
+    two_period_price_mean = Regimes[Regimes['Regime'] == 1]['close'].max()
+    three_period_price_mean = Regimes[Regimes['Regime'] == 2]['close'].max()
+    four_period_price_mean = Regimes[Regimes['Regime'] == 3]['close'].max()
+
+    print([one_period_price_mean, two_period_price_mean, three_period_price_mean, four_period_price_mean])
+
+    lisusss = [one_period_price_mean, two_period_price_mean, three_period_price_mean, four_period_price_mean]
+    lisusss_sort = sorted(lisusss)
+    print(lisusss_sort)
+
+    period_set = {0: lisusss_sort.index(lisusss[0]) + 1,
+                  1: lisusss_sort.index(lisusss[1]) + 1,
+                  2: lisusss_sort.index(lisusss[2]) + 1,
+                  3: lisusss_sort.index(lisusss[3]) + 1,
+                  }
+
+    Regimes_plot = Regimes.copy()
+
+    Regimes_plot['Regime'] = Regimes_plot['Regime'].replace(period_set)
+
+    # PERCENTILE =====================================================================
+
+    df_iv['IV_percentile'] = df_iv['close'].rolling(364).apply(
+        lambda x: stats.percentileofscore(x, x.iloc[-1]))
+
+    return current_price, df_iv['IV_percentile'].iloc[-1], Regimes_plot['Regime'].iloc[-1]
+
+def get_historical_vol(yahoo_data):
+    TRADING_DAYS = 200
+    returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
+    returns.fillna(0, inplace=True)
+    volatility = returns.rolling(window=TRADING_DAYS).std() * np.sqrt(TRADING_DAYS)
+
+    volatility = volatility.to_frame().dropna()
+    volatility = volatility[-200:]
+
+    unsup = mix.GaussianMixture(n_components=4,
+                                covariance_type="spherical",
+                                n_init=100,
+                                random_state=42)
+
+    unsup.fit(np.reshape(volatility, (-1, volatility.shape[1])))
+
+    regime = unsup.predict(np.reshape(volatility, (-1, volatility.shape[1])))
+    volatility['Return'] = np.log(volatility['Close'] / volatility['Close'].shift(1))
+    Regimes = pd.DataFrame(regime, columns=['Regime'], index=volatility.index) \
+        .join(volatility, how='inner') \
+        .assign(market_cu_return=volatility.Return.cumsum()) \
+        .reset_index(drop=False) \
+        .rename(columns={'index': 'Date'})
+
+    Regimes = Regimes.dropna()
+
+    one_period_price_mean = Regimes[Regimes['Regime'] == 0]['Close'].max()
+    two_period_price_mean = Regimes[Regimes['Regime'] == 1]['Close'].max()
+    three_period_price_mean = Regimes[Regimes['Regime'] == 2]['Close'].max()
+    four_period_price_mean = Regimes[Regimes['Regime'] == 3]['Close'].max()
+
+    lisusss = [one_period_price_mean, two_period_price_mean, three_period_price_mean, four_period_price_mean]
+    lisusss_sort = sorted(lisusss)
+
+
+    period_set = {0: lisusss_sort.index(lisusss[0]) + 1,
+                  1: lisusss_sort.index(lisusss[1]) + 1,
+                  2: lisusss_sort.index(lisusss[2]) + 1,
+                  3: lisusss_sort.index(lisusss[3]) + 1,
+                  }
+
+    Regimes_plot = Regimes.copy()
+
+    Regimes_plot['Regime'] = Regimes_plot['Regime'].replace(period_set)
+
+
+    return volatility['Close'].iloc[-1], Regimes_plot['Regime'].iloc[-1]

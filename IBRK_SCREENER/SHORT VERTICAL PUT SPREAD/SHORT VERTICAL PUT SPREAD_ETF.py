@@ -105,15 +105,6 @@ def get_BS_prices(current_price, type_option, option_chains_short_FULL):
     return option_chains_short_FULL
 
 
-def get_historical_vol(yahoo_data):
-    TRADING_DAYS = 200
-    returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
-    returns.fillna(0, inplace=True)
-    volatility = returns.rolling(window=TRADING_DAYS).std() * np.sqrt(TRADING_DAYS)
-
-    return volatility[-1]
-
-
 def margin_calc(needed_put_short, needed_put_long, current_price):
     net_credit = needed_put_short['bid'] - needed_put_long['ask']
     position_margin = (needed_put_short['strike'] - needed_put_long['strike'] - net_credit) * 100
@@ -131,7 +122,13 @@ def ratios_calc(needed_put_short, needed_put_long, current_price):
     vega_theta_ratio = (needed_put_short['vega'] + needed_put_long['vega']) / (
                 needed_put_short['theta'] + needed_put_long['theta'])
 
-    return  gamma_theta_ratio, vega_theta_ratio
+    # theta_margin_ratio
+    net_credit = needed_put_short['bid'] - needed_put_long['ask']
+    position_margi_calc = (needed_put_short['strike'] - needed_put_long['strike'] - net_credit) * 100
+    theta_position = abs(needed_put_short['theta']) - abs(needed_put_long['theta'])
+    theta_margin_ratio = (theta_position / position_margi_calc) * 100
+
+    return gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio
 
 
 def get_abs_return(price_array, type_option, days_to_exp, history_vol, current_price, strike, prime, vol_opt):
@@ -383,6 +380,7 @@ possition_margin_list = []
 delta_theta_ratio_list = []
 gamma_theta_ratio_list = []
 vega_theta_ratio_list = []
+theta_margin_ratio_list = []
 expected_return_list = []
 expected_return_percent_list = []
 iv_percentile_list = []
@@ -392,6 +390,12 @@ reward_risk_list = []
 trend_list = []
 exp_date_list = []
 max_paint_list = []
+liquidity_short_list = []
+liquidity_long_list = []
+hist_vol_list = []
+hist_vol_stage_list = []
+iv_stage_list = []
+ROI_day_list = []
 
 
 ib = IB()
@@ -417,7 +421,7 @@ for tick in ticker_list:
         limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
         limit_date_max = datetime.datetime.now() + relativedelta(days=+365)
 
-        current_price, current_iv_percentile = get_ib_data(tick, yahoo_df, ib)
+        current_price, current_iv_percentile, iv_regime = get_ib_data(tick, yahoo_df, ib)
 
         side = 'put'
 
@@ -449,13 +453,17 @@ for tick in ticker_list:
         print(needed_put_long['EXP_date'])
         print(needed_put_long['strike'])
         print(needed_put_long['delta'])
+
+        # ликвидность
+        liquidity_short = abs(needed_put_short['ask'] - needed_put_short['bid']) / needed_put_short['strike']
+        liquidity_long = abs(needed_put_long['ask'] - needed_put_long['bid']) / needed_put_long['strike']
     #
 
         position_margin, break_point, reward_risk = margin_calc(needed_put_short, needed_put_long, current_price)
         #     базовые ратио
-        gamma_theta_ratio, vega_theta_ratio = ratios_calc(needed_put_short, needed_put_long, current_price)
+        gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio = ratios_calc(needed_put_short, needed_put_long, current_price)
         #  historical volatility
-        hist_vol = get_historical_vol(yahoo_df)
+        hist_vol, hist_vol_regime = get_historical_vol(yahoo_df)
         # expected return
 
         expected_return = expected_return_calc(needed_put_short, needed_put_long, current_price, hist_vol)
@@ -482,6 +490,9 @@ for tick in ticker_list:
 
         print('max_pain_val', max_pain_val)
 
+        # ------ ROI/day ---------
+        ROI_day = (expected_return/position_margin)/needed_put_short['days_to_exp']
+
         put_long_strike_list.append(needed_put_long['strike'])
         put_short_strike_list.append(needed_put_short['strike'])
         exp_date_list.append(needed_put_short['EXP_date'])
@@ -496,8 +507,13 @@ for tick in ticker_list:
         reward_risk_list.append(reward_risk)
         trend_list.append(trend_value)
         max_paint_list.append(max_pain_val)
-
-
+        liquidity_short_list.append(liquidity_short)
+        liquidity_long_list.append(liquidity_long)
+        hist_vol_list.append(hist_vol)
+        hist_vol_stage_list.append(hist_vol_regime)
+        iv_stage_list.append(iv_regime)
+        theta_margin_ratio_list.append(theta_margin_ratio)
+        ROI_day_list.append(ROI_day)
 
 
     except Exception as e:
@@ -516,6 +532,13 @@ for tick in ticker_list:
         trend_list.append(np.nan)
         exp_date_list.append(np.nan)
         max_paint_list.append(np.nan)
+        liquidity_short_list.append(np.nan)
+        liquidity_long_list.append(np.nan)
+        hist_vol_list.append(np.nan)
+        hist_vol_stage_list.append(np.nan)
+        iv_stage_list.append(np.nan)
+        theta_margin_ratio_list.append(np.nan)
+        ROI_day_list.append(np.nan)
         pass
 
 FINISH_DF = pd.DataFrame(
@@ -527,10 +550,15 @@ FINISH_DF = pd.DataFrame(
         'Max_Pain': max_paint_list,
         'Gamma_Theta_Ratio': gamma_theta_ratio_list,
         'Vega_Theta_Ratio': vega_theta_ratio_list,
+        'Theta_Margin_Ratio': theta_margin_ratio_list,
         'Margin': possition_margin_list,
         'Rxpected_Return': expected_return_list,
+        'ROI_Day': ROI_day_list,
         'Rxpected_Return_Percent': expected_return_percent_list,
+        'Hist_Volatility': hist_vol_list,
+        'Hist_Vol_Stage': hist_vol_stage_list,
         'IV_Percentile': iv_percentile_list,
+        'IV_Stage': iv_stage_list,
         'Break Point': break_point_list,
         'Proba_Below': proba_below_list,
         'Reward_Risk': reward_risk_list,
@@ -539,6 +567,8 @@ FINISH_DF = pd.DataFrame(
         # 'Events_Available': events_available,
         # 'PCR_Signal': strategist_pcr_signals,
         'Trend': trend_list,
+        'Liquidity_Short_List': liquidity_short_list,
+        'Liquidity_Long_List': liquidity_long_list,
     }
 )
 
