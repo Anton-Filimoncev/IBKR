@@ -414,7 +414,7 @@ try:
     ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
 
 except:
-    ib.connect('127.0.0.1', 7497, clientId=212)
+    ib.connect('127.0.0.1', 7496, clientId=212)
 
 yahoo_df_native = yf.download(ticker_list)['Close']
 
@@ -465,8 +465,8 @@ for tick in ticker_list:
         print(needed_put_long['delta'])
 
         # ликвидность
-        liquidity_short = abs(needed_put_short['ask'] - needed_put_short['bid']) / needed_put_short['strike']
-        liquidity_long = abs(needed_put_long['ask'] - needed_put_long['bid']) / needed_put_long['strike']
+        liquidity_short = (abs(needed_put_short['ask'] - needed_put_short['bid']) / needed_put_short['strike']) * 100
+        liquidity_long = (abs(needed_put_long['ask'] - needed_put_long['bid']) / needed_put_long['strike']) * 100
     #
 
         position_margin, break_point, reward_risk = margin_calc(needed_put_short, needed_put_long, current_price)
@@ -578,8 +578,8 @@ FINISH_DF = pd.DataFrame(
         'Events_Available': events_available,
         'PCR_Signal': strategist_pcr_signals,
         'Trend': trend_list,
-        'Liquidity_Short_List': liquidity_short_list,
-        'Liquidity_Long_List': liquidity_long_list,
+        'Liquidity_Short': liquidity_short_list,
+
     }
 )
 

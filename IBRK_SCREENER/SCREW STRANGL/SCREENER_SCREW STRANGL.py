@@ -284,8 +284,8 @@ for tick in ticker_list:
         print(needed_call['delta'])
 
         # ликвидность
-        liquidity_put = abs(needed_put['ask'] - needed_put['bid']) / needed_put['strike']
-        liquidity_call = abs(needed_call['ask'] - needed_call['bid']) / needed_call['strike']
+        liquidity_put = (abs(needed_put['ask'] - needed_put['bid']) / needed_put['strike']) * 100
+        liquidity_call = (abs(needed_call['ask'] - needed_call['bid']) / needed_call['strike']) * 100
 
         #     базовые ратио
         delta_theta_ratio, gamma_theta_ratio, vega_theta_ratio, theta_margin_ratio = ratios_calc(needed_put, needed_call, current_price)
@@ -354,7 +354,6 @@ FINISH_DF = pd.DataFrame(
         'Hist_Vol_Stage': hist_vol_stage_list,
         'IV_Percentile': iv_percentile_list,
         'IV_Stage': iv_stage_list,
-        'Liquidity_Call': liquidity_call_list,
         'Liquidity_Put': liquidity_put_list,
 
     }
