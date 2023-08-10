@@ -17,6 +17,7 @@ nest_asyncio.apply()
 import mibian
 from contextvars import ContextVar
 import math
+import pandas_ta as pta
 
 from thetadata import ThetaClient, OptionReqType, OptionRight, DateRange, SecType, StockReqType
 
@@ -107,7 +108,7 @@ def get_BS_prices(current_price, type_option, option_chains_short_FULL):
 
 def margin_calc(needed_put_short, current_price):
     net_credit = needed_put_short['bid']
-    position_margin = current_price * 0.2
+    position_margin = current_price * 0.2 * 100
     break_point = needed_put_short['strike'] - net_credit
     reward_risk = net_credit*100/position_margin
 
@@ -237,6 +238,7 @@ def trend(price_df):
     current_price = price_df['Close'].iloc[-1]
     SMA_20 = price_df['Close'].rolling(window=20).mean().iloc[-1]
     SMA_100 = price_df['Close'].rolling(window=100).mean().iloc[-1]
+    RSI = pta.rsi(price_df['Close'])
 
     if current_price > SMA_100 and current_price > SMA_20 and SMA_20 > SMA_100:
         trend = 'Strong Uptrend'
@@ -251,7 +253,7 @@ def trend(price_df):
     if current_price < SMA_100 and current_price > SMA_20:
         trend = 'Weak downtrend'
 
-    return trend
+    return trend, RSI
 
 
 
@@ -388,12 +390,13 @@ reward_risk_list = []
 trend_list = []
 exp_date_list = []
 max_paint_list = []
-liquidity_short_list = []
+# liquidity_short_list = []
 liquidity_long_list = []
 hist_vol_list = []
 hist_vol_stage_list = []
 iv_stage_list = []
 ROI_day_list = []
+RSI_list = []
 
 
 ib = IB()
@@ -406,6 +409,7 @@ except:
 
 ticker_list = pd.read_excel('ticker_list.xlsx')['ticker'].tolist()
 yahoo_df_native = yf.download(ticker_list)['Close']
+
 
 for tick in ticker_list:
 
@@ -453,7 +457,7 @@ for tick in ticker_list:
         # print(needed_put_long['delta'])
 
         # ликвидность
-        liquidity_short = (abs(needed_put_short['ask'] - needed_put_short['bid']) / needed_put_short['strike']) * 100
+        # liquidity_short = (abs(needed_put_short['ask'] - needed_put_short['bid']) / needed_put_short['strike']) * 100
         # liquidity_long = (abs(needed_put_long['ask'] - needed_put_long['bid']) / needed_put_long['strike']) * 100
     #
 
@@ -476,7 +480,7 @@ for tick in ticker_list:
         print('proba_below', proba_below)
 
         # price_df = yf.download(tick)
-        trend_value = trend(yahoo_df)
+        trend_value, RSI = trend(yahoo_df)
         print('current_iv_percentile', current_iv_percentile)
 
         # Получить сигнал по PCR с стратегиста
@@ -505,13 +509,14 @@ for tick in ticker_list:
         reward_risk_list.append(reward_risk)
         trend_list.append(trend_value)
         max_paint_list.append(max_pain_val)
-        liquidity_short_list.append(liquidity_short)
+        # liquidity_short_list.append(liquidity_short)
         # liquidity_long_list.append(liquidity_long)
         hist_vol_list.append(hist_vol)
         hist_vol_stage_list.append(hist_vol_regime)
         iv_stage_list.append(iv_regime)
         theta_margin_ratio_list.append(theta_margin_ratio)
         ROI_day_list.append(ROI_day)
+        RSI_list.append(RSI)
 
 
     except Exception as e:
@@ -530,13 +535,14 @@ for tick in ticker_list:
         trend_list.append(np.nan)
         exp_date_list.append(np.nan)
         max_paint_list.append(np.nan)
-        liquidity_short_list.append(np.nan)
+        # liquidity_short_list.append(np.nan)
         # liquidity_long_list.append(np.nan)
         hist_vol_list.append(np.nan)
         hist_vol_stage_list.append(np.nan)
         iv_stage_list.append(np.nan)
         theta_margin_ratio_list.append(np.nan)
         ROI_day_list.append(np.nan)
+        RSI_list.append(np.nan)
         pass
 
 FINISH_DF = pd.DataFrame(
@@ -565,7 +571,8 @@ FINISH_DF = pd.DataFrame(
         # 'Events_Available': events_available,
         # 'PCR_Signal': strategist_pcr_signals,
         'Trend': trend_list,
-        'Liquidity_Short': liquidity_short_list,
+        # 'Liquidity_Short': liquidity_short_list,
+        'RSI': RSI_list,
     }
 )
 

@@ -12,6 +12,7 @@ import pickle
 import pandas_ta as pta
 from sklearn import mixture as mix
 import scipy.stats as stats
+import pandas_ta as pta
 
 KEY = "ckZsUXdiMTZEZVQ3a25TVEFtMm9SeURsQ1RQdk5yWERHS0RXaWNpWVJ2cz0"
 
@@ -98,7 +99,8 @@ def get_ib_data(tick, yahoo_df, ib):
             contract, endDateTime='', durationStr='365 D',
             barSizeSetting='1 day', whatToShow='OPTION_IMPLIED_VOLATILITY', useRTH=True)
         df_iv = util.df(bars)
-        iv_percqntile = df_iv['IV_percentile'].iloc[-1]
+        test = df_iv['close'].rolling(364).apply(
+            lambda x: stats.percentileofscore(x, x.iloc[-1]))
 
     except Exception as e:
         print(e)
@@ -108,7 +110,8 @@ def get_ib_data(tick, yahoo_df, ib):
             contract, endDateTime='', durationStr='365 D',
             barSizeSetting='1 day', whatToShow='OPTION_IMPLIED_VOLATILITY', useRTH=True)
         df_iv = util.df(bars)
-        iv_percqntile = df_iv['IV_percentile'].iloc[-1]
+        test = df_iv['close'].rolling(364).apply(
+            lambda x: stats.percentileofscore(x, x.iloc[-1]))
 
     current_price = yahoo_df['Close'].iloc[-1]
 
@@ -158,8 +161,9 @@ def get_ib_data(tick, yahoo_df, ib):
 
     df_iv['IV_percentile'] = df_iv['close'].rolling(364).apply(
         lambda x: stats.percentileofscore(x, x.iloc[-1]))
+    iv_percqntile = df_iv['IV_percentile'].iloc[-1]
 
-    return current_price, iv_percqntile , Regimes_plot['Regime'].iloc[-1]
+    return current_price, iv_percqntile, Regimes_plot['Regime'].iloc[-1]
 
 def get_historical_vol(yahoo_data):
     TRADING_DAYS = 200
