@@ -16,7 +16,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import threading
 import random
-
 import pandas as pd
 import numpy as np
 from selenium import webdriver
@@ -43,7 +42,11 @@ def get_fundamental_data(start_row):
 
     def scraper(tk):
 
-        barcode = 'seo@2site.ru'
+        print('Remove old files...')
+        for filename in os.listdir(f'guru_files'):
+            os.remove(f'guru_files\{filename}')
+
+        barcode = 'fin@ss-global-group.com'
         password = 'MSIGX660'
         # ____________________ Работа с Selenium ____________________________
         path = os.path.join(os.getcwd(), 'chromedriver.exe')
@@ -97,10 +100,15 @@ def get_fundamental_data(start_row):
                 # html.click()
 
                 sleep(7)
+                try:
+                    select_all = checker.find_element(By.XPATH,
+                                                      '''//*[@id="components-root"]/div[1]/div[4]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/span/div/span/i''')
+                    select_all.click()
+                except:
+                    select_all = checker.find_element(By.XPATH,
+                                                      '''/html/body/div/div/section/section/main/div[1]/div[3]/div[2]/div/div/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/span/div''')
+                    select_all.click()
 
-                select_all = checker.find_element(By.XPATH,
-                                                  '''/html/body/div/div/section/section/main/div[1]/div/div[4]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/span/div/span''')
-                select_all.click()
                 sleep(2)
 
                 export = checker.find_element(By.XPATH, '''/html/body/ul/li[2]/span/img''')
@@ -108,10 +116,6 @@ def get_fundamental_data(start_row):
                 export.click()
                 sleep(5)
 
-                try:
-                    os.remove(f'guru_files\{ticker}.xlsx')
-                except:
-                    pass
 
                 os.chdir(path_folder)
                 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
@@ -234,3 +238,5 @@ def run_guru(start_row):
     worksheet.update('A1', [worksheet_df.columns.values.tolist()] + worksheet_df.values.tolist(),
                      value_input_option='USER_ENTERED')
 
+
+run_guru(0)

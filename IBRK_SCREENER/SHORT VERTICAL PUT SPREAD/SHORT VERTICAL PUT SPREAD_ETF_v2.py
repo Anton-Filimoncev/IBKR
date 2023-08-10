@@ -18,8 +18,7 @@ import mibian
 from contextvars import ContextVar
 import math
 import pandas_ta as pta
-
-from thetadata import ThetaClient, OptionReqType, OptionRight, DateRange, SecType, StockReqType
+import gspread as gd
 
 
 def scraper_earnings(tickers_list):
@@ -364,16 +363,6 @@ def get_max_pain(df_chains_for_max_pain):
     return max_pain_strike
 
 
-# date_name = '8-1'
-# gf_screener_native = pd.read_excel(f'{date_name}.xlsx')
-# gf_screener = gf_screener_native[20:]
-# gf_screener.columns = gf_screener_native.iloc[19]
-# print(gf_screener)
-# ticker_list = gf_screener['Symbol'].tolist()
-
-# earnings_list, EVR_list, events_available = scraper_earnings(ticker_list)
-# strategist_pcr_signals, plot_links_list = strategist_pcr_signal(ticker_list)
-
 put_long_strike_list = []
 put_short_strike_list = []
 possition_margin_list = []
@@ -397,21 +386,33 @@ hist_vol_stage_list = []
 iv_stage_list = []
 ROI_day_list = []
 RSI_list = []
+div_list = []
 
 
-ib = IB()
-try:
-    ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
-
-except:
-    ib.connect('127.0.0.1', 7496, clientId=212)
+# # ================ раббота с таблицей============================================
+gc = gd.service_account(filename='Seetus.json')
+worksheet = gc.open("IBKR").worksheet("ETF")
+worksheet_df = pd.DataFrame(worksheet.get_all_records())[:-1]
+worksheet_df = worksheet_df.set_index('ETF COMPLEX POSITION')
+print('worksheet_df')
+print(worksheet_df)
+#
+# ib = IB()
+# try:
+#     ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
+#
+# except:
+#     ib.connect('127.0.0.1', 7496, clientId=212)
 
 
 ticker_list = pd.read_excel('ticker_list.xlsx')['ticker'].tolist()
 yahoo_df_native = yf.download(ticker_list)['Close']
 
 
+
 for tick in ticker_list:
+
+
 
     try:
         yahoo_df = pd.DataFrame()
@@ -495,6 +496,17 @@ for tick in ticker_list:
         # ------ ROI/day ---------
         ROI_day = (expected_return/position_margin)/needed_put_short['days_to_exp']
 
+        #  ------ Dividend Yield ---------
+        try:
+            if worksheet_df.loc[tick]['Dividend Yield'] > worksheet_df.loc[tick]['Dividend Yield Median']:
+                div_signal = 'Dividend Yield > Median'
+            else:
+                div_signal = 'Dividend Yield < Median'
+        except:
+            div_signal = 'Empty'
+
+        print(div_signal)
+
         # put_long_strike_list.append(needed_put_long['strike'])
         put_short_strike_list.append(needed_put_short['strike'])
         exp_date_list.append(needed_put_short['EXP_date'])
@@ -517,6 +529,7 @@ for tick in ticker_list:
         theta_margin_ratio_list.append(theta_margin_ratio)
         ROI_day_list.append(ROI_day)
         RSI_list.append(RSI)
+        div_list.append(div_signal)
 
 
     except Exception as e:
@@ -543,6 +556,7 @@ for tick in ticker_list:
         theta_margin_ratio_list.append(np.nan)
         ROI_day_list.append(np.nan)
         RSI_list.append(np.nan)
+        div_list.append(np.nan)
         pass
 
 FINISH_DF = pd.DataFrame(
@@ -573,6 +587,7 @@ FINISH_DF = pd.DataFrame(
         'Trend': trend_list,
         # 'Liquidity_Short': liquidity_short_list,
         'RSI': RSI_list,
+        'Dividend Yield': div_list,
     }
 )
 
