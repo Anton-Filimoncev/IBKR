@@ -237,7 +237,7 @@ def trend(price_df):
     current_price = price_df['Close'].iloc[-1]
     SMA_20 = price_df['Close'].rolling(window=20).mean().iloc[-1]
     SMA_100 = price_df['Close'].rolling(window=100).mean().iloc[-1]
-    RSI = pta.rsi(price_df['Close'])
+    RSI = pta.rsi(price_df['Close']).iloc[-1]
 
     if current_price > SMA_100 and current_price > SMA_20 and SMA_20 > SMA_100:
         trend = 'Strong Uptrend'
@@ -397,17 +397,16 @@ worksheet_df = worksheet_df.set_index('ETF COMPLEX POSITION')
 print('worksheet_df')
 print(worksheet_df)
 
-ib = IB()
-try:
-    ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
-
-except:
-    ib.connect('127.0.0.1', 7497, clientId=212)
+# ib = IB()
+# try:
+#     ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
+#
+# except:
+#     ib.connect('127.0.0.1', 7497, clientId=212)
 
 
 ticker_list = pd.read_excel('ticker_list.xlsx')['ticker'].tolist()
 yahoo_df_native = yf.download(ticker_list)['Close']
-
 
 
 for tick in ticker_list:
