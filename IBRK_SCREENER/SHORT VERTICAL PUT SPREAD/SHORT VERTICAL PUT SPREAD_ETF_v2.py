@@ -396,13 +396,13 @@ worksheet_df = pd.DataFrame(worksheet.get_all_records())[:-1]
 worksheet_df = worksheet_df.set_index('ETF COMPLEX POSITION')
 print('worksheet_df')
 print(worksheet_df)
-#
-# ib = IB()
-# try:
-#     ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
-#
-# except:
-#     ib.connect('127.0.0.1', 7496, clientId=212)
+
+ib = IB()
+try:
+    ib.connect('127.0.0.1', 4002, clientId=212)  # 7497
+
+except:
+    ib.connect('127.0.0.1', 7497, clientId=212)
 
 
 ticker_list = pd.read_excel('ticker_list.xlsx')['ticker'].tolist()
