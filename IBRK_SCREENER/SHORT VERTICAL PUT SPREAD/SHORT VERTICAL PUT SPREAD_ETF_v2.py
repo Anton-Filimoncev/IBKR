@@ -412,7 +412,6 @@ yahoo_df_native = yf.download(ticker_list)['Close']
 for tick in ticker_list:
 
 
-
     try:
         yahoo_df = pd.DataFrame()
         yahoo_df['Close'] = yahoo_df_native[tick]

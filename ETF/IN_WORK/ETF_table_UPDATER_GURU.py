@@ -102,7 +102,7 @@ def get_fundamental_data(start_row):
                 sleep(7)
                 try:
                     select_all = checker.find_element(By.XPATH,
-                                                      '''//*[@id="components-root"]/div[1]/div[4]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/span/div/span/i''')
+                                                      '''/html/body/div/div/section/section/main/div[1]/div[4]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div/div/div[2]/div/span/div/span/i''')
                     select_all.click()
                 except:
                     select_all = checker.find_element(By.XPATH,
