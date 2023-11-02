@@ -1,33 +1,11 @@
-import pandas as pd
-import numpy as np
-import os
-import time
-import pickle
-import gspread as gd
-from ib_insync import *
-from scipy import stats
-import yfinance as yf
-import pandas_ta as pta
-import datetime
-from dateutil.relativedelta import relativedelta
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 import threading
 import random
-
 import pandas as pd
-import numpy as np
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
-from concurrent.futures.thread import ThreadPoolExecutor
 import os
 from time import sleep
-from selenium.webdriver.support.ui import WebDriverWait
-import pickle
 from pathlib import Path
 
 

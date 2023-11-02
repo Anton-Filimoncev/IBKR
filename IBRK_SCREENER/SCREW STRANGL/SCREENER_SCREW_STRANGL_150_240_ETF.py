@@ -211,12 +211,12 @@ def expected_return_calc(needed_call, needed_put, current_price, history_vol):
     return expected_return
 
 
-ib = IB()
-try:
-    ib.connect('127.0.0.1', 4002, clientId=12)  # 7497
-
-except:
-    ib.connect('127.0.0.1', 7496, clientId=12)
+# ib = IB()
+# try:
+#     ib.connect('127.0.0.1', 4002, clientId=12)  # 7497
+#
+# except:
+#     ib.connect('127.0.0.1', 7496, clientId=12)
 
 # date_name = '7-12'
 # gf_screener_native = pd.read_excel(f'{date_name}.xlsx')
