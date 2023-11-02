@@ -2,7 +2,7 @@
 
 # $$$      BULL_PUT_VERTICAL      $$$
 Updating google sheet for VERTICAL BULL PUT position, with some parameters:
-## Probable statistical income (Вероятный статистический доход)
+## Probable statistical return (Вероятный статистический доход)
 
 
 # $$$      CREDIT STRADDL      $$$
@@ -25,7 +25,7 @@ Updating google sheet for CREDIT STRADDL position, with some parameters:
 
 # $$$      ETF      $$$
 Updating google sheet for ETF, with some parameters:
-### Vega_risk (Interactive Broker)
+### Vega Risk (Interactive Broker)
 ### Imply Volatility Percentile (Interactive Broker)
 ### Imply VolatilityRegime (Interactive Broker)
 ### Imply VolatilityMedian (Interactive Broker)
@@ -34,8 +34,13 @@ Updating google sheet for ETF, with some parameters:
 ### History Volatility 50 days
 ### History Volatility 100 days
 ### History Volatility Regime
-### vertical_skew_call (Interactive Broker)
-### vertical_skew_put (Interactive Broker)
-### pcr_signal (Interactive Broker)
-### max_pain_value (Interactive Broker)
-### iv_horizontal (Interactive Broker)
+### Vertical Skew Call (Interactive Broker)
+### Vertical Skew Put (Interactive Broker)
+### PCR Signal (Interactive Broker)
+### MAX Pain Value (Interactive Broker)
+### Imply Volatility Horizontal Skew (Interactive Broker)
+
+
+# $$$      EXPECTED RETURN ETF STRANGL      $$$
+Updating google sheet for EXPECTED RETURN ETF STRANGL position, with some parameters:
+### Probable statistical return calculated by generated stock price between -50% and +100% prise in increments 10 cents
