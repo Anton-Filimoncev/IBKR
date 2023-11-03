@@ -47,6 +47,7 @@ Updating google sheet for EXPECTED RETURN ETF STRANGL position, with some parame
 
 # $$$      IBRK_SCREENER      $$$
 Updating google sheet for DIAGONAL BULL SPREAD, SCREW STRANGL, SHORT VERTICAL PUT SPREAD position, with some parameters:
+
 ### DIAGONAL BULL SPREAD
 'Max_Pain' | 'Margin' | 'Rxpected_Return' | 'ROI_Day' | 'Rxpected_Return_Percent' | 'Hist_Volatility' | 'Hist_Vol_Stage' | 'IV_Percentile' | 'IV_Stage' | 'Reward_Risk' | 
 'PCR_Signal' | 'Trend' | 'Liquidity_Short' | 'Liquidity_Long' | 'RSI'
@@ -59,4 +60,8 @@ Updating google sheet for DIAGONAL BULL SPREAD, SCREW STRANGL, SHORT VERTICAL PU
 'Max_Pain' | 'Gamma_Theta_Ratio' | 'Vega_Theta_Ratio' | 'Theta_Margin_Ratio' | 'Margin' | 'Rxpected_Return' | 'Rxpected_Return_Percent' | 
 'ROI_Day' | 'Hist_Volatility' | 'Hist_Vol_Stage' | 'IV_Percentile' | 'IV_Stage' | 'Break Point' | 'Proba_Below' | 'Reward_Risk' | 'Earnings'
 'EVR' | 'Events_Available' | 'PCR_Signal' | 'Trend' | 'Liquidity_Short'
+
+# $$$      Margin_Risk      $$$
+Update google sheet for opened positions:
+'Trend' | 'Absolute Relative Regime' | 'Relative Regime' | 'GF SCORE' | 'PCR' | 'BETA' | 'Max Pain' | 'Days Befor Earnings Report'
 
