@@ -65,3 +65,9 @@ Updating google sheet for DIAGONAL BULL SPREAD, SCREW STRANGL, SHORT VERTICAL PU
 Update google sheet for opened positions:
 'Trend' | 'Absolute Relative Regime' | 'Relative Regime' | 'GF SCORE' | 'PCR' | 'BETA' | 'Max Pain' | 'Days Befor Earnings Report'
 
+# $$$      Montecarlo_UPDATER      $$$
+Updating google sheet SAXO_long_Naked_PUT, SAXO_SHORT_NAKED_CALL, STRANGL, calculating:
+Probability Montecarlo 50% (Return) Touch
+
+# $$$      POS      $$$
+
