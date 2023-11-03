@@ -44,3 +44,22 @@ Updating google sheet for ETF, with some parameters:
 # $$$      EXPECTED RETURN ETF STRANGL      $$$
 Updating google sheet for EXPECTED RETURN ETF STRANGL position, with some parameters:
 ### Probable statistical return calculated by generated stock price between -50% and +100% prise in increments 10 cents
+
+# $$$      IBRK_SCREENER      $$$
+Updating google sheet for DIAGONAL BULL SPREAD, SCREW STRANGL, SHORT VERTICAL PUT SPREAD position, with some parameters:
+### DIAGONAL BULL SPREAD
+'Max_Pain'
+'Margin'
+'Rxpected_Return'
+'ROI_Day'
+'Rxpected_Return_Percent'
+'Hist_Volatility'
+'Hist_Vol_Stage'
+'IV_Percentile'
+'IV_Stage'
+'Reward_Risk'
+'PCR_Signal'
+'Trend'
+'Liquidity_Short'
+'Liquidity_Long'
+'RSI'
