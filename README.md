@@ -50,3 +50,13 @@ Updating google sheet for DIAGONAL BULL SPREAD, SCREW STRANGL, SHORT VERTICAL PU
 ### DIAGONAL BULL SPREAD
 'Max_Pain' | 'Margin' | 'Rxpected_Return' | 'ROI_Day' | 'Rxpected_Return_Percent' | 'Hist_Volatility' | 'Hist_Vol_Stage' | 'IV_Percentile' | 'IV_Stage' | 'Reward_Risk' | 
 'PCR_Signal' | 'Trend' | 'Liquidity_Short' | 'Liquidity_Long' | 'RSI'
+
+### SCREW STRANGL
+'Delta_Theta_Ratio' | 'Gamma_Theta_Ratio' | 'Vega_Theta_Ratio' | 'Theta_Margin_Ratio' | 'Margin' | 'Rxpected_Return' | 'Rxpected_Return_Percent' | 
+'Hist_Volatility' | 'Hist_Vol_Stage' | 'IV_Percentile' | 'IV_Stage' | 'Liquidity_Put'
+
+### SHORT VERTICAL PUT SPREAD
+'Max_Pain' | 'Gamma_Theta_Ratio' | 'Vega_Theta_Ratio' | 'Theta_Margin_Ratio' | 'Margin' | 'Rxpected_Return' | 'Rxpected_Return_Percent' | 
+'ROI_Day' | 'Hist_Volatility' | 'Hist_Vol_Stage' | 'IV_Percentile' | 'IV_Stage' | 'Break Point' | 'Proba_Below' | 'Reward_Risk' | 'Earnings'
+'EVR' | 'Events_Available' | 'PCR_Signal' | 'Trend' | 'Liquidity_Short'
+
