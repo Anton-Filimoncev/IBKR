@@ -70,4 +70,6 @@ Updating google sheet SAXO_long_Naked_PUT, SAXO_SHORT_NAKED_CALL, STRANGL, calcu
 Probability Montecarlo 50% (Return) Touch
 
 # $$$      POS      $$$
-
+Updating google sheet "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
+Calculating for already open positions parameters at the current moment and at position opening:
+Probability of receiving 50% profit | expected profitability | average expected number of days until receiving 50% profit
