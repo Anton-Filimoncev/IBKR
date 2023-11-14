@@ -210,7 +210,7 @@ def get_proba_50_calendar(current_price, yahoo_data, put_long_strike, put_long_p
 
 if __name__ == "__main__":
     tables = [
-        "POS_template_OTM_calendar"
+        "POS_template_ITM_calendar"
     ]  # , "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
 
     for table_name in tables:
@@ -524,8 +524,8 @@ if __name__ == "__main__":
                 current_price = yahoo_data["Close"].iloc[-1]
                 put_long_strike = float(solo_company_data.iloc[5, 13])
                 put_short_strike = float(solo_company_data.iloc[5, 11])
-                put_long_price = float(solo_company_data.iloc[9, 13])
-                put_short_price = float(solo_company_data.iloc[9, 11])
+                put_long_price = float(solo_company_data.iloc[15, 13])
+                put_short_price = float(solo_company_data.iloc[15, 11])
                 sigma_short = float(solo_company_data.iloc[11, 11]) * 100
                 sigma_long = float(solo_company_data.iloc[10, 11]) * 100
                 days_to_expiration_short = int(solo_company_data.iloc[13, 11])
@@ -621,8 +621,8 @@ if __name__ == "__main__":
                 current_price = yahoo_data["Close"].iloc[-1]
                 put_long_strike = float(solo_company_data.iloc[5, 13])
                 put_short_strike = float(solo_company_data.iloc[5, 11])
-                put_long_price = float(solo_company_data.iloc[9, 13])
-                put_short_price = float(solo_company_data.iloc[9, 11])
+                put_long_price = float(solo_company_data.iloc[15, 13])
+                put_short_price = float(solo_company_data.iloc[15, 11])
                 sigma_short = float(solo_company_data.iloc[11, 11]) * 100
                 sigma_long = float(solo_company_data.iloc[10, 11]) * 100
                 days_to_expiration_short = int(solo_company_data.iloc[13, 11])

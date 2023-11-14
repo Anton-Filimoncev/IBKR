@@ -291,6 +291,7 @@ if __name__ == "__main__":
         "POS_template_OTM_calendar"
     ]  #  "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
 
+
     for table_name in tables:
         # # ================ раббота с таблицей============================================
         gc = gd.service_account(filename="Seetus.json")
