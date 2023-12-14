@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 import gspread as gd
 from short_selling import get_current_regime
+from momentum import calculate_stock_momentum
 import requests
 import asyncio
 import aiohttp
@@ -267,7 +268,7 @@ def get_df_chains(tick, limit_date_min, limit_date_max):
 if __name__ == "__main__":
     KEY = "ckZsUXdiMTZEZVQ3a25TVEFtMm9SeURsQ1RQdk5yWERHS0RXaWNpWVJ2cz0"
     api_token = "34b27ff5b013ecb09d2eeafdf8724472:2ab9f1f92f838c3c431fc85e772d0f6c"
-    # # ================ раббота с таблицей============================================
+    # ================ раббота с таблицей============================================
     gc = gd.service_account(filename="Seetus.json")
     worksheet = gc.open("IBKR").worksheet("Margin/risk_EXANTE")
     worksheet_df = pd.DataFrame(worksheet.get_all_records()).replace("", np.nan)
@@ -326,6 +327,9 @@ if __name__ == "__main__":
 
     earnings = run_earnings_get(tickers_list)
 
+    yahoo_data_regime = yf.download(tickers_list, group_by="ticker", auto_adjust = True).dropna(axis=1, how="all")
+    yahoo_data_regime.index = pd.to_datetime(yahoo_data.index)
+
     for i, tick in enumerate(tickers_list):
         try:
             current_price = yahoo_data[tick]["Close"].iloc[-1]
@@ -333,9 +337,11 @@ if __name__ == "__main__":
             print(tick)
             trend_moving = trend(yahoo_data[tick])
             # тренд режим
+
             current_regime = get_current_regime(
-                yahoo_data[tick], benchmark, regime_start_date, tick
+                yahoo_data_regime[tick], benchmark, regime_start_date, tick
             )
+
             trend_short = current_regime[0]
             trend_rel = current_regime[1]
 
@@ -368,9 +374,16 @@ if __name__ == "__main__":
             max_pain_val = get_max_pain(df_chains)
             print("max_pain_val", max_pain_val)
 
+            # ------------------------------------------ Momentum  ---------------------
+
+            stock_momentum = calculate_stock_momentum(tick, yahoo_data)
+
+
+
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = trend_moving
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = trend_short
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = trend_rel
+            worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
@@ -382,6 +395,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = "No data"
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = "No data"
+            worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
@@ -463,6 +477,9 @@ if __name__ == "__main__":
 
     earnings = run_earnings_get(tickers_list)
 
+    yahoo_data_regime = yf.download(tickers_list, group_by="ticker", auto_adjust = True).dropna(axis=1, how="all")
+    yahoo_data_regime.index = pd.to_datetime(yahoo_data.index)
+
     for i, tick in enumerate(tickers_list):
         try:
             current_price = yahoo_data[tick]["Close"].iloc[-1]
@@ -471,7 +488,7 @@ if __name__ == "__main__":
             trend_moving = trend(yahoo_data[tick])
             # тренд режим
             current_regime = get_current_regime(
-                yahoo_data[tick], benchmark, regime_start_date, tick
+                yahoo_data_regime[tick], benchmark, regime_start_date, tick
             )
             trend_short = current_regime[0]
             trend_rel = current_regime[1]
@@ -503,9 +520,14 @@ if __name__ == "__main__":
             max_pain_val = get_max_pain(df_chains)
             print("max_pain_val", max_pain_val)
 
+            # ------------------------------------------ Momentum  ---------------------
+
+            stock_momentum = calculate_stock_momentum(tick, yahoo_data)
+
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = trend_moving
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = trend_short
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = trend_rel
+            worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
@@ -517,6 +539,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = "No data"
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = "No data"
+            worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
