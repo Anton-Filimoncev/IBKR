@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import scipy.stats as stats
+import sys
 import datetime
 import time
 from dateutil.relativedelta import relativedelta
@@ -12,6 +13,7 @@ from selenium import webdriver
 import gspread as gd
 from short_selling import get_current_regime
 from momentum import calculate_stock_momentum
+from up_down_volume import up_down_vol_regr
 import requests
 import asyncio
 import aiohttp
@@ -362,44 +364,58 @@ if __name__ == "__main__":
 
             print("Beta:", beta)
 
-            # ------------------------------------------ Max Pain  ---------------------
-
-            limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
-            limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
-            df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
+            # # ------------------------------------------ Max Pain  ---------------------
             #
-            # print('---------------- df_chains  ---------------------')
-            # print(df_chains)
-            df_chains = get_atm_strikes(df_chains, current_price)
-            max_pain_val = get_max_pain(df_chains)
-            print("max_pain_val", max_pain_val)
+            # limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
+            # limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
+            # df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
+            # #
+            # # print('---------------- df_chains  ---------------------')
+            # # print(df_chains)
+            # df_chains = get_atm_strikes(df_chains, current_price)
+            # max_pain_val = get_max_pain(df_chains)
+            # print("max_pain_val", max_pain_val)
 
             # ------------------------------------------ Momentum  ---------------------
 
+            print('Momentum')
             stock_momentum = calculate_stock_momentum(tick, yahoo_data)
+            print('Momentum', stock_momentum)
 
+            # ------------------------------------------ UP DOWN VOLUME  ---------------------
 
+            print('UP DOWN VOLUME')
 
+            up_dow_vol, up_dow_vol_regr = up_down_vol_regr(tick, yahoo_data)
+
+            print('UP DOWN VOLUME', up_dow_vol, up_dow_vol_regr)
+
+            # UP/Down Volume
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = trend_moving
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = trend_short
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = trend_rel
             worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
+            worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = up_dow_vol
+            worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = up_dow_vol_regr
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
-            worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
+            # worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
             worksheet_df_FORMULA["Дней до отчетности/дивиденда"].iloc[i] = earnings[i]
 
         except Exception as eeee:
-            print(eeee)
+            print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(eeee).__name__, eeee)
+
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = "No data"
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
+            worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = "No data"
+            worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = "No data"
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
-            worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"
+            # worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"
             worksheet_df_FORMULA["Дней до отчетности/дивиденда"].iloc[i] = earnings[i]
 
         print(worksheet_df_FORMULA)
@@ -508,31 +524,40 @@ if __name__ == "__main__":
 
             print("Beta:", beta)
 
-            # ------------------------------------------ Max Pain  ---------------------
-
-            limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
-            limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
-            df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
+            # # ------------------------------------------ Max Pain  ---------------------
             #
-            # print('---------------- df_chains  ---------------------')
-            # print(df_chains)
-            df_chains = get_atm_strikes(df_chains, current_price)
-            max_pain_val = get_max_pain(df_chains)
-            print("max_pain_val", max_pain_val)
+            # limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
+            # limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
+            # df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
+            # #
+            # # print('---------------- df_chains  ---------------------')
+            # # print(df_chains)
+            # df_chains = get_atm_strikes(df_chains, current_price)
+            # max_pain_val = get_max_pain(df_chains)
+            # print("max_pain_val", max_pain_val)
 
             # ------------------------------------------ Momentum  ---------------------
-
+            print('Momentum')
             stock_momentum = calculate_stock_momentum(tick, yahoo_data)
+            print('Momentum', stock_momentum)
+
+            # ------------------------------------------ UP DOWN VOLUME  ---------------------
+
+            up_dow_vol, up_dow_vol_regr = up_down_vol_regr(tick, yahoo_data)
+
 
             worksheet_df_FORMULA["Тренд по скользящим"].iloc[i] = trend_moving
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = trend_short
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = trend_rel
             worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
+            worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = up_dow_vol
+            worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = up_dow_vol_regr
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
-            worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
+            # worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
             worksheet_df_FORMULA["Дней до отчетности/дивиденда"].iloc[i] = earnings[i]
+
 
         except Exception as eeee:
             print(eeee)
@@ -540,10 +565,12 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Абсолютный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Относительный ряд"].iloc[i] = "No data"
             worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
+            worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = "No data"
+            worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = "No data"
             worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
-            worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"
+            # worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"
             worksheet_df_FORMULA["Дней до отчетности/дивиденда"].iloc[i] = earnings[i]
 
         print(worksheet_df_FORMULA)
