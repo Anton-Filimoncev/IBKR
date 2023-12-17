@@ -1,8 +1,8 @@
 from numba import jit
-from MonteCarloCALENDAR import monteCarlo
-from MonteCarloCALENDAR_RETURN import monteCarlo_return
+from .MonteCarlo_CALENDAR import monteCarlo
+from .MonteCarloCALENDAR_RETURN import monteCarlo_return
 import time
-from BlackScholes import blackScholesCall
+from .BlackScholes import blackScholesCall
 import numpy as np
 
 
@@ -58,18 +58,18 @@ def callCalendar(underlying, sigma_short, sigma_long, rate, trials, days_to_expi
     except RuntimeError as err:
         print(err.args)
 
-    expected_profit = monteCarlo_return(underlying, rate, sigma_short, sigma_long,
-                                                            days_to_expiration_short, days_to_expiration_long,
-                                                            closing_days_array, trials, initial_credit, min_profit,
-                                                            strikes, bsm_debit, yahoo_stock)
+    # expected_profit = monteCarlo_return(underlying, rate, sigma_short, sigma_long,
+    #                                                         days_to_expiration_short, days_to_expiration_long,
+    #                                                         closing_days_array, trials, initial_credit, min_profit,
+    #                                                         strikes, bsm_debit, yahoo_stock)
 
 
     response = {
         "pop": pop,
-        'exp_return': expected_profit,
-        "pop_error": pop_error,
+         "pop_error": pop_error,
         "avg_dtc": avg_dtc,
         "avg_dtc_error": avg_dtc_error
     }
+    print(response)
 
-    return response
+    return pop[0] / 100, avg_dtc

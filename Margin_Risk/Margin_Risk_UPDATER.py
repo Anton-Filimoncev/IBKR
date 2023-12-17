@@ -364,17 +364,17 @@ if __name__ == "__main__":
 
             print("Beta:", beta)
 
-            # # ------------------------------------------ Max Pain  ---------------------
+            # ------------------------------------------ Max Pain  ---------------------
+
+            limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
+            limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
+            df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
             #
-            # limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
-            # limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
-            # df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
-            # #
-            # # print('---------------- df_chains  ---------------------')
-            # # print(df_chains)
-            # df_chains = get_atm_strikes(df_chains, current_price)
-            # max_pain_val = get_max_pain(df_chains)
-            # print("max_pain_val", max_pain_val)
+            # print('---------------- df_chains  ---------------------')
+            # print(df_chains)
+            df_chains = get_atm_strikes(df_chains, current_price)
+            max_pain_val = get_max_pain(df_chains)
+            print("max_pain_val", max_pain_val)
 
             # ------------------------------------------ Momentum  ---------------------
 
@@ -524,17 +524,17 @@ if __name__ == "__main__":
 
             print("Beta:", beta)
 
-            # # ------------------------------------------ Max Pain  ---------------------
+            # ------------------------------------------ Max Pain  ---------------------
+
+            limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
+            limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
+            df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
             #
-            # limit_date_min = datetime.datetime.now() + relativedelta(days=+3)
-            # limit_date_max = datetime.datetime.now() + relativedelta(days=+31)
-            # df_chains = get_df_chains(tick, limit_date_min, limit_date_max)
-            # #
-            # # print('---------------- df_chains  ---------------------')
-            # # print(df_chains)
-            # df_chains = get_atm_strikes(df_chains, current_price)
-            # max_pain_val = get_max_pain(df_chains)
-            # print("max_pain_val", max_pain_val)
+            # print('---------------- df_chains  ---------------------')
+            # print(df_chains)
+            df_chains = get_atm_strikes(df_chains, current_price)
+            max_pain_val = get_max_pain(df_chains)
+            print("max_pain_val", max_pain_val)
 
             # ------------------------------------------ Momentum  ---------------------
             print('Momentum')

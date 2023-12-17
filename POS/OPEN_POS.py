@@ -13,7 +13,7 @@ from popoption.ShortPut import shortPut
 from popoption.ShortCall import shortCall
 from popoption.ShortStrangle import shortStrangle
 from popoption.PutCalendar import putCalendar
-
+from popoption.CallCalendar import callCalendar
 pd.options.mode.chained_assignment = None
 
 
@@ -144,7 +144,7 @@ def get_abs_return(
     current_price,
     strike,
     prime,
-    vol_opt,
+    vol_opt, side
 ):
     put_price_list = []
     call_price_list = []
@@ -154,28 +154,16 @@ def get_abs_return(
     for stock_price_num in range(len(price_array)):
         try:
             P_below = stats.norm.cdf(
-                (
-                    np.log(price_array[stock_price_num] / current_price)
-                    / (history_vol * math.sqrt(days_to_exp_short / 365))
-                )
-            )
+                (np.log(price_array[stock_price_num] / current_price) / (
+                        history_vol * math.sqrt(days_to_exp_short / 365))))
             P_current = stats.norm.cdf(
-                (
-                    np.log(price_array[stock_price_num + 1] / current_price)
-                    / (history_vol * math.sqrt(days_to_exp_short / 365))
-                )
-            )
+                (np.log(price_array[stock_price_num + 1] / current_price) / (
+                        history_vol * math.sqrt(days_to_exp_short / 365))))
             proba_list.append(P_current - P_below)
-            if type_option == "Short":
-                c = mibian.BS(
-                    [price_array[stock_price_num + 1], strike, 4, 1],
-                    volatility=vol_opt * 100,
-                )
-            if type_option == "Long":
-                c = mibian.BS(
-                    [price_array[stock_price_num + 1], strike, 4, days_to_exp],
-                    volatility=vol_opt * 100,
-                )
+            if type_option == 'Short':
+                c = mibian.BS([price_array[stock_price_num + 1], strike, 4, 1], volatility=vol_opt * 100)
+            if type_option == 'Long':
+                c = mibian.BS([price_array[stock_price_num + 1], strike, 4, days_to_exp], volatility=vol_opt * 100)
 
             put_price_list.append(c.putPrice)
             call_price_list.append(c.callPrice)
@@ -183,65 +171,43 @@ def get_abs_return(
         except:
             pass
 
-    put_df = pd.DataFrame(
-        {
-            "gen_price": price_gen_list,
-            "put_price": put_price_list,
-            "call_price": call_price_list,
-            "proba": proba_list,
-        }
-    )
+    gen_df = pd.DataFrame({
+        'gen_price': price_gen_list,
+        'put_price': put_price_list,
+        'call_price': call_price_list,
+        'proba': proba_list,
+    })
 
-    put_df["return"] = put_df["put_price"] - prime
+    gen_df['return'] = (gen_df['put_price'] - prime)
 
-    if type_option == "Short":
-        return ((prime - put_df["put_price"]) * put_df["proba"]).sum()
+    if side =='P':
+        if type_option == 'Short':
+            return ((prime - gen_df['put_price']) * gen_df['proba']).sum()
 
-    if type_option == "Long":
-        return ((put_df["put_price"] - prime) * put_df["proba"]).sum()
+        if type_option == 'Long':
+            return ((gen_df['put_price'] - prime) * gen_df['proba']).sum()
+
+    if side == 'C':
+        if type_option == 'Short':
+            return ((prime - gen_df['call_price']) * gen_df['proba']).sum()
+
+        if type_option == 'Long':
+            return ((gen_df['call_price'] - prime) * gen_df['proba']).sum()
 
 
-def expected_return_calc(
-    vol_put_short,
-    vol_put_long,
-    current_price,
-    history_vol,
-    days_to_exp_short,
-    days_to_exp_long,
-    strike_put_long,
-    strike_put_short,
-    prime_put_long,
-    prime_put_short,
-):
+def expected_return_calc(vol_short, vol_long, current_price, history_vol, days_to_exp_short, days_to_exp_long, strike_long, strike_short, prime_long, prime_short, side):
+
     # print('expected_return CALCULATION ...')
 
-    price_array = np.arange(
-        current_price - current_price / 2, current_price + current_price, 0.2
-    )
+    price_array = np.arange(current_price - current_price / 2, current_price + current_price, 0.2)
 
-    short_finish = get_abs_return(
-        price_array,
-        "Short",
-        days_to_exp_short,
-        days_to_exp_short,
-        history_vol,
-        current_price,
-        strike_put_short,
-        prime_put_short,
-        vol_put_short,
-    )
+    short_finish = get_abs_return(price_array, 'Short', days_to_exp_short, days_to_exp_short, history_vol, current_price, strike_short,
+                                prime_short,
+                                vol_short, side)
 
-    long_finish = get_abs_return(
-        price_array,
-        "Long",
-        days_to_exp_long,
-        days_to_exp_short,
-        history_vol,
-        current_price,
-        strike_put_long,
-        prime_put_long,
-        vol_put_long,
-    )
+    long_finish = get_abs_return(price_array, 'Long', days_to_exp_long, days_to_exp_short, history_vol, current_price, strike_long,
+                                 prime_long,
+                                 vol_long, side)
 
     expected_return = (short_finish + long_finish) * 100
 
@@ -251,36 +217,28 @@ def expected_return_calc(
 def get_proba_50_calendar(
     current_price,
     yahoo_data,
-    put_long_strike,
-    put_long_price,
-    put_short_strike,
-    put_short_price,
+    long_strike,
+    long_price,
+    short_strike,
+    short_price,
     sigma_short,
     sigma_long,
     days_to_expiration_short,
-    days_to_expiration_long,
+    days_to_expiration_long, side
 ):
     rate = 4.6
     closing_days_array = [days_to_expiration_short]
     percentage_array = [30]
     trials = 3000
 
-    proba_50 = putCalendar(
-        current_price,
-        sigma_short,
-        sigma_long,
-        rate,
-        trials,
-        days_to_expiration_short,
-        days_to_expiration_long,
-        closing_days_array,
-        percentage_array,
-        put_long_strike,
-        put_long_price,
-        put_short_strike,
-        put_short_price,
-        yahoo_data,
-    )
+    if side == 'P':
+        proba_50 = putCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+                    days_to_expiration_long, closing_days_array, percentage_array, long_strike,
+                    long_price, short_strike, short_price, yahoo_data)
+    else:
+        proba_50 = callCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+                    days_to_expiration_long, closing_days_array, percentage_array, long_strike,
+                    long_price, short_strike, short_price, yahoo_data)
 
     return proba_50
 
@@ -288,7 +246,7 @@ def get_proba_50_calendar(
 if __name__ == "__main__":
     # **********************   Указываем назыание таблицы в которой работаем *************
     tables = [
-        "POS_template_OTM_calendar"
+        "POS_template_Call_diagonal"
     ]  #  "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
 
 
@@ -673,8 +631,8 @@ if __name__ == "__main__":
                     sigma_short,
                     sigma_long,
                     days_to_expiration_short,
-                    days_to_expiration_long,
-                )
+                    days_to_expiration_long, 'P'
+                    )
 
                 print("proba_50", proba_50)
                 expected_return = expected_return_calc(
@@ -687,7 +645,7 @@ if __name__ == "__main__":
                     put_long_strike,
                     put_short_strike,
                     put_long_price,
-                    put_short_price,
+                    put_short_price, 'P'
                 )
 
                 print("expected_return", expected_return)
@@ -802,7 +760,7 @@ if __name__ == "__main__":
                     sigma_short,
                     sigma_long,
                     days_to_expiration_short,
-                    days_to_expiration_long,
+                    days_to_expiration_long, 'P'
                 )
 
                 print("proba_50", proba_50)
@@ -816,7 +774,7 @@ if __name__ == "__main__":
                     put_long_strike,
                     put_short_strike,
                     put_long_price,
-                    put_short_price,
+                    put_short_price, 'P'
                 )
 
                 print("expected_return", expected_return)
@@ -846,3 +804,113 @@ if __name__ == "__main__":
                 worksheet_df_FORMULA_sum.values.tolist(),
                 value_input_option="USER_ENTERED",
             )
+
+            # ============================================================================================================
+            # ============================================================================================================
+            # ============================================================================================================
+            # ========================================   CALL Diagonal  ==================================================
+            # ============================================================================================================
+            # ============================================================================================================
+            # ============================================================================================================
+
+        if table_name == 'POS_template_Call_diagonal':
+            for num, next_num in enumerate(num_total):
+                try:
+                    solo_company_data = worksheet_df.iloc[
+                                        num_total[num]: num_total[num + 1]
+                                        ].reset_index(drop=True)
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                                                num_total[num]: num_total[num + 1]
+                                                ].reset_index(drop=True)
+
+                except:
+                    solo_company_data = worksheet_df.iloc[num_total[-1]:].reset_index(
+                        drop=True
+                    )
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                                                num_total[-1]:
+                                                ].reset_index(drop=True)
+                # ticker = solo_company_data[solo_company_data[0] == "ПОЗИЦИЯ"][3].values[0]
+                ticker = solo_company_data.iloc[2, 3]
+                print("ticker", ticker)
+                # solo_company_data.iloc[2, 3] = "pisya" # заполнить поле
+                yahoo_data = yf.download(ticker)
+                # Compute the logarithmic returns using the Closing price
+                log_returns = np.log(yahoo_data["Close"] / yahoo_data["Close"].shift(1))
+                # Compute Volatility using the pandas rolling standard deviation function
+                hv = log_returns.rolling(window=252).std() * np.sqrt(252)
+                hv = hv[-1]
+                current_price = float(solo_company_data.iloc[2, 13])
+                call_long_strike = float(solo_company_data.iloc[5, 13])
+                call_short_strike = float(solo_company_data.iloc[5, 11])
+
+                call_long_price = float(solo_company_data.iloc[15, 13])
+                call_short_price = float(solo_company_data.iloc[15, 11])
+
+                sigma_short = float(solo_company_data.iloc[11, 11]) * 100
+                sigma_long = float(solo_company_data.iloc[10, 11]) * 100
+
+                days_to_expiration_short = int(solo_company_data.iloc[13, 11])
+                days_to_expiration_long = int(solo_company_data.iloc[12, 11])
+                days_to_expiration_long_return = (
+                        int(solo_company_data.iloc[12, 11]) - days_to_expiration_short
+                )
+
+                number_positions = abs(float(solo_company_data.iloc[6, 11]))
+
+                print("current_price", current_price)
+                print("call_long_strike", call_long_strike)
+                print("v_short_strike", call_short_strike)
+                print("call_long_price", call_long_price)
+                print("call_short_price", call_short_price)
+                print("hv", hv)
+                print("sigma_short", sigma_short)
+                print("sigma_long", sigma_long)
+                print("days_to_expiration_short", days_to_expiration_short)
+                print("days_to_expiration_long", days_to_expiration_long)
+
+                proba_50, avg_dtc = get_proba_50_calendar(current_price, yahoo_data,
+                                                          call_long_strike, call_long_price, call_short_strike,
+                                                          call_short_price,
+                                                          sigma_short, sigma_long, days_to_expiration_short,
+                                                          days_to_expiration_long, 'C')
+
+                print("proba_30", proba_50)
+                expected_return = expected_return_calc(sigma_short / 100, sigma_long / 100, current_price, hv,
+                                                       days_to_expiration_short,
+                                                       days_to_expiration_long, call_long_strike, call_short_strike,
+                                                       call_long_price,
+                                                       call_short_price, 'C')
+
+                print("expected_return", expected_return)
+                print("pop_30", proba_50)
+                print("avg_dtc", avg_dtc[0])
+
+                solo_company_data_formula.iloc[
+                    8, 3
+                ] = proba_50  # заполняем поле в таблице
+                solo_company_data_formula.iloc[7, 3] = int(
+                    avg_dtc[0]
+                )  # заполняем поле в таблице
+                solo_company_data_formula.iloc[3, 3] = (
+                        expected_return * number_positions
+                )  # заполняем поле в таблице
+
+                worksheet_df_FORMULA_sum = pd.concat(
+                    [worksheet_df_FORMULA_sum, solo_company_data_formula]
+                )
+                print("=================================")
+
+            print(worksheet_df_FORMULA_sum)
+
+            worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
+            # # ===================================  запись в таблицу ================================================
+            worksheet.update(
+                "A1",
+                # [worksheet_df_FORMULA_sum.columns.values.tolist()]
+                # +
+                worksheet_df_FORMULA_sum.values.tolist(),
+                value_input_option="USER_ENTERED",
+            )
+
+
