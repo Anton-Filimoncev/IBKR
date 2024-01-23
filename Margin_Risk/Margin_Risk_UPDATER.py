@@ -347,15 +347,15 @@ if __name__ == "__main__":
             trend_short = current_regime[0]
             trend_rel = current_regime[1]
 
-            url = f"https://api.gurufocus.com/public/user/{api_token}/stock/{tick}/summary"
-            response_exp = requests.request("GET", url).json()
-            guru_df = pd.DataFrame(response_exp["summary"])
-            gf_score = guru_df["general"]["gf_score"]
-            gf_valuation = guru_df["general"]["gf_valuation"]
-            # gf_score_list.append(gf_score)
-            # gf_valuation_list.append(gf_valuation)
-            print("gf_score:", gf_score)
-            print("gf_valuation:", gf_valuation)
+            # url = f"https://api.gurufocus.com/public/user/{api_token}/stock/{tick}/summary"
+            # response_exp = requests.request("GET", url).json()
+            # guru_df = pd.DataFrame(response_exp["summary"])
+            # gf_score = guru_df["general"]["gf_score"]
+            # gf_valuation = guru_df["general"]["gf_valuation"]
+            # # gf_score_list.append(gf_score)
+            # # gf_valuation_list.append(gf_valuation)
+            # print("gf_score:", gf_score)
+            # print("gf_valuation:", gf_valuation)
 
             # let's calculate the beta for Apple stock with respect to the S&P500 market index
             beta = calculate_beta(
@@ -397,7 +397,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
             worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = up_dow_vol
             worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = up_dow_vol_regr
-            worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
+            # worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
             # worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
@@ -412,7 +412,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
             worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = "No data"
             worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = "No data"
-            worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
+            # worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
             # worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"
@@ -509,13 +509,13 @@ if __name__ == "__main__":
             trend_short = current_regime[0]
             trend_rel = current_regime[1]
 
-            url = f"https://api.gurufocus.com/public/user/{api_token}/stock/{tick}/summary"
-            response_exp = requests.request("GET", url).json()
-            guru_df = pd.DataFrame(response_exp["summary"])
-            gf_score = guru_df["general"]["gf_score"]
-            gf_valuation = guru_df["general"]["gf_valuation"]
-            print("gf_score:", gf_score)
-            print("gf_valuation:", gf_valuation)
+            # url = f"https://api.gurufocus.com/public/user/{api_token}/stock/{tick}/summary"
+            # response_exp = requests.request("GET", url).json()
+            # guru_df = pd.DataFrame(response_exp["summary"])
+            # gf_score = guru_df["general"]["gf_score"]
+            # gf_valuation = guru_df["general"]["gf_valuation"]
+            # print("gf_score:", gf_score)
+            # print("gf_valuation:", gf_valuation)
 
             # let's calculate the beta for Apple stock with respect to the S&P500 market index
             beta = calculate_beta(
@@ -552,7 +552,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Momentum"].iloc[i] = stock_momentum
             worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = up_dow_vol
             worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = up_dow_vol_regr
-            worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
+            # worksheet_df_FORMULA["GF SCORE"].iloc[i] = gf_score
             worksheet_df_FORMULA["PCR"].iloc[i] = pcr_list[i]
             worksheet_df_FORMULA["БЕТА"].iloc[i] = round(beta, 2)
             # worksheet_df_FORMULA["Max Pain"].iloc[i] = max_pain_val
@@ -567,7 +567,7 @@ if __name__ == "__main__":
             worksheet_df_FORMULA["Momentum"].iloc[i] = "No data"
             worksheet_df_FORMULA["UP/Down Volume"].iloc[i] = "No data"
             worksheet_df_FORMULA["UP/Down Volume Regression"].iloc[i] = "No data"
-            worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
+            # worksheet_df_FORMULA["GF SCORE"].iloc[i] = "No data"
             worksheet_df_FORMULA["PCR"].iloc[i] = "No data"
             worksheet_df_FORMULA["БЕТА"].iloc[i] = "No data"
             # worksheet_df_FORMULA["Max Pain"].iloc[i] = "No data"

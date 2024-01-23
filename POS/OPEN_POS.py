@@ -246,8 +246,8 @@ def get_proba_50_calendar(
 if __name__ == "__main__":
     # **********************   Указываем назыание таблицы в которой работаем *************
     tables = [
-        "POS_template_Call_diagonal"
-    ]  #  "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
+           'POS_template_ITM_calendar'
+    ]  # "POS_template_Call_diagonal", "POS_template_call", 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
 
 
     for table_name in tables:

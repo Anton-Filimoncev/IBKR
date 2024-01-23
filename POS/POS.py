@@ -224,9 +224,9 @@ def get_proba_50_calendar(current_price, yahoo_data, long_strike, long_price, sh
 
 if __name__ == "__main__":
     tables = [
-               'POS_template_Call_diagonal'
-    ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar'
-    # 'POS_template_Call_diagonal'
+              'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
+    ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
+    #
     for table_name in tables:
         # # ================ раббота с таблицей============================================
         gc = gd.service_account(filename="Seetus.json")
