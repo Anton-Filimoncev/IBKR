@@ -1,5 +1,6 @@
 from numba import jit
 from .MonteCarlo import monteCarlo
+# from MonteCarloCALENDAR_RETURN import monteCarlo_exp_return
 from .MonteCarlo_SELL_PUT_RETURN import monteCarlo_exp_return
 import time
 from .BlackScholes import blackScholesPut
@@ -7,7 +8,6 @@ import numpy as np
 
 
 def bsm_debit(sim_price, strikes, rate, time_fraction, sigma):
-
     P_short_puts = blackScholesPut(sim_price, strikes[0], rate, time_fraction, sigma)
 
     debit = P_short_puts
@@ -15,18 +15,9 @@ def bsm_debit(sim_price, strikes, rate, time_fraction, sigma):
     return debit
 
 
-def shortPut(
-    underlying,
-    sigma,
-    rate,
-    trials,
-    days_to_expiration,
-    closing_days_array,
-    percentage_array,
-    short_strike,
-    short_price,
-    yahoo_stock,
-):
+def shortPut(underlying, sigma, rate, trials, days_to_expiration, closing_days_array,
+             percentage_array, short_strike, short_price, yahoo_stock):
+
     for closing_days in closing_days_array:
         if closing_days > days_to_expiration:
             raise ValueError("Closing days cannot be beyond Days To Expiration.")
@@ -48,19 +39,9 @@ def shortPut(
     min_profit = np.array(min_profit)
 
     try:
-        pop, pop_error, avg_dtc, avg_dtc_error = monteCarlo(
-            underlying,
-            rate,
-            sigma,
-            days_to_expiration,
-            closing_days_array,
-            trials,
-            initial_credit,
-            min_profit,
-            strikes,
-            bsm_debit,
-            yahoo_stock,
-        )
+        pop, pop_error, avg_dtc, avg_dtc_error, cvar = monteCarlo(underlying, rate, sigma, days_to_expiration,
+                                                              closing_days_array, trials,
+                                                              initial_credit, min_profit, strikes, bsm_debit, yahoo_stock)
     except RuntimeError as err:
         print(err.args)
 
@@ -85,4 +66,4 @@ def shortPut(
         "avg_dtc_error": avg_dtc_error,
     }
 
-    return pop[0] / 100, exp_return*100, avg_dtc
+    return pop[0] / 100, exp_return*100, avg_dtc, cvar*100

@@ -1,5 +1,6 @@
 from numba import jit
-from .MonteCarlo_CALENDAR import monteCarlo
+from .MonteCarloCALENDAR import monteCarlo
+from .MonteCarloCALENDAR_RETURN import monteCarlo_return
 import time
 from .BlackScholes import blackScholesPut
 import numpy as np
@@ -50,25 +51,26 @@ def putCalendar(underlying, sigma_short, sigma_long, rate, trials, days_to_expir
     min_profit = np.array(min_profit)
 
     try:
-        pop, pop_error, avg_dtc, avg_dtc_error = monteCarlo(underlying, rate, sigma_short, sigma_long,
+        pop, pop_error, avg_dtc, avg_dtc_error, cvar = monteCarlo(underlying, rate, sigma_short, sigma_long,
                                                             days_to_expiration_short, days_to_expiration_long,
                                                             closing_days_array, trials, initial_credit, min_profit,
                                                             strikes, bsm_debit, yahoo_stock)
     except RuntimeError as err:
         print(err.args)
 
-    # expected_profit = monteCarlo_return(underlying, rate, sigma_short, sigma_long,
-    #                                                         days_to_expiration_short, days_to_expiration_long,
-    #                                                         closing_days_array, trials, initial_credit, min_profit,
-    #                                                         strikes, bsm_debit, yahoo_stock)
+    expected_profit = monteCarlo_return(underlying, rate, sigma_short, sigma_long,
+                                                            days_to_expiration_short, days_to_expiration_long,
+                                                            closing_days_array, trials, initial_credit, min_profit,
+                                                            strikes, bsm_debit, yahoo_stock)
+
 
     response = {
         "pop": pop,
+        'cvar': cvar,
+        'exp_return': expected_profit,
         "pop_error": pop_error,
         "avg_dtc": avg_dtc,
         "avg_dtc_error": avg_dtc_error
     }
 
-    print(response)
-
-    return pop[0] / 100, avg_dtc
+    return pop[0] / 100, avg_dtc, cvar*100

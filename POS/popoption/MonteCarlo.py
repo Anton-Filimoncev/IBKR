@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from numba import jit
 import math
 
@@ -16,6 +17,8 @@ import math
 def monteCarlo(underlying, rate, sigma, days_to_expiration, closing_days_array, trials, initial_credit,
                    min_profit, strikes, bsm_func, yahoo_stock):
 
+    profit_list = []
+    price_list = []
     log_returns = np.log(1 + yahoo_stock['Close'].pct_change())
     # Define the variables
     u = log_returns.mean()
@@ -28,7 +31,7 @@ def monteCarlo(underlying, rate, sigma, days_to_expiration, closing_days_array, 
     log_returns = np.log(yahoo_stock['Close'] / yahoo_stock['Close'].shift(1))
     # Compute Volatility using the pandas rolling standard deviation function
     volatility = log_returns.rolling(window=252).std() * np.sqrt(252)
-    volatility = volatility.iloc[-1]
+    volatility = volatility[-1]
 
 
     dt = 1 / 365  # 365 calendar days in a year
@@ -61,12 +64,12 @@ def monteCarlo(underlying, rate, sigma, days_to_expiration, closing_days_array, 
 
             # Geometric Brownian Motion
             # signal = (rate - 0.5 * (sigma ** 2)) * t_cum
-            signal = drift - 0.5 * (volatility ** 2) * t_cum
+            signal = drift - 0.5 * (sigma ** 2) * t_cum
             # noise = sigma * W
             noise = volatility * W
             y = noise + signal
             stock_price = underlying * np.exp(y)  # Stock price on current day
-            # print(underlying)
+            # print(stock_price)
             epsilon = np.random.randn()
             epsilon_cum += epsilon
             t_cum += dt
@@ -79,6 +82,8 @@ def monteCarlo(underlying, rate, sigma, days_to_expiration, closing_days_array, 
 
             profit = initial_credit - debit  # Profit if we were to close on current day
             sum = 0
+            profit_list.append(profit)
+            price_list.append(stock_price)
 
             for i in range(length):
                 if indices[i] == 1:  # Checks if combo has been evaluated
@@ -135,5 +140,10 @@ def monteCarlo(underlying, rate, sigma, days_to_expiration, closing_days_array, 
     avg_dtc = [round(x, 2) for x in avg_dtc]
 
     avg_dtc_error = [round(x, 2) for x in avg_dtc_error]
+    dist_df = pd.DataFrame({
+        'Stock_price': price_list,
+        'Profit': profit_list,
+    })
 
-    return pop_counter1, pop_counter1_err, avg_dtc, avg_dtc_error
+    cvar = dist_df.sort_values('Profit')[:int(len(dist_df)*0.05)]['Profit'].mean()
+    return pop_counter1, pop_counter1_err, avg_dtc, avg_dtc_error, cvar

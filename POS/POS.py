@@ -81,8 +81,9 @@ def get_proba_50_call(
     prob_50 = proba_50[0]
     expected_profit = proba_50[1]
     avg_dtc = proba_50[2]
+    cvar = proba_50[3]
 
-    return prob_50, expected_profit, avg_dtc, prob_100
+    return prob_50, expected_profit, avg_dtc, prob_100, cvar
 
 
 def get_proba_50_strangle(
@@ -133,8 +134,9 @@ def get_proba_50_strangle(
     prob_50 = proba_50[0]
     expected_profit = proba_50[1]
     avg_dtc = proba_50[2]
+    cvar = proba_50[3]
 
-    return prob_50, expected_profit, avg_dtc, prob_100
+    return prob_50, expected_profit, avg_dtc, prob_100, cvar
 
 def get_abs_return(price_array, type_option, days_to_exp, days_to_exp_short, history_vol, current_price, strike, prime, vol_opt, side):
     put_price_list = []
@@ -224,7 +226,7 @@ def get_proba_50_calendar(current_price, yahoo_data, long_strike, long_price, sh
 
 if __name__ == "__main__":
     tables = [
-              'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
+        'POS_template_call', 'POS_template_put', 'POS_template_strangl',  'POS_template_ITM_calendar',
     ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
     #
     for table_name in tables:
@@ -267,7 +269,7 @@ if __name__ == "__main__":
                 current_price = yahoo_data["Close"].iloc[-1]
 
                 short_strike = float(solo_company_data.iloc[4, 13])
-                short_price = float(solo_company_data.iloc[6, 13])
+                short_price = float(solo_company_data.iloc[6, 11])
                 sigma = float(solo_company_data.iloc[7, 11]) * 100
                 days_to_expiration = int(solo_company_data.iloc[2, 6])
                 number_positions = abs(float(solo_company_data.iloc[4, 11]))
@@ -280,7 +282,7 @@ if __name__ == "__main__":
                 print("days_to_expiration", days_to_expiration)
                 print("pop", pop)
 
-                pop_50, expected_profit, avg_dtc = get_proba_50_put(
+                pop_50, expected_profit, avg_dtc, cvar = get_proba_50_put(
                     current_price,
                     yahoo_data,
                     short_strike,
@@ -298,6 +300,10 @@ if __name__ == "__main__":
                 solo_company_data_formula.iloc[2, 8] = (
                     expected_profit * number_positions
                 )  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[
+                    12, 8
+                ] = cvar  # заполняем поле в таблице
 
                 worksheet_df_FORMULA_sum = pd.concat(
                     [worksheet_df_FORMULA_sum, solo_company_data_formula]
@@ -347,7 +353,7 @@ if __name__ == "__main__":
                 current_price = yahoo_data["Close"].iloc[-1]
 
                 short_strike = float(solo_company_data.iloc[4, 13])
-                short_price = float(solo_company_data.iloc[6, 13])
+                short_price = float(solo_company_data.iloc[6, 11])
                 sigma = float(solo_company_data.iloc[7, 11]) * 100
                 days_to_expiration = int(solo_company_data.iloc[2, 6])
 
@@ -359,7 +365,7 @@ if __name__ == "__main__":
                 print("days_to_expiration", days_to_expiration)
                 print("pop", pop)
 
-                proba_50, expected_profit, avg_dtc, prob_100 = get_proba_50_call(
+                proba_50, expected_profit, avg_dtc, prob_100, cvar = get_proba_50_call(
                     current_price,
                     yahoo_data,
                     short_strike,
@@ -372,12 +378,17 @@ if __name__ == "__main__":
                 print("prob_100", prob_100)
                 print("expected_profit", expected_profit)
                 print("avg_dtc", avg_dtc)
+                print("cvar", cvar)
 
                 number_positions = abs(float(solo_company_data.iloc[4, 11]))
 
                 solo_company_data_formula.iloc[
                     4, 8
                 ] = proba_50  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[
+                    12, 8
+                ] = cvar  # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[
                     3, 8
@@ -435,8 +446,10 @@ if __name__ == "__main__":
                 current_price = yahoo_data["Close"].iloc[-1]
                 call_short_strike = float(solo_company_data.iloc[4, 13])
                 put_short_strike = float(solo_company_data.iloc[5, 13])
-                call_short_price = float(solo_company_data.iloc[13, 13])
-                put_short_price = float(solo_company_data.iloc[13, 11])
+                # call_short_price = float(solo_company_data.iloc[14, 13])
+                # put_short_price = float(solo_company_data.iloc[14, 11])
+                call_short_price = float(solo_company_data.iloc[7, 11])
+                put_short_price = 0
                 sigma = (
                     (
                         float(solo_company_data.iloc[8, 11])
@@ -447,7 +460,7 @@ if __name__ == "__main__":
                 )
                 days_to_expiration = int(solo_company_data.iloc[2, 6])
 
-                proba_50, expected_profit, avg_dtc, prob_100 = get_proba_50_strangle(
+                proba_50, expected_profit, avg_dtc, prob_100, cvar = get_proba_50_strangle(
                     current_price,
                     yahoo_data,
                     call_short_strike,
@@ -479,6 +492,10 @@ if __name__ == "__main__":
                 solo_company_data_formula.iloc[
                     3, 8
                 ] = prob_100  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[
+                    11, 8
+                ] = cvar  # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[2, 8] = (
                     expected_profit * number_positions
@@ -656,7 +673,7 @@ if __name__ == "__main__":
                 print("days_to_expiration_long", days_to_expiration_long)
 
 
-                proba_50, avg_dtc = get_proba_50_calendar(current_price, yahoo_data,
+                proba_50, avg_dtc, cvar = get_proba_50_calendar(current_price, yahoo_data,
                                          put_long_strike, put_long_price, put_short_strike, put_short_price,
                                           sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, 'P')
 
@@ -672,6 +689,10 @@ if __name__ == "__main__":
                 solo_company_data_formula.iloc[
                     4, 8
                 ] = proba_50  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[
+                    13, 8
+                ] = cvar  # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[2, 8] = (
                     expected_return * number_positions
