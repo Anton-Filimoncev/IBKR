@@ -209,24 +209,24 @@ def get_proba_50_calendar(current_price, yahoo_data, long_strike, long_price, sh
                           sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, side):
     rate = 4.6
     closing_days_array = [days_to_expiration_short]
-    percentage_array = [30]
+    percentage_array = [10]
     trials = 3000
 
     if side == 'P':
-        proba_50 = putCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+        proba_50, avg_dtc, cvar = putCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
                     days_to_expiration_long, closing_days_array, percentage_array, long_strike,
                     long_price, short_strike, short_price, yahoo_data)
     else:
-        proba_50 = callCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+        proba_50, avg_dtc, cvar = callCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
                     days_to_expiration_long, closing_days_array, percentage_array, long_strike,
                     long_price, short_strike, short_price, yahoo_data)
 
-    return proba_50
+    return proba_50, avg_dtc, cvar
 
 
 if __name__ == "__main__":
     tables = [
-        'POS_template_call', 'POS_template_put', 'POS_template_strangl',  'POS_template_ITM_calendar',
+        'POS_template_Call_diagonal' #'POS_template_call', 'POS_template_put', 'POS_template_strangl',  'POS_template_ITM_calendar',
     ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
     #
     for table_name in tables:
@@ -772,7 +772,7 @@ if __name__ == "__main__":
                 print("days_to_expiration_short", days_to_expiration_short)
                 print("days_to_expiration_long", days_to_expiration_long)
 
-                proba_50, avg_dtc = get_proba_50_calendar(current_price, yahoo_data,
+                proba_50, avg_dtc, cvar = get_proba_50_calendar(current_price, yahoo_data,
                                                           call_long_strike, call_long_price, call_short_strike,
                                                           call_short_price,
                                                           sigma_short, sigma_long, days_to_expiration_short,
@@ -796,6 +796,10 @@ if __name__ == "__main__":
 
                 solo_company_data_formula.iloc[2, 8] = (
                         expected_return * number_positions
+                )  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[13, 8] = (
+                        cvar * number_positions
                 )  # заполняем поле в таблице
 
                 worksheet_df_FORMULA_sum = pd.concat(
