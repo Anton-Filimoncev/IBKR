@@ -303,7 +303,7 @@ if __name__ == "__main__":
 
                 solo_company_data_formula.iloc[
                     12, 8
-                ] = cvar  # заполняем поле в таблице
+                ] = cvar * number_positions # заполняем поле в таблице
 
                 worksheet_df_FORMULA_sum = pd.concat(
                     [worksheet_df_FORMULA_sum, solo_company_data_formula]
@@ -388,7 +388,7 @@ if __name__ == "__main__":
 
                 solo_company_data_formula.iloc[
                     12, 8
-                ] = cvar  # заполняем поле в таблице
+                ] = cvar * number_positions  # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[
                     3, 8
@@ -495,7 +495,7 @@ if __name__ == "__main__":
 
                 solo_company_data_formula.iloc[
                     11, 8
-                ] = cvar  # заполняем поле в таблице
+                ] = cvar  * number_positions# заполняем поле в таблице
 
                 solo_company_data_formula.iloc[2, 8] = (
                     expected_profit * number_positions
@@ -692,7 +692,7 @@ if __name__ == "__main__":
 
                 solo_company_data_formula.iloc[
                     13, 8
-                ] = cvar  # заполняем поле в таблице
+                ] = cvar * number_positions # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[2, 8] = (
                     expected_return * number_positions
