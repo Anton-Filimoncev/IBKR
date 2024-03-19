@@ -14,8 +14,38 @@ from popoption.ShortCall import shortCall
 from popoption.ShortStrangle import shortStrangle
 from popoption.PutCalendar import putCalendar
 from popoption.CallCalendar import callCalendar
+from popoption.PutRatio import putRatio
 
 pd.options.mode.chained_assignment = None
+
+
+def get_proba_putRatio(current_price, yahoo_data, put_long_strike, put_short_strike1, put_short_strike2, total_prime,
+                                          sigma_short1, sigma_short2, sigma_long, days_to_expiration):
+    rate = 4.6
+    closing_days_array = [days_to_expiration]
+    percentage_array = [50]
+    trials = 3000
+
+    proba_50 = putRatio(
+        current_price,
+        sigma_long,
+        sigma_short1,
+        sigma_short2,
+        rate,
+        trials,
+        days_to_expiration,
+        closing_days_array,
+        percentage_array,
+        put_long_strike,
+        put_short_strike1,
+        put_short_strike2,
+        total_prime,
+        yahoo_data,
+    )
+    print(proba_50)
+    return proba_50
+
+
 
 
 def get_proba_50_put(
@@ -226,9 +256,9 @@ def get_proba_50_calendar(current_price, yahoo_data, long_strike, long_price, sh
 
 if __name__ == "__main__":
     tables = [
-        'POS_template_Call_diagonal' #'POS_template_call', 'POS_template_put', 'POS_template_strangl',  'POS_template_ITM_calendar',
+         'POS_template_putRatio'
     ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
-    #
+    #'POS_template_putRatio'
     for table_name in tables:
         # # ================ раббота с таблицей============================================
         gc = gd.service_account(filename="Seetus.json")
@@ -264,6 +294,10 @@ if __name__ == "__main__":
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
                 # solo_company_data.iloc[2, 3] = "pisya" # заполнить поле
                 yahoo_data = yf.download(ticker)
                 current_price = yahoo_data["Close"].iloc[-1]
@@ -349,6 +383,10 @@ if __name__ == "__main__":
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
                 # solo_company_data.iloc[2, 3] = "pisya" # заполнить поле
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
                 yahoo_data = yf.download(ticker)
                 current_price = yahoo_data["Close"].iloc[-1]
 
@@ -441,6 +479,12 @@ if __name__ == "__main__":
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
+
+
                 # solo_company_data.iloc[2, 3] = "pisya" # заполнить поле
                 yahoo_data = yf.download(ticker)
                 current_price = yahoo_data["Close"].iloc[-1]
@@ -544,6 +588,10 @@ if __name__ == "__main__":
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
                 # solo_company_data.iloc[2, 3] = "" # заполнить поле
                 yahoo_data = yf.download(ticker)
 
@@ -616,6 +664,113 @@ if __name__ == "__main__":
         # ============================================================================================================
         # ============================================================================================================
         # ============================================================================================================
+        # ========================================   POS_template_putRatio  ==========================================
+        # ============================================================================================================
+        # ============================================================================================================
+        # ============================================================================================================
+
+        if table_name == "POS_template_putRatio":
+            for num, next_num in enumerate(num_total):
+                try:
+                    solo_company_data = worksheet_df.iloc[
+                        num_total[num] : num_total[num + 1]
+                    ].reset_index(drop=True)
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                        num_total[num] : num_total[num + 1]
+                    ].reset_index(drop=True)
+
+                except:
+                    solo_company_data = worksheet_df.iloc[num_total[-1] :].reset_index(
+                        drop=True
+                    )
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                        num_total[-1] :
+                    ].reset_index(drop=True)
+                # Работаем с карточкой одной компании
+                ticker = solo_company_data.iloc[2, 3]
+                print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
+
+                # solo_company_data.iloc[2, 3] = "" # заполнить поле
+                yahoo_data = yf.download(ticker)
+                print(yahoo_data)
+                # Compute the logarithmic returns using the Closing price
+                log_returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
+                # Compute Volatility using the pandas rolling standard deviation function
+                hv = log_returns.rolling(window=252).std() * np.sqrt(252)
+                hv = hv[-1]
+
+                current_price = yahoo_data["Close"].iloc[-1]
+                put_long_strike = float(solo_company_data.iloc[4, 11])
+                put_short_strike1 = float(solo_company_data.iloc[4, 13])
+                put_short_strike2 = float(solo_company_data.iloc[5, 13])
+                total_prime = float(solo_company_data.iloc[8, 11])
+                sigma_short1 = float(solo_company_data.iloc[10, 11]) * 100
+                sigma_short2 = float(solo_company_data.iloc[10, 13]) * 100
+                sigma_long = float(solo_company_data.iloc[9, 11]) * 100
+                days_to_expiration = int(solo_company_data.iloc[11, 11])
+
+                print("current_price", current_price)
+                print("put_long_strike", put_long_strike)
+                print("put_short_strike1", put_short_strike1)
+                print("put_short_strike2", put_short_strike2)
+                print("total_prime", total_prime)
+                print("sigma_short1", sigma_short1)
+                print("hv", hv)
+                print("sigma_short2", sigma_short2)
+                print("sigma_long", sigma_long)
+                print("days_to_expiration", days_to_expiration)
+
+
+                proba_50, cvar, expected_return = get_proba_putRatio(current_price, yahoo_data,
+                                         put_long_strike, put_short_strike1, put_short_strike2, total_prime,
+                                          sigma_short1, sigma_short2, sigma_long, days_to_expiration)
+
+                # print("proba_30", proba_50)
+                # expected_return = expected_return_calc(sigma_short/100, sigma_long/100, current_price, hv, days_to_expiration_short,
+                #                            days_to_expiration_long_return, put_long_strike, put_short_strike, put_long_price,
+                #                            put_short_price, 'P')
+                print("proba_50", proba_50)
+                print("expected_return", expected_return)
+
+                number_positions = abs(float(solo_company_data.iloc[5, 11]))
+
+                solo_company_data_formula.iloc[
+                    4, 8
+                ] = proba_50  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[2, 8] = (
+                    expected_return * number_positions
+                )  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[12, 8] = (
+                    cvar * number_positions
+                )  # заполняем поле в таблице
+
+                worksheet_df_FORMULA_sum = pd.concat(
+                    [worksheet_df_FORMULA_sum, solo_company_data_formula]
+                )
+                print("=================================")
+                print(worksheet_df_FORMULA_sum)
+
+            worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
+            # # ===================================  запись в таблицу ================================================
+            worksheet.update(
+                "A1",
+                # [worksheet_df_FORMULA_sum.columns.values.tolist()]
+                # +
+                worksheet_df_FORMULA_sum.values.tolist(),
+                value_input_option="USER_ENTERED",
+            )
+
+
+
+        # ============================================================================================================
+        # ============================================================================================================
+        # ============================================================================================================
         # ========================================   CALENDAR ITM  =====================================================
         # ============================================================================================================
         # ============================================================================================================
@@ -641,6 +796,10 @@ if __name__ == "__main__":
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
                 # solo_company_data.iloc[2, 3] = "" # заполнить поле
                 yahoo_data = yf.download(ticker)
 
@@ -741,6 +900,10 @@ if __name__ == "__main__":
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
                 # solo_company_data.iloc[2, 3] = "" # заполнить поле
                 yahoo_data = yf.download(ticker)
 
