@@ -14,8 +14,9 @@ import math
 # Earnings date and stock splits are not considered.
 
 
-def monteCarlo(underlying, rate, sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, closing_days_array, trials, initial_credit,
-                   min_profit, strikes, bsm_func, yahoo_stock):
+def monteCarlo(underlying, rate, sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long,
+               closing_days_array, trials, initial_credit, min_profit, strikes, bsm_func, yahoo_stock, short_count,
+               long_count):
 
     profit_list = []
     price_list = []
@@ -83,9 +84,13 @@ def monteCarlo(underlying, rate, sigma_short, sigma_long, days_to_expiration_sho
             time_fraction_short = dt * (days_to_expiration_short - r)
             time_fraction_long = dt * (days_to_expiration_long - r)
 
-            debit = bsm_func(stock_price, strikes, rate, time_fraction_short, time_fraction_long, sigma_short, sigma_long)
+            debit = bsm_func(stock_price, strikes, rate, time_fraction_short, time_fraction_long, sigma_short,
+                             sigma_long, short_count, long_count)
+
 
             profit = debit + initial_credit  # Profit if we were to close on current day
+
+
             profit_list.append(profit)
             price_list.append(stock_price)
 

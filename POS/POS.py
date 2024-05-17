@@ -236,29 +236,34 @@ def expected_return_calc(vol_short, vol_long, current_price, history_vol, days_t
     return expected_return
 
 def get_proba_50_calendar(current_price, yahoo_data, long_strike, long_price, short_strike, short_price,
-                          sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, side):
+                          sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, side, short_count, long_count):
     rate = 4.6
     closing_days_array = [days_to_expiration_short]
     percentage_array = [10]
+    if short_count > long_count:
+        percentage_array = [3]
     trials = 3000
 
     if side == 'P':
-        proba_50, avg_dtc, cvar = putCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+        response = putCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
                     days_to_expiration_long, closing_days_array, percentage_array, long_strike,
-                    long_price, short_strike, short_price, yahoo_data)
+                    long_price, short_strike, short_price, yahoo_data, short_count, long_count)
     else:
-        proba_50, avg_dtc, cvar = callCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
+        response = callCalendar(current_price, sigma_short, sigma_long, rate, trials, days_to_expiration_short,
                     days_to_expiration_long, closing_days_array, percentage_array, long_strike,
-                    long_price, short_strike, short_price, yahoo_data)
+                    long_price, short_strike, short_price, yahoo_data, short_count, long_count)
 
-    return proba_50, avg_dtc, cvar
+    print(response)
+    return response['pop'][0], response['cvar']*100, response['exp_return']*100
+
 
 
 if __name__ == "__main__":
     tables = [
-         'POS_template_putRatio'
-    ]  # , 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_OTM_calendar', 'POS_template_ITM_calendar', 'POS_template_Call_diagonal'
-    #'POS_template_putRatio'
+            'POS_template_put_calendar', 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_putRatio', 'POS_template_call_calendar'
+    ]  # 'POS_template_put_calendar', 'POS_template_call', 'POS_template_put', 'POS_template_strangl', 'POS_template_putRatio', 'POS_template_call_calendar'
+
+
     for table_name in tables:
         # # ================ раббота с таблицей============================================
         gc = gd.service_account(filename="Seetus.json")
@@ -560,31 +565,32 @@ if __name__ == "__main__":
                 value_input_option="USER_ENTERED",
             )
 
+
         # ============================================================================================================
         # ============================================================================================================
         # ============================================================================================================
-        # ========================================   CALENDAR OTM  =====================================================
+        # ========================================   POS_template_call_calendar  ==========================================
         # ============================================================================================================
         # ============================================================================================================
         # ============================================================================================================
 
-        if table_name == "POS_template_OTM_calendar":
+        if table_name == "POS_template_call_calendar":
             for num, next_num in enumerate(num_total):
                 try:
                     solo_company_data = worksheet_df.iloc[
-                        num_total[num] : num_total[num + 1]
-                    ].reset_index(drop=True)
+                                        num_total[num]: num_total[num + 1]
+                                        ].reset_index(drop=True)
                     solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                        num_total[num] : num_total[num + 1]
-                    ].reset_index(drop=True)
+                                                num_total[num]: num_total[num + 1]
+                                                ].reset_index(drop=True)
 
                 except:
-                    solo_company_data = worksheet_df.iloc[num_total[-1] :].reset_index(
+                    solo_company_data = worksheet_df.iloc[num_total[-1]:].reset_index(
                         drop=True
                     )
                     solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                        num_total[-1] :
-                    ].reset_index(drop=True)
+                                                num_total[-1]:
+                                                ].reset_index(drop=True)
                 # Работаем с карточкой одной компании
                 ticker = solo_company_data.iloc[2, 3]
                 print("ticker", ticker)
@@ -602,48 +608,55 @@ if __name__ == "__main__":
                 hv = hv[-1]
 
                 current_price = yahoo_data["Close"].iloc[-1]
-                put_long_strike = float(solo_company_data.iloc[5, 13])
-                put_short_strike = float(solo_company_data.iloc[5, 11])
-                put_long_price = float(solo_company_data.iloc[15, 13])
-                put_short_price = float(solo_company_data.iloc[15, 11])
+                long_count = abs(float(solo_company_data.iloc[6, 13]))
+                short_count = abs(float(solo_company_data.iloc[6, 11]))
+                long_strike = float(solo_company_data.iloc[5, 13])
+                short_strike = float(solo_company_data.iloc[5, 11])
+                long_price = float(solo_company_data.iloc[15, 13])
+                short_price = float(solo_company_data.iloc[15, 11])
                 sigma_short = float(solo_company_data.iloc[11, 11]) * 100
                 sigma_long = float(solo_company_data.iloc[10, 11]) * 100
                 days_to_expiration_short = int(solo_company_data.iloc[13, 11])
                 days_to_expiration_long = int(solo_company_data.iloc[12, 11])
                 days_to_expiration_long_return = int(solo_company_data.iloc[12, 11]) - days_to_expiration_short
 
-
                 print("current_price", current_price)
-                print("put_long_strike", put_long_strike)
-                print("put_short_strike", put_short_strike)
-                print("put_long_price", put_long_price)
-                print("put_short_price", put_short_price)
+                print("long_strike", long_strike)
+                print("short_strike", short_strike)
+                print("long_price", long_price)
+                print("short_price", short_price)
                 print("hv", hv)
                 print("sigma_short", sigma_short)
                 print("sigma_long", sigma_long)
                 print("days_to_expiration_short", days_to_expiration_short)
                 print("days_to_expiration_long", days_to_expiration_long)
+                print("short_count", short_count)
+                print("long_count", long_count)
+
+                pop, cvar, exp_return = get_proba_50_calendar(current_price, yahoo_data,
+                                                          long_strike, long_price, short_strike,
+                                                          short_price,
+                                                          sigma_short, sigma_long, days_to_expiration_short,
+                                                          days_to_expiration_long, 'C', short_count, long_count)
 
 
-                proba_50, avg_dtc = get_proba_50_calendar(current_price, yahoo_data,
-                                         put_long_strike, put_long_price, put_short_strike, put_short_price,
-                                          sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, 'P')
+                print("expected_return", exp_return)
+                print("pop", pop)
+                print("cvar", cvar)
 
-                print("proba_30", proba_50)
-                expected_return = expected_return_calc(sigma_short/100, sigma_long/100, current_price, hv, days_to_expiration_short,
-                                           days_to_expiration_long_return, put_long_strike, put_short_strike, put_long_price,
-                                           put_short_price, 'P')
-
-                print("expected_return", expected_return)
-
-                number_positions = abs(float(solo_company_data.iloc[6, 11]))
+                number_positions = abs(float(solo_company_data.iloc[6, 14]))
 
                 solo_company_data_formula.iloc[
                     4, 8
-                ] = proba_50  # заполняем поле в таблице
+                ] = pop  # заполняем поле в таблице
 
                 solo_company_data_formula.iloc[2, 8] = (
-                    expected_return * number_positions
+                        exp_return * number_positions
+                )  # заполняем поле в таблице
+
+
+                solo_company_data_formula.iloc[13, 8] = (
+                        cvar * number_positions
                 )  # заполняем поле в таблице
 
                 worksheet_df_FORMULA_sum = pd.concat(
@@ -652,7 +665,7 @@ if __name__ == "__main__":
                 print("=================================")
 
             worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
-            # # ===================================  запись в таблицу ================================================
+            # ===================================  запись в таблицу ================================================
             worksheet.update(
                 "A1",
                 # [worksheet_df_FORMULA_sum.columns.values.tolist()]
@@ -660,6 +673,111 @@ if __name__ == "__main__":
                 worksheet_df_FORMULA_sum.values.tolist(),
                 value_input_option="USER_ENTERED",
             )
+
+        # ============================================================================================================
+        # ============================================================================================================
+        # ============================================================================================================
+        # ========================================   POS_template_put_calendar  ==========================================
+        # ============================================================================================================
+        # ============================================================================================================
+        # ============================================================================================================
+
+        if table_name == "POS_template_put_calendar":
+            for num, next_num in enumerate(num_total):
+                try:
+                    solo_company_data = worksheet_df.iloc[
+                                        num_total[num]: num_total[num + 1]
+                                        ].reset_index(drop=True)
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                                                num_total[num]: num_total[num + 1]
+                                                ].reset_index(drop=True)
+
+                except:
+                    solo_company_data = worksheet_df.iloc[num_total[-1]:].reset_index(
+                        drop=True
+                    )
+                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
+                                                num_total[-1]:
+                                                ].reset_index(drop=True)
+                # Работаем с карточкой одной компании
+                ticker = solo_company_data.iloc[2, 3]
+                print("ticker", ticker)
+                if ticker == 'RUT':
+                    ticker = '^RUT'
+                if ticker == 'XSP':
+                    ticker = '^XSP'
+                # solo_company_data.iloc[2, 3] = "" # заполнить поле
+                yahoo_data = yf.download(ticker)
+
+                # Compute the logarithmic returns using the Closing price
+                log_returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
+                # Compute Volatility using the pandas rolling standard deviation function
+                hv = log_returns.rolling(window=252).std() * np.sqrt(252)
+                hv = hv[-1]
+
+                current_price = yahoo_data["Close"].iloc[-1]
+                long_count = abs(float(solo_company_data.iloc[6, 13]))
+                short_count = abs(float(solo_company_data.iloc[6, 11]))
+                long_strike = float(solo_company_data.iloc[5, 13])
+                short_strike = float(solo_company_data.iloc[5, 11])
+                long_price = float(solo_company_data.iloc[15, 13])
+                short_price = float(solo_company_data.iloc[15, 11])
+                sigma_short = float(solo_company_data.iloc[11, 11]) * 100
+                sigma_long = float(solo_company_data.iloc[10, 11]) * 100
+                days_to_expiration_short = int(solo_company_data.iloc[13, 11])
+                days_to_expiration_long = int(solo_company_data.iloc[12, 11])
+                days_to_expiration_long_return = int(solo_company_data.iloc[12, 11]) - days_to_expiration_short
+
+                print("current_price", current_price)
+                print("long_strike", long_strike)
+                print("short_strike", short_strike)
+                print("long_price", long_price)
+                print("short_price", short_price)
+                print("hv", hv)
+                print("sigma_short", sigma_short)
+                print("sigma_long", sigma_long)
+                print("days_to_expiration_short", days_to_expiration_short)
+                print("days_to_expiration_long", days_to_expiration_long)
+
+                pop, cvar, exp_return = get_proba_50_calendar(current_price, yahoo_data,
+                                                              long_strike, long_price, short_strike,
+                                                              short_price,
+                                                              sigma_short, sigma_long, days_to_expiration_short,
+                                                              days_to_expiration_long, 'P', short_count, long_count)
+
+                print("expected_return", exp_return)
+                print("pop", pop)
+                print("cvar", cvar)
+
+                number_positions = abs(float(solo_company_data.iloc[6, 14]))
+
+                solo_company_data_formula.iloc[
+                    4, 8
+                ] = pop  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[2, 8] = (
+                        exp_return * number_positions
+                )  # заполняем поле в таблице
+
+                solo_company_data_formula.iloc[13, 8] = (
+                        cvar * number_positions
+                )  # заполняем поле в таблице
+
+                worksheet_df_FORMULA_sum = pd.concat(
+                    [worksheet_df_FORMULA_sum, solo_company_data_formula]
+                )
+                print("=================================")
+
+            worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
+            # ===================================  запись в таблицу ================================================
+            worksheet.update(
+                "A1",
+                # [worksheet_df_FORMULA_sum.columns.values.tolist()]
+                # +
+                worksheet_df_FORMULA_sum.values.tolist(),
+                value_input_option="USER_ENTERED",
+            )
+
 
         # ============================================================================================================
         # ============================================================================================================
@@ -765,219 +883,4 @@ if __name__ == "__main__":
                 worksheet_df_FORMULA_sum.values.tolist(),
                 value_input_option="USER_ENTERED",
             )
-
-
-
-        # ============================================================================================================
-        # ============================================================================================================
-        # ============================================================================================================
-        # ========================================   CALENDAR ITM  =====================================================
-        # ============================================================================================================
-        # ============================================================================================================
-        # ============================================================================================================
-
-        if table_name == "POS_template_ITM_calendar":
-            for num, next_num in enumerate(num_total):
-                try:
-                    solo_company_data = worksheet_df.iloc[
-                        num_total[num] : num_total[num + 1]
-                    ].reset_index(drop=True)
-                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                        num_total[num] : num_total[num + 1]
-                    ].reset_index(drop=True)
-
-                except:
-                    solo_company_data = worksheet_df.iloc[num_total[-1] :].reset_index(
-                        drop=True
-                    )
-                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                        num_total[-1] :
-                    ].reset_index(drop=True)
-                # Работаем с карточкой одной компании
-                ticker = solo_company_data.iloc[2, 3]
-                print("ticker", ticker)
-                if ticker == 'RUT':
-                    ticker = '^RUT'
-                if ticker == 'XSP':
-                    ticker = '^XSP'
-                # solo_company_data.iloc[2, 3] = "" # заполнить поле
-                yahoo_data = yf.download(ticker)
-
-                # Compute the logarithmic returns using the Closing price
-                log_returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
-                # Compute Volatility using the pandas rolling standard deviation function
-                hv = log_returns.rolling(window=252).std() * np.sqrt(252)
-                hv = hv[-1]
-
-                current_price = yahoo_data["Close"].iloc[-1]
-                put_long_strike = float(solo_company_data.iloc[5, 13])
-                put_short_strike = float(solo_company_data.iloc[5, 11])
-                put_long_price = float(solo_company_data.iloc[15, 13])
-                put_short_price = float(solo_company_data.iloc[15, 11])
-                sigma_short = float(solo_company_data.iloc[11, 11]) * 100
-                sigma_long = float(solo_company_data.iloc[10, 11]) * 100
-                days_to_expiration_short = int(solo_company_data.iloc[13, 11])
-                days_to_expiration_long = int(solo_company_data.iloc[12, 11])
-                days_to_expiration_long_return = int(solo_company_data.iloc[12, 11]) - days_to_expiration_short
-
-                print("current_price", current_price)
-                print("put_long_strike", put_long_strike)
-                print("put_short_strike", put_short_strike)
-                print("put_long_price", put_long_price)
-                print("put_short_price", put_short_price)
-                print("hv", hv)
-                print("sigma_short", sigma_short)
-                print("sigma_long", sigma_long)
-                print("days_to_expiration_short", days_to_expiration_short)
-                print("days_to_expiration_long", days_to_expiration_long)
-
-
-                proba_50, avg_dtc, cvar = get_proba_50_calendar(current_price, yahoo_data,
-                                         put_long_strike, put_long_price, put_short_strike, put_short_price,
-                                          sigma_short, sigma_long, days_to_expiration_short, days_to_expiration_long, 'P')
-
-                print("proba_30", proba_50)
-                expected_return = expected_return_calc(sigma_short/100, sigma_long/100, current_price, hv, days_to_expiration_short,
-                                           days_to_expiration_long, put_long_strike, put_short_strike, put_long_price,
-                                           put_short_price, 'P')
-
-                print("expected_return", expected_return)
-
-                number_positions = abs(float(solo_company_data.iloc[6, 11]))
-
-                solo_company_data_formula.iloc[
-                    4, 8
-                ] = proba_50  # заполняем поле в таблице
-
-                solo_company_data_formula.iloc[
-                    13, 8
-                ] = cvar * number_positions # заполняем поле в таблице
-
-                solo_company_data_formula.iloc[2, 8] = (
-                    expected_return * number_positions
-                )  # заполняем поле в таблице
-
-                worksheet_df_FORMULA_sum = pd.concat(
-                    [worksheet_df_FORMULA_sum, solo_company_data_formula]
-                )
-                print("=================================")
-
-            worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
-            # # ===================================  запись в таблицу ================================================
-            worksheet.update(
-                "A1",
-                # [worksheet_df_FORMULA_sum.columns.values.tolist()]
-                # +
-                worksheet_df_FORMULA_sum.values.tolist(),
-                value_input_option="USER_ENTERED",
-            )
-
-            # ============================================================================================================
-            # ============================================================================================================
-            # ============================================================================================================
-            # ========================================   CALL Diagonal  ==================================================
-            # ============================================================================================================
-            # ============================================================================================================
-            # ============================================================================================================
-
-        if table_name == 'POS_template_Call_diagonal':
-            for num, next_num in enumerate(num_total):
-                try:
-                    solo_company_data = worksheet_df.iloc[
-                                        num_total[num]: num_total[num + 1]
-                                        ].reset_index(drop=True)
-                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                                                num_total[num]: num_total[num + 1]
-                                                ].reset_index(drop=True)
-
-                except:
-                    solo_company_data = worksheet_df.iloc[num_total[-1]:].reset_index(
-                        drop=True
-                    )
-                    solo_company_data_formula = worksheet_df_FORMULA.iloc[
-                                                num_total[-1]:
-                                                ].reset_index(drop=True)
-                # Работаем с карточкой одной компании
-                ticker = solo_company_data.iloc[2, 3]
-                print("ticker", ticker)
-                if ticker == 'RUT':
-                    ticker = '^RUT'
-                if ticker == 'XSP':
-                    ticker = '^XSP'
-                # solo_company_data.iloc[2, 3] = "" # заполнить поле
-                yahoo_data = yf.download(ticker)
-
-                # Compute the logarithmic returns using the Closing price
-                log_returns = np.log(yahoo_data['Close'] / yahoo_data['Close'].shift(1))
-                # Compute Volatility using the pandas rolling standard deviation function
-                hv = log_returns.rolling(window=252).std() * np.sqrt(252)
-                hv = hv[-1]
-
-                current_price = yahoo_data["Close"].iloc[-1]
-                call_long_strike = float(solo_company_data.iloc[5, 13])
-                call_short_strike = float(solo_company_data.iloc[5, 11])
-                call_long_price = float(solo_company_data.iloc[15, 13])
-                call_short_price = float(solo_company_data.iloc[15, 11])
-                sigma_short = float(solo_company_data.iloc[11, 11]) * 100
-                sigma_long = float(solo_company_data.iloc[10, 11]) * 100
-                days_to_expiration_short = int(solo_company_data.iloc[13, 11])
-                days_to_expiration_long = int(solo_company_data.iloc[12, 11])
-                days_to_expiration_long_return = int(solo_company_data.iloc[12, 11]) - days_to_expiration_short
-
-                print("current_price", current_price)
-                print("call_long_strike", call_long_strike)
-                print("call_short_strike", call_short_strike)
-                print("call_long_price", call_long_price)
-                print("call_short_price", call_short_price)
-                print("hv", hv)
-                print("sigma_short", sigma_short)
-                print("sigma_long", sigma_long)
-                print("days_to_expiration_short", days_to_expiration_short)
-                print("days_to_expiration_long", days_to_expiration_long)
-
-                proba_50, avg_dtc, cvar = get_proba_50_calendar(current_price, yahoo_data,
-                                                          call_long_strike, call_long_price, call_short_strike,
-                                                          call_short_price,
-                                                          sigma_short, sigma_long, days_to_expiration_short,
-                                                          days_to_expiration_long, 'C')
-
-                print("proba_30", proba_50)
-                expected_return = expected_return_calc(sigma_short / 100, sigma_long / 100, current_price, hv,
-                                                       days_to_expiration_short,
-                                                       days_to_expiration_long, call_long_strike, call_short_strike,
-                                                       call_long_price,
-                                                       call_short_price, 'C')
-
-
-                print("expected_return", expected_return)
-
-                number_positions = abs(float(solo_company_data.iloc[6, 11]))
-
-                solo_company_data_formula.iloc[
-                    4, 8
-                ] = proba_50  # заполняем поле в таблице
-
-                solo_company_data_formula.iloc[2, 8] = (
-                        expected_return * number_positions
-                )  # заполняем поле в таблице
-
-                solo_company_data_formula.iloc[13, 8] = (
-                        cvar * number_positions
-                )  # заполняем поле в таблице
-
-                worksheet_df_FORMULA_sum = pd.concat(
-                    [worksheet_df_FORMULA_sum, solo_company_data_formula]
-                )
-                print("=================================")
-
-            worksheet_df_FORMULA_sum = worksheet_df_FORMULA_sum.fillna("'")
-            # # ===================================  запись в таблицу ================================================
-            worksheet.update(
-                "A1",
-                # [worksheet_df_FORMULA_sum.columns.values.tolist()]
-                # +
-                worksheet_df_FORMULA_sum.values.tolist(),
-                value_input_option="USER_ENTERED",
-            )
-
 
