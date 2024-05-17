@@ -122,7 +122,7 @@ def hist_median_move(tick):
 
 
 if __name__ == "__main__":
-    tables = ['SP00_SECTORS']
+    tables = ['SP500_SECTORS']
 
     for table_name in tables:
         # # ================ раббота с таблицей============================================
@@ -139,7 +139,7 @@ if __name__ == "__main__":
         num_total = worksheet_df_FORMULA[0][worksheet_df_FORMULA[0] == "next"].index
         worksheet_df_FORMULA_sum = pd.DataFrame()
 
-        if table_name == "SP00_SECTORS":
+        if table_name == "SP500_SECTORS":
             company_list = worksheet_df_FORMULA[0][1:].values.tolist()
             yahoo_data_native = yf.download(company_list + ['^SPX'])
             yahoo_data = yahoo_data_native['Close'][-132:]
