@@ -18,7 +18,9 @@ import requests
 import asyncio
 import aiohttp
 from Earnings_GET import run_earnings_get
-
+import pandas_ta as pta
+import warnings
+warnings.filterwarnings("ignore")
 
 def get_tech_data(df):
     df["RSI"] = pta.rsi(df["Close"])

@@ -16,7 +16,7 @@ def get_garch(market_price_df):
     # ========== GARCH volatility calculated ============================================
 
     try:
-        returns_long = np.log(market_price_df[:756] / market_price_df[:756].shift(1))
+        returns_long = np.log(market_price_df[756:] / market_price_df[756:].shift(1))
         returns_long = returns_long.dropna()
         # print(market_price_df[ticker][-252:])
         print('returns_long')
